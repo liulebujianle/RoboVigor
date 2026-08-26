@@ -1,0 +1,37 @@
+[0.351s] Invoking command in '/home/ethan/sentinel_ws/src/sentinel_decision': PYTHONPATH=/home/ethan/sentinel_ws/build/sentinel_decision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sentinel_decision build --build-base /home/ethan/sentinel_ws/build/sentinel_decision/build install --record /home/ethan/sentinel_ws/build/sentinel_decision/install.log --install-scripts $base/lib/sentinel_decision --single-version-externally-managed install_data
+[0.467s] running egg_info
+[0.467s] creating ../../build/sentinel_decision/sentinel_decision.egg-info
+[0.467s] writing ../../build/sentinel_decision/sentinel_decision.egg-info/PKG-INFO
+[0.468s] writing dependency_links to ../../build/sentinel_decision/sentinel_decision.egg-info/dependency_links.txt
+[0.468s] writing entry points to ../../build/sentinel_decision/sentinel_decision.egg-info/entry_points.txt
+[0.468s] writing requirements to ../../build/sentinel_decision/sentinel_decision.egg-info/requires.txt
+[0.468s] writing top-level names to ../../build/sentinel_decision/sentinel_decision.egg-info/top_level.txt
+[0.468s] writing manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+[0.468s] reading manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+[0.469s] writing manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+[0.469s] running build
+[0.469s] running build_py
+[0.469s] creating /home/ethan/sentinel_ws/build/sentinel_decision/build
+[0.469s] creating /home/ethan/sentinel_ws/build/sentinel_decision/build/lib
+[0.469s] creating /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision
+[0.469s] copying sentinel_decision/__init__.py -> /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision
+[0.469s] copying sentinel_decision/lesson01_decision.py -> /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision
+[0.469s] running install
+[0.469s] running install_lib
+[0.469s] creating /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision
+[0.469s] copying /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision/__init__.py -> /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision
+[0.469s] copying /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision/lesson01_decision.py -> /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision
+[0.469s] byte-compiling /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision/__init__.py to __init__.cpython-310.pyc
+[0.469s] byte-compiling /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision/lesson01_decision.py to lesson01_decision.cpython-310.pyc
+[0.470s] running install_data
+[0.470s] creating /home/ethan/sentinel_ws/install/sentinel_decision/share/ament_index
+[0.470s] creating /home/ethan/sentinel_ws/install/sentinel_decision/share/ament_index/resource_index
+[0.470s] creating /home/ethan/sentinel_ws/install/sentinel_decision/share/ament_index/resource_index/packages
+[0.470s] copying resource/sentinel_decision -> /home/ethan/sentinel_ws/install/sentinel_decision/share/ament_index/resource_index/packages
+[0.470s] copying package.xml -> /home/ethan/sentinel_ws/install/sentinel_decision/share/sentinel_decision
+[0.470s] running install_egg_info
+[0.471s] Copying ../../build/sentinel_decision/sentinel_decision.egg-info to /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision-0.0.0-py3.10.egg-info
+[0.471s] running install_scripts
+[0.481s] Installing lesson01_decision script to /home/ethan/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[0.481s] writing list of installed files to '/home/ethan/sentinel_ws/build/sentinel_decision/install.log'
+[0.490s] Invoked command in '/home/ethan/sentinel_ws/src/sentinel_decision' returned '0': PYTHONPATH=/home/ethan/sentinel_ws/build/sentinel_decision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sentinel_decision build --build-base /home/ethan/sentinel_ws/build/sentinel_decision/build install --record /home/ethan/sentinel_ws/build/sentinel_decision/install.log --install-scripts $base/lib/sentinel_decision --single-version-externally-managed install_data

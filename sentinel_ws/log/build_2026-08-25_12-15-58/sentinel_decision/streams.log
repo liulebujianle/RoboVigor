@@ -1,0 +1,28 @@
+[0.415s] Invoking command in '/home/ethan/sentinel_ws/src/sentinel_decision': PYTHONPATH=/home/ethan/sentinel_ws/build/sentinel_decision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sentinel_decision build --build-base /home/ethan/sentinel_ws/build/sentinel_decision/build install --record /home/ethan/sentinel_ws/build/sentinel_decision/install.log --install-scripts $base/lib/sentinel_decision --single-version-externally-managed install_data
+[0.572s] running egg_info
+[0.573s] writing ../../build/sentinel_decision/sentinel_decision.egg-info/PKG-INFO
+[0.573s] writing dependency_links to ../../build/sentinel_decision/sentinel_decision.egg-info/dependency_links.txt
+[0.573s] writing entry points to ../../build/sentinel_decision/sentinel_decision.egg-info/entry_points.txt
+[0.573s] writing requirements to ../../build/sentinel_decision/sentinel_decision.egg-info/requires.txt
+[0.573s] writing top-level names to ../../build/sentinel_decision/sentinel_decision.egg-info/top_level.txt
+[0.574s] reading manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+[0.575s] writing manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+[0.575s] running build
+[0.575s] running build_py
+[0.575s] copying sentinel_decision/lesson05_target_manager.py -> /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision
+[0.575s] running install
+[0.575s] running install_lib
+[0.576s] copying /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision/lesson05_target_manager.py -> /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision
+[0.576s] byte-compiling /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision/lesson05_target_manager.py to lesson05_target_manager.cpython-310.pyc
+[0.576s] running install_data
+[0.576s] running install_egg_info
+[0.578s] removing '/home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision-0.0.0-py3.10.egg-info' (and everything under it)
+[0.578s] Copying ../../build/sentinel_decision/sentinel_decision.egg-info to /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision-0.0.0-py3.10.egg-info
+[0.578s] running install_scripts
+[0.592s] Installing lesson01_decision script to /home/ethan/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[0.592s] Installing lesson02_health_publisher script to /home/ethan/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[0.592s] Installing lesson03_decision_subscriber script to /home/ethan/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[0.592s] Installing lesson04_mission_decision script to /home/ethan/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[0.592s] Installing lesson05_target_manager script to /home/ethan/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[0.592s] writing list of installed files to '/home/ethan/sentinel_ws/build/sentinel_decision/install.log'
+[0.607s] Invoked command in '/home/ethan/sentinel_ws/src/sentinel_decision' returned '0': PYTHONPATH=/home/ethan/sentinel_ws/build/sentinel_decision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sentinel_decision build --build-base /home/ethan/sentinel_ws/build/sentinel_decision/build install --record /home/ethan/sentinel_ws/build/sentinel_decision/install.log --install-scripts $base/lib/sentinel_decision --single-version-externally-managed install_data

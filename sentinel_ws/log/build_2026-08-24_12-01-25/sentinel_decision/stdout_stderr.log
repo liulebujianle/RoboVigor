@@ -1,0 +1,23 @@
+running egg_info
+writing ../../build/sentinel_decision/sentinel_decision.egg-info/PKG-INFO
+writing dependency_links to ../../build/sentinel_decision/sentinel_decision.egg-info/dependency_links.txt
+writing entry points to ../../build/sentinel_decision/sentinel_decision.egg-info/entry_points.txt
+writing requirements to ../../build/sentinel_decision/sentinel_decision.egg-info/requires.txt
+writing top-level names to ../../build/sentinel_decision/sentinel_decision.egg-info/top_level.txt
+reading manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+writing manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+running build
+running build_py
+copying sentinel_decision/lesson02_health_publisher.py -> /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision
+running install
+running install_lib
+copying /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision/lesson02_health_publisher.py -> /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision
+byte-compiling /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision/lesson02_health_publisher.py to lesson02_health_publisher.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/sentinel_decision/sentinel_decision.egg-info to /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision-0.0.0-py3.10.egg-info
+running install_scripts
+Installing lesson01_decision script to /home/ethan/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+Installing lesson02_health_publisher script to /home/ethan/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+writing list of installed files to '/home/ethan/sentinel_ws/build/sentinel_decision/install.log'

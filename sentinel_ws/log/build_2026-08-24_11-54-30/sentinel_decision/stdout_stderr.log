@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/sentinel_decision/sentinel_decision.egg-info
+writing ../../build/sentinel_decision/sentinel_decision.egg-info/PKG-INFO
+writing dependency_links to ../../build/sentinel_decision/sentinel_decision.egg-info/dependency_links.txt
+writing entry points to ../../build/sentinel_decision/sentinel_decision.egg-info/entry_points.txt
+writing requirements to ../../build/sentinel_decision/sentinel_decision.egg-info/requires.txt
+writing top-level names to ../../build/sentinel_decision/sentinel_decision.egg-info/top_level.txt
+writing manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+reading manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+writing manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ethan/sentinel_ws/build/sentinel_decision/build
+creating /home/ethan/sentinel_ws/build/sentinel_decision/build/lib
+creating /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision
+copying sentinel_decision/__init__.py -> /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision
+copying sentinel_decision/lesson01_decision.py -> /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision
+running install
+running install_lib
+creating /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision
+copying /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision/__init__.py -> /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision
+copying /home/ethan/sentinel_ws/build/sentinel_decision/build/lib/sentinel_decision/lesson01_decision.py -> /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision
+byte-compiling /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision/lesson01_decision.py to lesson01_decision.cpython-310.pyc
+running install_data
+creating /home/ethan/sentinel_ws/install/sentinel_decision/share/ament_index
+creating /home/ethan/sentinel_ws/install/sentinel_decision/share/ament_index/resource_index
+creating /home/ethan/sentinel_ws/install/sentinel_decision/share/ament_index/resource_index/packages
+copying resource/sentinel_decision -> /home/ethan/sentinel_ws/install/sentinel_decision/share/ament_index/resource_index/packages
+copying package.xml -> /home/ethan/sentinel_ws/install/sentinel_decision/share/sentinel_decision
+running install_egg_info
+Copying ../../build/sentinel_decision/sentinel_decision.egg-info to /home/ethan/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision-0.0.0-py3.10.egg-info
+running install_scripts
+Installing lesson01_decision script to /home/ethan/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+writing list of installed files to '/home/ethan/sentinel_ws/build/sentinel_decision/install.log'
