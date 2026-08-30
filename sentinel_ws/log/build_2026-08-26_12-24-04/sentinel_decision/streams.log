@@ -1,0 +1,27 @@
+[0.830s] Invoking command in '/home/ethan/RoboVigor/sentinel_ws/src/sentinel_decision': PYTHONPATH=/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sentinel_decision build --build-base /home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/build install --record /home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/install.log --install-scripts $base/lib/sentinel_decision --single-version-externally-managed install_data
+[1.522s] running egg_info
+[1.524s] writing ../../build/sentinel_decision/sentinel_decision.egg-info/PKG-INFO
+[1.524s] writing dependency_links to ../../build/sentinel_decision/sentinel_decision.egg-info/dependency_links.txt
+[1.525s] writing entry points to ../../build/sentinel_decision/sentinel_decision.egg-info/entry_points.txt
+[1.525s] writing requirements to ../../build/sentinel_decision/sentinel_decision.egg-info/requires.txt
+[1.525s] writing top-level names to ../../build/sentinel_decision/sentinel_decision.egg-info/top_level.txt
+[1.530s] reading manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+[1.533s] writing manifest file '../../build/sentinel_decision/sentinel_decision.egg-info/SOURCES.txt'
+[1.533s] running build
+[1.533s] running build_py
+[1.534s] running install
+[1.535s] running install_lib
+[1.540s] running install_data
+[1.540s] running install_egg_info
+[1.545s] removing '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision-0.0.0-py3.10.egg-info' (and everything under it)
+[1.546s] Copying ../../build/sentinel_decision/sentinel_decision.egg-info to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel_decision-0.0.0-py3.10.egg-info
+[1.547s] running install_scripts
+[1.608s] Installing lesson01_decision script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[1.609s] Installing lesson02_health_publisher script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[1.609s] Installing lesson03_decision_subscriber script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[1.609s] Installing lesson04_mission_decision script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[1.609s] Installing lesson05_target_manager script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[1.610s] Installing lesson06_decision_with_target script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[1.610s] Installing lesson07_robot_state script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision
+[1.610s] writing list of installed files to '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/install.log'
+[1.677s] Invoked command in '/home/ethan/RoboVigor/sentinel_ws/src/sentinel_decision' returned '0': PYTHONPATH=/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sentinel_decision build --build-base /home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/build install --record /home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/install.log --install-scripts $base/lib/sentinel_decision --single-version-externally-managed install_data
