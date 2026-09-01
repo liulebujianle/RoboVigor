@@ -1,0 +1,133 @@
+[0.622s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'sentinel_decision', '--symlink-install']
+[0.622s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['sentinel_decision'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x75cd3fc0e290>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75cd3fc0dd50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75cd3fc0dd50>>)
+[1.653s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.655s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.655s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ethan/RoboVigor/sentinel_ws'
+[1.655s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.656s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.656s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.656s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.726s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.726s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.726s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.727s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.727s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.727s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.730s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.731s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.731s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.731s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.731s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.732s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.732s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.732s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.732s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.732s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.734s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.734s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.734s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/sentinel_decision) by extensions ['ignore', 'ignore_ament_install']
+[1.735s] Level 1:colcon.colcon_core.package_identification:_identify(src/sentinel_decision) by extension 'ignore'
+[1.735s] Level 1:colcon.colcon_core.package_identification:_identify(src/sentinel_decision) by extension 'ignore_ament_install'
+[1.735s] Level 1:colcon.colcon_core.package_identification:_identify(src/sentinel_decision) by extensions ['colcon_pkg']
+[1.736s] Level 1:colcon.colcon_core.package_identification:_identify(src/sentinel_decision) by extension 'colcon_pkg'
+[1.736s] Level 1:colcon.colcon_core.package_identification:_identify(src/sentinel_decision) by extensions ['colcon_meta']
+[1.736s] Level 1:colcon.colcon_core.package_identification:_identify(src/sentinel_decision) by extension 'colcon_meta'
+[1.736s] Level 1:colcon.colcon_core.package_identification:_identify(src/sentinel_decision) by extensions ['ros']
+[1.736s] Level 1:colcon.colcon_core.package_identification:_identify(src/sentinel_decision) by extension 'ros'
+[1.751s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sentinel_decision' with type 'ros.ament_python' and name 'sentinel_decision'
+[1.751s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.752s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.752s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.752s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.752s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.921s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.921s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.929s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ethan/RoboVigor/sentinel_ws/install
+[1.939s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 441 installed packages in /opt/ros/humble
+[1.951s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.253s] Level 5:colcon.colcon_core.verb:set package 'sentinel_decision' build argument 'cmake_args' from command line to 'None'
+[2.253s] Level 5:colcon.colcon_core.verb:set package 'sentinel_decision' build argument 'cmake_target' from command line to 'None'
+[2.254s] Level 5:colcon.colcon_core.verb:set package 'sentinel_decision' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.254s] Level 5:colcon.colcon_core.verb:set package 'sentinel_decision' build argument 'cmake_clean_cache' from command line to 'False'
+[2.254s] Level 5:colcon.colcon_core.verb:set package 'sentinel_decision' build argument 'cmake_clean_first' from command line to 'False'
+[2.254s] Level 5:colcon.colcon_core.verb:set package 'sentinel_decision' build argument 'cmake_force_configure' from command line to 'False'
+[2.254s] Level 5:colcon.colcon_core.verb:set package 'sentinel_decision' build argument 'ament_cmake_args' from command line to 'None'
+[2.254s] Level 5:colcon.colcon_core.verb:set package 'sentinel_decision' build argument 'catkin_cmake_args' from command line to 'None'
+[2.254s] Level 5:colcon.colcon_core.verb:set package 'sentinel_decision' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.255s] DEBUG:colcon.colcon_core.verb:Building package 'sentinel_decision' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision', 'merge_install': False, 'path': '/home/ethan/RoboVigor/sentinel_ws/src/sentinel_decision', 'symlink_install': True, 'test_result_base': None}
+[2.255s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.262s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.263s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ethan/RoboVigor/sentinel_ws/src/sentinel_decision' with build type 'ament_python'
+[2.264s] Level 1:colcon.colcon_core.shell:create_environment_hook('sentinel_decision', 'ament_prefix_path')
+[2.276s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.277s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/hook/ament_prefix_path.ps1'
+[2.281s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/hook/ament_prefix_path.dsv'
+[2.284s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/hook/ament_prefix_path.sh'
+[2.288s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.288s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.856s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ethan/RoboVigor/sentinel_ws/src/sentinel_decision'
+[3.858s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.858s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.954s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: sdist, compile_catalog, install_headers, update_catalog, egg_info, build_ext, bdist_wheel, test, build, clean, install_lib, build_py, register, init_catalog, install_scripts, extract_messages, bdist_egg, easy_install, bdist_dumb, rotate, develop, bdist_rpm, upload, saveopts, bdist, build_scripts, dist_info, build_clib, alias, install_data, install, check, install_egg_info, upload_docs, symlink_data, setopt
+[7.622s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --always-copy, --verbose, --multi-version, --help, --build-directory, --upgrade, --prefix, --no-deps, --local-snapshots-ok, --force-installation-into-system-dir, --optimize, --no-user-cfg, --exclude-scripts, --allow-hosts, --editable, --record, --no-find-links, --user, --find-links, --always-unzip, --install-dir, --index-url, --zip-ok, --script-dir, --version, --site-dirs, --quiet, --egg-path, --install-layout, --dry-run, --uninstall
+[7.632s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision': PYTHONPATH=/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/build --no-deps symlink_data
+[10.415s] Level 1:colcon.colcon_core.shell:create_environment_hook('sentinel_decision', 'pythonpath_develop')
+[10.416s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/share/sentinel_decision/hook/pythonpath_develop.ps1'
+[10.420s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision' returned '0': PYTHONPATH=/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/build --no-deps symlink_data
+[10.421s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/share/sentinel_decision/hook/pythonpath_develop.dsv'
+[10.424s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/share/sentinel_decision/hook/pythonpath_develop.sh'
+[10.436s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision' for CMake module files
+[10.439s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision' for CMake config files
+[10.442s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib'
+[10.443s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/bin'
+[10.443s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/pkgconfig/sentinel_decision.pc'
+[10.444s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages'
+[10.445s] Level 1:colcon.colcon_core.shell:create_environment_hook('sentinel_decision', 'pythonpath')
+[10.446s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/hook/pythonpath.ps1'
+[10.448s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/hook/pythonpath.dsv'
+[10.450s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/hook/pythonpath.sh'
+[10.455s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/bin'
+[10.456s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sentinel_decision)
+[10.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/package.ps1'
+[10.464s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/package.dsv'
+[10.468s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/package.sh'
+[10.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/package.bash'
+[10.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/sentinel_decision/package.zsh'
+[10.481s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/share/colcon-core/packages/sentinel_decision)
+[10.482s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.484s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.485s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.485s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.511s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.512s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.512s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.576s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.578s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ethan/RoboVigor/sentinel_ws/install/local_setup.ps1'
+[10.584s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ethan/RoboVigor/sentinel_ws/install/_local_setup_util_ps1.py'
+[10.591s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ethan/RoboVigor/sentinel_ws/install/setup.ps1'
+[10.598s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ethan/RoboVigor/sentinel_ws/install/local_setup.sh'
+[10.601s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ethan/RoboVigor/sentinel_ws/install/_local_setup_util_sh.py'
+[10.603s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ethan/RoboVigor/sentinel_ws/install/setup.sh'
+[10.609s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ethan/RoboVigor/sentinel_ws/install/local_setup.bash'
+[10.611s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ethan/RoboVigor/sentinel_ws/install/setup.bash'
+[10.616s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ethan/RoboVigor/sentinel_ws/install/local_setup.zsh'
+[10.619s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ethan/RoboVigor/sentinel_ws/install/setup.zsh'

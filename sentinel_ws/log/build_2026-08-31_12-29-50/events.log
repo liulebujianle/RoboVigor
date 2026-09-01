@@ -1,0 +1,118 @@
+[0.000000] (-) TimerEvent: {}
+[0.000852] (sentinel_decision) JobQueued: {'identifier': 'sentinel_decision', 'dependencies': OrderedDict()}
+[0.004473] (sentinel_decision) JobStarted: {'identifier': 'sentinel_decision'}
+[0.098123] (-) TimerEvent: {}
+[0.199629] (-) TimerEvent: {}
+[0.300734] (-) TimerEvent: {}
+[0.401934] (-) TimerEvent: {}
+[0.503237] (-) TimerEvent: {}
+[0.604464] (-) TimerEvent: {}
+[0.705589] (-) TimerEvent: {}
+[0.806825] (-) TimerEvent: {}
+[0.908212] (-) TimerEvent: {}
+[1.009373] (-) TimerEvent: {}
+[1.110445] (-) TimerEvent: {}
+[1.211710] (-) TimerEvent: {}
+[1.312915] (-) TimerEvent: {}
+[1.414339] (-) TimerEvent: {}
+[1.515662] (-) TimerEvent: {}
+[1.619483] (-) TimerEvent: {}
+[1.720727] (-) TimerEvent: {}
+[1.822427] (-) TimerEvent: {}
+[1.924167] (-) TimerEvent: {}
+[2.025362] (-) TimerEvent: {}
+[2.126428] (-) TimerEvent: {}
+[2.227514] (-) TimerEvent: {}
+[2.328606] (-) TimerEvent: {}
+[2.429666] (-) TimerEvent: {}
+[2.530748] (-) TimerEvent: {}
+[2.631855] (-) TimerEvent: {}
+[2.733051] (-) TimerEvent: {}
+[2.834286] (-) TimerEvent: {}
+[2.935424] (-) TimerEvent: {}
+[3.036457] (-) TimerEvent: {}
+[3.137671] (-) TimerEvent: {}
+[3.238704] (-) TimerEvent: {}
+[3.339864] (-) TimerEvent: {}
+[3.441052] (-) TimerEvent: {}
+[3.542319] (-) TimerEvent: {}
+[3.643412] (-) TimerEvent: {}
+[3.744461] (-) TimerEvent: {}
+[3.845540] (-) TimerEvent: {}
+[3.946713] (-) TimerEvent: {}
+[4.047800] (-) TimerEvent: {}
+[4.148999] (-) TimerEvent: {}
+[4.250228] (-) TimerEvent: {}
+[4.351374] (-) TimerEvent: {}
+[4.452459] (-) TimerEvent: {}
+[4.553602] (-) TimerEvent: {}
+[4.654642] (-) TimerEvent: {}
+[4.755718] (-) TimerEvent: {}
+[4.856899] (-) TimerEvent: {}
+[4.958149] (-) TimerEvent: {}
+[5.059316] (-) TimerEvent: {}
+[5.160417] (-) TimerEvent: {}
+[5.261622] (-) TimerEvent: {}
+[5.362841] (-) TimerEvent: {}
+[5.365402] (sentinel_decision) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'HTTPS_PROXY': 'http://127.0.0.1:7897/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'LANGUAGE': 'zh_CN:zh', 'USER': 'ethan', 'all_proxy': 'socks://127.0.0.1:7897/', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ethan', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/ethan/RoboVigor/sentinel_ws/src/sentinel_decision', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SYSTEMD_EXEC_PID': '8387', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/ethan/anaconda3', 'https_proxy': 'http://127.0.0.1:7897/', 'COLCON_PREFIX_PATH': '/home/ethan/RoboVigor/sentinel_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ethan', 'ALL_PROXY': 'socks://127.0.0.1:7897/', 'http_proxy': 'http://127.0.0.1:7897/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ethan/.local/bin:/opt/ros/humble/bin:/home/ethan/anaconda3/condabin:/home/ethan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/PC:@/tmp/.ICE-unix/1649,unix/PC:/tmp/.ICE-unix/1649', 'GDM_LANG': 'zh_CN', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/301fc553_0b20_4cb2_a51f_974c4dd91045', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/home/ethan/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.241', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/ethan', 'AMENT_PREFIX_PATH': '/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision:/opt/ros/humble', 'CONDA_PYTHON_EXE': '/home/ethan/anaconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', '_CONDA_EXE': '/home/ethan/anaconda3/bin/conda', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/ethan/anaconda3/bin/conda', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:/home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision:/home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'HTTP_PROXY': 'http://127.0.0.1:7897/', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[5.463284] (-) TimerEvent: {}
+[5.564418] (-) TimerEvent: {}
+[5.665491] (-) TimerEvent: {}
+[5.766564] (-) TimerEvent: {}
+[5.867610] (-) TimerEvent: {}
+[5.968748] (-) TimerEvent: {}
+[6.069960] (-) TimerEvent: {}
+[6.171211] (-) TimerEvent: {}
+[6.272339] (-) TimerEvent: {}
+[6.373424] (-) TimerEvent: {}
+[6.474501] (-) TimerEvent: {}
+[6.575612] (-) TimerEvent: {}
+[6.676706] (-) TimerEvent: {}
+[6.777809] (-) TimerEvent: {}
+[6.878855] (-) TimerEvent: {}
+[6.925464] (sentinel_decision) StdoutLine: {'line': b'running develop\n'}
+[6.979258] (-) TimerEvent: {}
+[7.080361] (-) TimerEvent: {}
+[7.181434] (-) TimerEvent: {}
+[7.282641] (-) TimerEvent: {}
+[7.383709] (-) TimerEvent: {}
+[7.484757] (-) TimerEvent: {}
+[7.585787] (-) TimerEvent: {}
+[7.686945] (-) TimerEvent: {}
+[7.788175] (-) TimerEvent: {}
+[7.889315] (-) TimerEvent: {}
+[7.975674] (sentinel_decision) StdoutLine: {'line': b'running egg_info\n'}
+[7.977684] (sentinel_decision) StdoutLine: {'line': b'writing sentinel_decision.egg-info/PKG-INFO\n'}
+[7.978494] (sentinel_decision) StdoutLine: {'line': b'writing dependency_links to sentinel_decision.egg-info/dependency_links.txt\n'}
+[7.979322] (sentinel_decision) StdoutLine: {'line': b'writing entry points to sentinel_decision.egg-info/entry_points.txt\n'}
+[7.980267] (sentinel_decision) StdoutLine: {'line': b'writing requirements to sentinel_decision.egg-info/requires.txt\n'}
+[7.980910] (sentinel_decision) StdoutLine: {'line': b'writing top-level names to sentinel_decision.egg-info/top_level.txt\n'}
+[7.989547] (-) TimerEvent: {}
+[7.990776] (sentinel_decision) StdoutLine: {'line': b"reading manifest file 'sentinel_decision.egg-info/SOURCES.txt'\n"}
+[7.995929] (sentinel_decision) StdoutLine: {'line': b"writing manifest file 'sentinel_decision.egg-info/SOURCES.txt'\n"}
+[8.003166] (sentinel_decision) StdoutLine: {'line': b'running build_ext\n'}
+[8.004487] (sentinel_decision) StdoutLine: {'line': b'Creating /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/python3.10/site-packages/sentinel-decision.egg-link (link to .)\n'}
+[8.009769] (sentinel_decision) StdoutLine: {'line': b'Installing lesson01_decision script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.010740] (sentinel_decision) StdoutLine: {'line': b'Installing lesson02_health_publisher script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.011737] (sentinel_decision) StdoutLine: {'line': b'Installing lesson03_decision_subscriber script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.012539] (sentinel_decision) StdoutLine: {'line': b'Installing lesson04_mission_decision script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.012935] (sentinel_decision) StdoutLine: {'line': b'Installing lesson05_target_manager script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.014016] (sentinel_decision) StdoutLine: {'line': b'Installing lesson06_decision_with_target script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.014920] (sentinel_decision) StdoutLine: {'line': b'Installing lesson07_robot_state script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.015541] (sentinel_decision) StdoutLine: {'line': b'Installing lesson08_match_timer script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.015936] (sentinel_decision) StdoutLine: {'line': b'Installing lesson09_health_time_decision script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.016286] (sentinel_decision) StdoutLine: {'line': b'Installing lesson10_remaining_time script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.016598] (sentinel_decision) StdoutLine: {'line': b'Installing lesson11_robot_pose script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.016892] (sentinel_decision) StdoutLine: {'line': b'Installing lesson12_tf2_demo script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.017217] (sentinel_decision) StdoutLine: {'line': b'Installing lesson13_tf_tree script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.017773] (sentinel_decision) StdoutLine: {'line': b'Installing lesson15_scan_publisher script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.018112] (sentinel_decision) StdoutLine: {'line': b'Installing lesson16_scan_reader script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.018395] (sentinel_decision) StdoutLine: {'line': b'Installing lesson17_scan_zone script to /home/ethan/RoboVigor/sentinel_ws/install/sentinel_decision/lib/sentinel_decision\n'}
+[8.018727] (sentinel_decision) StdoutLine: {'line': b'\n'}
+[8.019004] (sentinel_decision) StdoutLine: {'line': b'Installed /home/ethan/RoboVigor/sentinel_ws/build/sentinel_decision\n'}
+[8.019305] (sentinel_decision) StdoutLine: {'line': b'running symlink_data\n'}
+[8.089828] (-) TimerEvent: {}
+[8.157783] (sentinel_decision) CommandEnded: {'returncode': 0}
+[8.191021] (-) TimerEvent: {}
+[8.221923] (sentinel_decision) JobEnded: {'identifier': 'sentinel_decision', 'rc': 0}
+[8.225575] (-) EventReactorShutdown: {}

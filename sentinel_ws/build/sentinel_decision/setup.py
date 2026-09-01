@@ -1,1 +1,0 @@
-/home/ethan/RoboVigor/sentinel_ws/src/sentinel_decision/setup.py

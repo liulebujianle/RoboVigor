@@ -50,10 +50,16 @@ setup(
             'lesson12_tf2_demo = sentinel_decision.lesson12_tf2_demo:main',
         
             'lesson13_tf_tree = sentinel_decision.lesson13_tf_tree:main',
-        
-            'lesson15_laserscan = sentinel_decision.lesson15_laserscan:main',
-        
-            'lesson16_laser_direction = sentinel_decision.lesson16_laser_direction:main',
+
+            'lesson15_scan_publisher = sentinel_decision.lesson15_scan_publisher:main',
+
+            'lesson16_scan_reader = sentinel_decision.lesson16_scan_reader:main',
+
+            'lesson17_scan_zone = sentinel_decision.lesson17_scan_zone:main',
+
+            'lesson18_obstacle_safety = sentinel_decision.lesson18_obstacle_safety:main',
+
+            'lesson19_obstacle_decision = sentinel_decision.lesson19_obstacle_decision:main',
 
         ],
     },
