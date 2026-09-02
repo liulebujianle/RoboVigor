@@ -28,6 +28,8 @@ sentinel_decision/lesson16_scan_reader.py
 sentinel_decision/lesson17_scan_zone.py
 sentinel_decision/lesson18_obstacle_safety.py
 sentinel_decision/lesson19_obstacle_decision.py
+sentinel_decision/lesson20_decision_publisher.py
+sentinel_decision/lesson21_control_node.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

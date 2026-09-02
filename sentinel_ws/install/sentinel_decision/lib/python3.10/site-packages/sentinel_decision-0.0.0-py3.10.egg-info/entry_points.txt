@@ -17,4 +17,6 @@ lesson16_scan_reader = sentinel_decision.lesson16_scan_reader:main
 lesson17_scan_zone = sentinel_decision.lesson17_scan_zone:main
 lesson18_obstacle_safety = sentinel_decision.lesson18_obstacle_safety:main
 lesson19_obstacle_decision = sentinel_decision.lesson19_obstacle_decision:main
+lesson20_decision_publisher = sentinel_decision.lesson20_decision_publisher:main
+lesson21_control_node = sentinel_decision.lesson21_control_node:main
 

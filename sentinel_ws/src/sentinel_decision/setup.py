@@ -61,6 +61,10 @@ setup(
 
             'lesson19_obstacle_decision = sentinel_decision.lesson19_obstacle_decision:main',
 
+            'lesson20_decision_publisher = sentinel_decision.lesson20_decision_publisher:main',
+
+            'lesson21_control_node = sentinel_decision.lesson21_control_node:main',
+
         ],
     },
 )
