@@ -8,7 +8,9 @@ setup.py
 ../../build/sentinel_decision/sentinel_decision.egg-info/requires.txt
 ../../build/sentinel_decision/sentinel_decision.egg-info/top_level.txt
 ../../build/sentinel_decision/sentinel_decision.egg-info/zip-safe
+launch/lesson26.launch.py
 resource/sentinel_decision
+rviz/lesson26.rviz
 sentinel_decision/__init__.py
 sentinel_decision/lesson01_decision.py
 sentinel_decision/lesson02_health_publisher.py
@@ -30,6 +32,14 @@ sentinel_decision/lesson18_obstacle_safety.py
 sentinel_decision/lesson19_obstacle_decision.py
 sentinel_decision/lesson20_decision_publisher.py
 sentinel_decision/lesson21_control_node.py
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
+sentinel_decision/lesson22_cmd_vel_publisher.py
+sentinel_decision/lesson27_odom_publisher.py
+sentinel_decision/lesson28_cmd_vel_monitor.py
+sentinel_decision/lesson29_mecanum_sim.py
+sentinel_decision.egg-info/PKG-INFO
+sentinel_decision.egg-info/SOURCES.txt
+sentinel_decision.egg-info/dependency_links.txt
+sentinel_decision.egg-info/entry_points.txt
+sentinel_decision.egg-info/requires.txt
+sentinel_decision.egg-info/top_level.txt
+sentinel_decision.egg-info/zip-safe
