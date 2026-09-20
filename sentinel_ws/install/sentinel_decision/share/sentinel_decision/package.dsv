@@ -4,6 +4,3 @@ source;share/sentinel_decision/hook/pythonpath.sh
 source;share/sentinel_decision/hook/ament_prefix_path.ps1
 source;share/sentinel_decision/hook/ament_prefix_path.dsv
 source;share/sentinel_decision/hook/ament_prefix_path.sh
-source;../../build/sentinel_decision/share/sentinel_decision/hook/pythonpath_develop.ps1
-source;../../build/sentinel_decision/share/sentinel_decision/hook/pythonpath_develop.dsv
-source;../../build/sentinel_decision/share/sentinel_decision/hook/pythonpath_develop.sh

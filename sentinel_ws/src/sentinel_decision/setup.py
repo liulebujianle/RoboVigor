@@ -307,6 +307,8 @@ setup(
             # =================================================
 
             'lesson29_mecanum_sim = sentinel_decision.lesson29_mecanum_sim:main',
+            
+            'lesson30_mecanum_sim = sentinel_decision.lesson30_mecanum_sim:main',
         ],
     },
 )
