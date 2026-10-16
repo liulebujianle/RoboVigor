@@ -1,1 +1,0 @@
-/home/ethan/RoboVigor/sentinel_ws/build/rm_arena/launch/simulation.launch.py
