@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+
+  <world name="rmul_2027_world">
+
+    <!-- ============================== -->
+    <!-- 1. Gazebo 物理引擎 -->
+    <!-- ============================== -->
+
+    <physics name="default_physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+
+    <!-- ============================== -->
+    <!-- 2. 太阳光 -->
+    <!-- ============================== -->
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+
+    <!-- ============================== -->
+    <!-- 3. 地面 -->
+    <!-- ============================== -->
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+
+    <!-- ============================== -->
+    <!-- 4. RMUL 2027 场地 -->
+    <!-- ============================== -->
+
+    <model name="rmul_2027_arena">
+
+      <!-- 场地固定 -->
+      <static>true</static>
+
+      <!--
+      模型原始坐标：
+      X：0 ~ 12600
+      Y：0 ~ 520
+      Z：0 ~ 8600
+
+      假设单位为 mm，并且 Y 轴向上。
+
+      缩放后：
+      X：12.6m
+      Y：0.52m
+      Z：8.6m
+
+      绕 X 轴旋转 90°。
+      然后让场地中心与世界原点对齐。
+      -->
+
+      <pose>-6.3 -4.3 0.52 -1.57079632679 0 0</pose>
+
+      <link name="arena_link">
+
+        <!-- STL 视觉模型 -->
+        <visual name="arena_visual">
+
+          <geometry>
+            <mesh>
+
+              <uri>file:///home/ethan/rm_arena/meshes/rmul_2027.stl</uri>
+
+              <scale>0.001 0.001 0.001</scale>
+
+            </mesh>
+          </geometry>
+
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+
+        </visual>
+
+
+        <!-- STL 碰撞模型 -->
+        <collision name="arena_collision">
+
+          <geometry>
+            <mesh>
+
+              <uri>file:///home/ethan/rm_arena/meshes/rmul_2027.stl</uri>
+
+              <scale>0.001 0.001 0.001</scale>
+
+            </mesh>
+          </geometry>
+
+        </collision>
+
+      </link>
+
+    </model>
+
+  </world>
+
+</sdf>
