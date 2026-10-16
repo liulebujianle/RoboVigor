@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing rm_arena.egg-info/PKG-INFO
+writing dependency_links to rm_arena.egg-info/dependency_links.txt
+writing entry points to rm_arena.egg-info/entry_points.txt
+writing requirements to rm_arena.egg-info/requires.txt
+writing top-level names to rm_arena.egg-info/top_level.txt
+reading manifest file 'rm_arena.egg-info/SOURCES.txt'
+writing manifest file 'rm_arena.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm-arena.egg-link (link to .)
+Installing arena_marker script to /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/rm_arena
+
+Installed /home/ethan/RoboVigor/sentinel_ws/build/rm_arena
+running symlink_data
+creating /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/launch
+symbolically linking /home/ethan/RoboVigor/sentinel_ws/build/rm_arena/launch/simulation.launch.py -> /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/launch
+creating /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/rviz
+symbolically linking /home/ethan/RoboVigor/sentinel_ws/build/rm_arena/rviz/arena.rviz -> /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/rviz

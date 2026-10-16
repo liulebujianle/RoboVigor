@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sdf version="1.6">
+
+  <world name="rmul_2027">
+
+    <!-- 太阳光 -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- 基础地面 -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- RMUL 2027 比赛场地 -->
+    <model name="rmul_2027_arena">
+
+      <!-- 固定场地，不受物理引擎影响 -->
+      <static>true</static>
+
+      <!--
+        STL 原始尺寸：
+        X = 12600
+        Y = 520
+        Z = 8600
+
+        假设原始单位为毫米。
+
+        绕 X 轴旋转 -90°，
+        将模型调整为水平放置。
+
+        Z = 0.52：
+        将模型整体抬高到地面以上。
+      -->
+
+      <pose>-6.3 -4.3 0.52 -1.57079632679 0 0</pose>
+
+      <link name="arena_link">
+
+        <!-- STL 视觉模型 -->
+        <visual name="arena_visual">
+
+          <geometry>
+            <mesh>
+
+              <!-- 使用当前工程中的 STL 文件 -->
+              <uri>file:///home/ethan/RoboVigor/gazebo_arena/meshes/rmul_2027.stl</uri>
+
+              <!-- 毫米转换为米 -->
+              <scale>0.001 0.001 0.001</scale>
+
+            </mesh>
+          </geometry>
+
+          <!-- 模型颜色 -->
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+
+        </visual>
+
+      </link>
+
+    </model>
+
+  </world>
+
+</sdf>

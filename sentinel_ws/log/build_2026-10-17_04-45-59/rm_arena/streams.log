@@ -1,0 +1,21 @@
+[0.307s] Invoking command in '/home/ethan/RoboVigor/sentinel_ws/build/rm_arena': PYTHONPATH=/home/ethan/RoboVigor/sentinel_ws/build/rm_arena/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ethan/RoboVigor/sentinel_ws/build/rm_arena/build --no-deps symlink_data
+[0.398s] running develop
+[0.444s] running egg_info
+[0.444s] writing rm_arena.egg-info/PKG-INFO
+[0.444s] writing dependency_links to rm_arena.egg-info/dependency_links.txt
+[0.444s] writing entry points to rm_arena.egg-info/entry_points.txt
+[0.444s] writing requirements to rm_arena.egg-info/requires.txt
+[0.444s] writing top-level names to rm_arena.egg-info/top_level.txt
+[0.444s] reading manifest file 'rm_arena.egg-info/SOURCES.txt'
+[0.444s] writing manifest file 'rm_arena.egg-info/SOURCES.txt'
+[0.445s] running build_ext
+[0.445s] Creating /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm-arena.egg-link (link to .)
+[0.445s] Installing arena_marker script to /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/rm_arena
+[0.445s] 
+[0.445s] Installed /home/ethan/RoboVigor/sentinel_ws/build/rm_arena
+[0.445s] running symlink_data
+[0.445s] creating /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/launch
+[0.445s] symbolically linking /home/ethan/RoboVigor/sentinel_ws/build/rm_arena/launch/simulation.launch.py -> /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/launch
+[0.445s] creating /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/rviz
+[0.445s] symbolically linking /home/ethan/RoboVigor/sentinel_ws/build/rm_arena/rviz/arena.rviz -> /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/rviz
+[0.456s] Invoked command in '/home/ethan/RoboVigor/sentinel_ws/build/rm_arena' returned '0': PYTHONPATH=/home/ethan/RoboVigor/sentinel_ws/build/rm_arena/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ethan/RoboVigor/sentinel_ws/build/rm_arena/build --no-deps symlink_data
