@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!-- 简化包络模型：整车最大直径已确认 0.58 m；高度和质量暂定，后续用正式 URDF 替换。 -->
+<robot name="robovigor_sentry_simple">
+  <!-- 底盘坐标：x 向前，y 向左，z 向上；原点设在车体几何中心。 -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <!-- 单位：米；包络半径 0.29，高度暂定 0.20；圆柱轴沿 z 方向。 -->
+        <cylinder radius="0.29" length="0.20"/>
+      </geometry>
+      <material name="robovigor_blue">
+        <color rgba="0.1 0.35 0.8 1.0"/>
+      </material>
+    </visual>
+    <!-- 碰撞外形暂时与视觉外形一致。 -->
+    <collision>
+      <geometry>
+        <cylinder radius="0.29" length="0.20"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <!-- 临时质量 10 kg；均匀实心圆柱惯量，单位 kg*m^2。
+           Ixx=Iyy=m*(3*r*r+h*h)/12，Izz=m*r*r/2。 -->
+      <mass value="10.0"/>
+      <inertia ixx="0.243583333" ixy="0" ixz="0"
+               iyy="0.243583333" iyz="0" izz="0.4205"/>
+    </inertial>
+  </link>
+  <!-- 理想全向平面运动：用于导航接口验证，不模拟真实麦轮接触和打滑。 -->
+  <gazebo>
+    <plugin name="sentry_planar_move" filename="libgazebo_ros_planar_move.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>cmd_vel:=cmd_vel</remapping>
+        <remapping>odom:=odom</remapping>
+      </ros>
+      <!-- 仿真更新与反馈发布频率，单位 Hz。 -->
+      <update_rate>100.0</update_rate>
+      <publish_rate>30.0</publish_rate>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+    </plugin>
+  </gazebo>
+</robot>

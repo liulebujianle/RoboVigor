@@ -1,0 +1,33 @@
+[0.094s] Invoking command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation -- -j24 -l24
+[0.101s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.155s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.184s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.184s] -- Added test 'lint_cmake' to check CMake code style
+[0.185s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.185s] -- Added test 'xmllint' to check XML markup files
+[0.185s] -- Configuring done
+[0.186s] -- Generating done
+[0.187s] -- Build files have been written to: /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation
+[0.206s] Invoked command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation -- -j24 -l24
+[0.210s] Invoking command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation
+[0.213s] -- Install configuration: ""
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/urdf
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/urdf/sentry_simple.urdf
+[0.213s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/launch
+[0.213s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/launch/spawn_robot.launch.py
+[0.213s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/ament_index/resource_index/package_run_dependencies/sentry_simulation
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/ament_index/resource_index/parent_prefix_path/sentry_simulation
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/ament_prefix_path.sh
+[0.213s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/ament_prefix_path.dsv
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/path.sh
+[0.213s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/path.dsv
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.bash
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.sh
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.zsh
+[0.213s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.dsv
+[0.213s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/package.dsv
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/ament_index/resource_index/packages/sentry_simulation
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/cmake/sentry_simulationConfig.cmake
+[0.213s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/cmake/sentry_simulationConfig-version.cmake
+[0.213s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/package.xml
+[0.218s] Invoked command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation

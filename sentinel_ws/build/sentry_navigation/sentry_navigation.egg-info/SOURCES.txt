@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+resource/sentry_navigation
+sentry_navigation/__init__.py
+sentry_navigation.egg-info/PKG-INFO
+sentry_navigation.egg-info/SOURCES.txt
+sentry_navigation.egg-info/dependency_links.txt
+sentry_navigation.egg-info/entry_points.txt
+sentry_navigation.egg-info/requires.txt
+sentry_navigation.egg-info/top_level.txt
+sentry_navigation.egg-info/zip-safe

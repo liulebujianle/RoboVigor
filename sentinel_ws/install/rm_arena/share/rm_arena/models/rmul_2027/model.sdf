@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+  <model name="rmul_2027">
+    <static>true</static>
+    <link name="arena">
+      <collision name="official_step_collision">
+        <geometry>
+          <mesh>
+            <uri>model://rmul_2027/meshes/step_textured.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>.8</mu>
+              <mu2>.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="official_step_visual">
+        <geometry>
+          <mesh>
+            <uri>model://rmul_2027/meshes/step_textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

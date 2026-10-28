@@ -1,0 +1,22 @@
+[30.020s] Invoking command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation -- -j24 -l24
+[30.039s] Invoked command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation -- -j24 -l24
+[30.043s] Invoking command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation
+[30.046s] -- Install configuration: ""
+[30.046s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/urdf
+[30.046s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/urdf/sentry_simple.urdf
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/ament_index/resource_index/package_run_dependencies/sentry_simulation
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/ament_index/resource_index/parent_prefix_path/sentry_simulation
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/ament_prefix_path.sh
+[30.046s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/ament_prefix_path.dsv
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/path.sh
+[30.046s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/path.dsv
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.bash
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.sh
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.zsh
+[30.046s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.dsv
+[30.046s] -- Installing: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/package.dsv
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/ament_index/resource_index/packages/sentry_simulation
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/cmake/sentry_simulationConfig.cmake
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/cmake/sentry_simulationConfig-version.cmake
+[30.046s] -- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/package.xml
+[60.048s] Invoked command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation

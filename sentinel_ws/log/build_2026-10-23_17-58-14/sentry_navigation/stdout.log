@@ -1,0 +1,16 @@
+running develop
+running egg_info
+creating sentry_navigation.egg-info
+writing sentry_navigation.egg-info/PKG-INFO
+writing dependency_links to sentry_navigation.egg-info/dependency_links.txt
+writing entry points to sentry_navigation.egg-info/entry_points.txt
+writing requirements to sentry_navigation.egg-info/requires.txt
+writing top-level names to sentry_navigation.egg-info/top_level.txt
+writing manifest file 'sentry_navigation.egg-info/SOURCES.txt'
+reading manifest file 'sentry_navigation.egg-info/SOURCES.txt'
+writing manifest file 'sentry_navigation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ethan/RoboVigor/sentinel_ws/install/sentry_navigation/lib/python3.10/site-packages/sentry-navigation.egg-link (link to .)
+
+Installed /home/ethan/RoboVigor/sentinel_ws/build/sentry_navigation
+running symlink_data

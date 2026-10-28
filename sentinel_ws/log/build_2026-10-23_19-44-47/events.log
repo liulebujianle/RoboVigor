@@ -1,0 +1,337 @@
+[0.000000] (-) TimerEvent: {}
+[0.000165] (-) JobUnselected: {'identifier': 'rm_arena'}
+[0.000179] (sentry_simulation) JobQueued: {'identifier': 'sentry_simulation', 'dependencies': OrderedDict()}
+[0.000424] (sentry_simulation) JobStarted: {'identifier': 'sentry_simulation'}
+[0.003463] (sentry_simulation) JobProgress: {'identifier': 'sentry_simulation', 'progress': 'cmake'}
+[0.004274] (sentry_simulation) JobProgress: {'identifier': 'sentry_simulation', 'progress': 'build'}
+[0.004326] (sentry_simulation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation', '--', '-j24', '-l24'], 'cwd': '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('CODEX_CI', '1'), ('no_proxy', '*zhihu.com,*zhimg.com,*jd.com,100ime-iat-api.xfyun.cn,*360buyimg.com,localhost,*.local,127.*,10.*,172.16.*,172.17.*,172.18.*,172.19.*,172.2*,172.30.*,172.31.*,192.168.*'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'ethan'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ethan'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', '*zhihu.com,*zhimg.com,*jd.com,100ime-iat-api.xfyun.cn,*360buyimg.com,localhost,*.local,127.*,10.*,172.16.*,172.17.*,172.18.*,172.19.*,172.2*,172.30.*,172.31.*,192.168.*'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2340'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('https_proxy', 'http://127.0.0.1:7890/'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('CODEX_TOOL_CALL_ID', 'exec-7d03e94c-c99d-41ee-a09e-840046b3ec89'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ethan'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ethan'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ethan/.local/bin:/home/ethan/.codex/packages/app-server-daemon/releases/0.164.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.codex/tmp/arg0-linux/codex-arg0gnyoiq:/home/ethan/.codex/tmp/arg0/codex-arg0hHPeE0:/home/ethan/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ethan/.local/bin:/opt/ros/humble/bin:/home/ethan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/pc:@/tmp/.ICE-unix/2317,unix/pc:/tmp/.ICE-unix/2317'), ('CODEX_VERSION', '0.164.0'), ('CODEX_SESSION_ID', '01a16865-e0c7-7890-8e07-60932b7cbc47'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a919e55e_9fec_4c21_9eed_b27e46981054'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.107'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a16865-e0c7-7890-8e07-60932b7cbc47'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/ethan/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.015466] (sentry_simulation) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.069326] (sentry_simulation) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.096844] (sentry_simulation) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.097099] (sentry_simulation) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.097204] (sentry_simulation) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.098067] (sentry_simulation) StdoutLine: {'line': b'-- Generating done\n'}
+[0.098501] (sentry_simulation) StdoutLine: {'line': b'-- Build files have been written to: /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation\n'}
+[0.100006] (-) TimerEvent: {}
+[0.200277] (-) TimerEvent: {}
+[0.300541] (-) TimerEvent: {}
+[0.400841] (-) TimerEvent: {}
+[0.501107] (-) TimerEvent: {}
+[0.601442] (-) TimerEvent: {}
+[0.701767] (-) TimerEvent: {}
+[0.802030] (-) TimerEvent: {}
+[0.902259] (-) TimerEvent: {}
+[1.002516] (-) TimerEvent: {}
+[1.102743] (-) TimerEvent: {}
+[1.202992] (-) TimerEvent: {}
+[1.303284] (-) TimerEvent: {}
+[1.403613] (-) TimerEvent: {}
+[1.503701] (-) TimerEvent: {}
+[1.603961] (-) TimerEvent: {}
+[1.704174] (-) TimerEvent: {}
+[1.804404] (-) TimerEvent: {}
+[1.904807] (-) TimerEvent: {}
+[2.004948] (-) TimerEvent: {}
+[2.105035] (-) TimerEvent: {}
+[2.205120] (-) TimerEvent: {}
+[2.305465] (-) TimerEvent: {}
+[2.405730] (-) TimerEvent: {}
+[2.505976] (-) TimerEvent: {}
+[2.606070] (-) TimerEvent: {}
+[2.706398] (-) TimerEvent: {}
+[2.806801] (-) TimerEvent: {}
+[2.907044] (-) TimerEvent: {}
+[3.007365] (-) TimerEvent: {}
+[3.107728] (-) TimerEvent: {}
+[3.208026] (-) TimerEvent: {}
+[3.308438] (-) TimerEvent: {}
+[3.408850] (-) TimerEvent: {}
+[3.509165] (-) TimerEvent: {}
+[3.609710] (-) TimerEvent: {}
+[3.709965] (-) TimerEvent: {}
+[3.810324] (-) TimerEvent: {}
+[3.910574] (-) TimerEvent: {}
+[4.010840] (-) TimerEvent: {}
+[4.111086] (-) TimerEvent: {}
+[4.211359] (-) TimerEvent: {}
+[4.311579] (-) TimerEvent: {}
+[4.411807] (-) TimerEvent: {}
+[4.512103] (-) TimerEvent: {}
+[4.612338] (-) TimerEvent: {}
+[4.712576] (-) TimerEvent: {}
+[4.812819] (-) TimerEvent: {}
+[4.913054] (-) TimerEvent: {}
+[5.013286] (-) TimerEvent: {}
+[5.113492] (-) TimerEvent: {}
+[5.213762] (-) TimerEvent: {}
+[5.314140] (-) TimerEvent: {}
+[5.414460] (-) TimerEvent: {}
+[5.514725] (-) TimerEvent: {}
+[5.615031] (-) TimerEvent: {}
+[5.715263] (-) TimerEvent: {}
+[5.815563] (-) TimerEvent: {}
+[5.915761] (-) TimerEvent: {}
+[6.015987] (-) TimerEvent: {}
+[6.116311] (-) TimerEvent: {}
+[6.216703] (-) TimerEvent: {}
+[6.317085] (-) TimerEvent: {}
+[6.417476] (-) TimerEvent: {}
+[6.517879] (-) TimerEvent: {}
+[6.618193] (-) TimerEvent: {}
+[6.718589] (-) TimerEvent: {}
+[6.818909] (-) TimerEvent: {}
+[6.919250] (-) TimerEvent: {}
+[7.019614] (-) TimerEvent: {}
+[7.119995] (-) TimerEvent: {}
+[7.220341] (-) TimerEvent: {}
+[7.320603] (-) TimerEvent: {}
+[7.420932] (-) TimerEvent: {}
+[7.521217] (-) TimerEvent: {}
+[7.621645] (-) TimerEvent: {}
+[7.721944] (-) TimerEvent: {}
+[7.822186] (-) TimerEvent: {}
+[7.922621] (-) TimerEvent: {}
+[8.022941] (-) TimerEvent: {}
+[8.123237] (-) TimerEvent: {}
+[8.223577] (-) TimerEvent: {}
+[8.323917] (-) TimerEvent: {}
+[8.424354] (-) TimerEvent: {}
+[8.524710] (-) TimerEvent: {}
+[8.625072] (-) TimerEvent: {}
+[8.725395] (-) TimerEvent: {}
+[8.825783] (-) TimerEvent: {}
+[8.927739] (-) TimerEvent: {}
+[9.027845] (-) TimerEvent: {}
+[9.128013] (-) TimerEvent: {}
+[9.228266] (-) TimerEvent: {}
+[9.328409] (-) TimerEvent: {}
+[9.428735] (-) TimerEvent: {}
+[9.528822] (-) TimerEvent: {}
+[9.628909] (-) TimerEvent: {}
+[9.729173] (-) TimerEvent: {}
+[9.829460] (-) TimerEvent: {}
+[9.929585] (-) TimerEvent: {}
+[10.029673] (-) TimerEvent: {}
+[10.129757] (-) TimerEvent: {}
+[10.229839] (-) TimerEvent: {}
+[10.329924] (-) TimerEvent: {}
+[10.430009] (-) TimerEvent: {}
+[10.530094] (-) TimerEvent: {}
+[10.630178] (-) TimerEvent: {}
+[10.730261] (-) TimerEvent: {}
+[10.830344] (-) TimerEvent: {}
+[10.930433] (-) TimerEvent: {}
+[11.030499] (-) TimerEvent: {}
+[11.130630] (-) TimerEvent: {}
+[11.231022] (-) TimerEvent: {}
+[11.331378] (-) TimerEvent: {}
+[11.431685] (-) TimerEvent: {}
+[11.531933] (-) TimerEvent: {}
+[11.632263] (-) TimerEvent: {}
+[11.732574] (-) TimerEvent: {}
+[11.832954] (-) TimerEvent: {}
+[11.933325] (-) TimerEvent: {}
+[12.033692] (-) TimerEvent: {}
+[12.133972] (-) TimerEvent: {}
+[12.234263] (-) TimerEvent: {}
+[12.334490] (-) TimerEvent: {}
+[12.434731] (-) TimerEvent: {}
+[12.534818] (-) TimerEvent: {}
+[12.635027] (-) TimerEvent: {}
+[12.735393] (-) TimerEvent: {}
+[12.835689] (-) TimerEvent: {}
+[12.936158] (-) TimerEvent: {}
+[13.036488] (-) TimerEvent: {}
+[13.136826] (-) TimerEvent: {}
+[13.237134] (-) TimerEvent: {}
+[13.337441] (-) TimerEvent: {}
+[13.437783] (-) TimerEvent: {}
+[13.538079] (-) TimerEvent: {}
+[13.638365] (-) TimerEvent: {}
+[13.738733] (-) TimerEvent: {}
+[13.839027] (-) TimerEvent: {}
+[13.940696] (-) TimerEvent: {}
+[14.040799] (-) TimerEvent: {}
+[14.140890] (-) TimerEvent: {}
+[14.240979] (-) TimerEvent: {}
+[14.341247] (-) TimerEvent: {}
+[14.441413] (-) TimerEvent: {}
+[14.541677] (-) TimerEvent: {}
+[14.641768] (-) TimerEvent: {}
+[14.741854] (-) TimerEvent: {}
+[14.841939] (-) TimerEvent: {}
+[14.942024] (-) TimerEvent: {}
+[15.042109] (-) TimerEvent: {}
+[15.142194] (-) TimerEvent: {}
+[15.242348] (-) TimerEvent: {}
+[15.342722] (-) TimerEvent: {}
+[15.442938] (-) TimerEvent: {}
+[15.543302] (-) TimerEvent: {}
+[15.643790] (-) TimerEvent: {}
+[15.744078] (-) TimerEvent: {}
+[15.844367] (-) TimerEvent: {}
+[15.944755] (-) TimerEvent: {}
+[16.045214] (-) TimerEvent: {}
+[16.145526] (-) TimerEvent: {}
+[16.245715] (-) TimerEvent: {}
+[16.345951] (-) TimerEvent: {}
+[16.446260] (-) TimerEvent: {}
+[16.546475] (-) TimerEvent: {}
+[16.646774] (-) TimerEvent: {}
+[16.747026] (-) TimerEvent: {}
+[16.847271] (-) TimerEvent: {}
+[16.947498] (-) TimerEvent: {}
+[17.047713] (-) TimerEvent: {}
+[17.147939] (-) TimerEvent: {}
+[17.248181] (-) TimerEvent: {}
+[17.348604] (-) TimerEvent: {}
+[17.448891] (-) TimerEvent: {}
+[17.549221] (-) TimerEvent: {}
+[17.649530] (-) TimerEvent: {}
+[17.749686] (-) TimerEvent: {}
+[17.849776] (-) TimerEvent: {}
+[17.949870] (-) TimerEvent: {}
+[18.049957] (-) TimerEvent: {}
+[18.150214] (-) TimerEvent: {}
+[18.250511] (-) TimerEvent: {}
+[18.350754] (-) TimerEvent: {}
+[18.450871] (-) TimerEvent: {}
+[18.550971] (-) TimerEvent: {}
+[18.651207] (-) TimerEvent: {}
+[18.751517] (-) TimerEvent: {}
+[18.851692] (-) TimerEvent: {}
+[18.951948] (-) TimerEvent: {}
+[19.052247] (-) TimerEvent: {}
+[19.152529] (-) TimerEvent: {}
+[19.252701] (-) TimerEvent: {}
+[19.352821] (-) TimerEvent: {}
+[19.452908] (-) TimerEvent: {}
+[19.552995] (-) TimerEvent: {}
+[19.653141] (-) TimerEvent: {}
+[19.753285] (-) TimerEvent: {}
+[19.853429] (-) TimerEvent: {}
+[19.953724] (-) TimerEvent: {}
+[20.053957] (-) TimerEvent: {}
+[20.154143] (-) TimerEvent: {}
+[20.254348] (-) TimerEvent: {}
+[20.354654] (-) TimerEvent: {}
+[20.454911] (-) TimerEvent: {}
+[20.555231] (-) TimerEvent: {}
+[20.655605] (-) TimerEvent: {}
+[20.755822] (-) TimerEvent: {}
+[20.855939] (-) TimerEvent: {}
+[20.956254] (-) TimerEvent: {}
+[21.056528] (-) TimerEvent: {}
+[21.156866] (-) TimerEvent: {}
+[21.256966] (-) TimerEvent: {}
+[21.357053] (-) TimerEvent: {}
+[21.457362] (-) TimerEvent: {}
+[21.557648] (-) TimerEvent: {}
+[21.657774] (-) TimerEvent: {}
+[21.758011] (-) TimerEvent: {}
+[21.858273] (-) TimerEvent: {}
+[21.958524] (-) TimerEvent: {}
+[22.058696] (-) TimerEvent: {}
+[22.158995] (-) TimerEvent: {}
+[22.259272] (-) TimerEvent: {}
+[22.359499] (-) TimerEvent: {}
+[22.459601] (-) TimerEvent: {}
+[22.559945] (-) TimerEvent: {}
+[22.660273] (-) TimerEvent: {}
+[22.760651] (-) TimerEvent: {}
+[22.860772] (-) TimerEvent: {}
+[22.961011] (-) TimerEvent: {}
+[23.061283] (-) TimerEvent: {}
+[23.161506] (-) TimerEvent: {}
+[23.261707] (-) TimerEvent: {}
+[23.361973] (-) TimerEvent: {}
+[23.462091] (-) TimerEvent: {}
+[23.562411] (-) TimerEvent: {}
+[23.662630] (-) TimerEvent: {}
+[23.762736] (-) TimerEvent: {}
+[23.863109] (-) TimerEvent: {}
+[23.963436] (-) TimerEvent: {}
+[24.063689] (-) TimerEvent: {}
+[24.163989] (-) TimerEvent: {}
+[24.264178] (-) TimerEvent: {}
+[24.364466] (-) TimerEvent: {}
+[24.464717] (-) TimerEvent: {}
+[24.564904] (-) TimerEvent: {}
+[24.665001] (-) TimerEvent: {}
+[24.765311] (-) TimerEvent: {}
+[24.865643] (-) TimerEvent: {}
+[24.965896] (-) TimerEvent: {}
+[25.066221] (-) TimerEvent: {}
+[25.166502] (-) TimerEvent: {}
+[25.266743] (-) TimerEvent: {}
+[25.366995] (-) TimerEvent: {}
+[25.467266] (-) TimerEvent: {}
+[25.567533] (-) TimerEvent: {}
+[25.667832] (-) TimerEvent: {}
+[25.768097] (-) TimerEvent: {}
+[25.868381] (-) TimerEvent: {}
+[25.968640] (-) TimerEvent: {}
+[26.068898] (-) TimerEvent: {}
+[26.169138] (-) TimerEvent: {}
+[26.269381] (-) TimerEvent: {}
+[26.369630] (-) TimerEvent: {}
+[26.469760] (-) TimerEvent: {}
+[26.569847] (-) TimerEvent: {}
+[26.669952] (-) TimerEvent: {}
+[26.770057] (-) TimerEvent: {}
+[26.870423] (-) TimerEvent: {}
+[26.970652] (-) TimerEvent: {}
+[27.070764] (-) TimerEvent: {}
+[27.170853] (-) TimerEvent: {}
+[27.270946] (-) TimerEvent: {}
+[27.371032] (-) TimerEvent: {}
+[27.471120] (-) TimerEvent: {}
+[27.571351] (-) TimerEvent: {}
+[27.671672] (-) TimerEvent: {}
+[27.771773] (-) TimerEvent: {}
+[27.872023] (-) TimerEvent: {}
+[27.972202] (-) TimerEvent: {}
+[28.072527] (-) TimerEvent: {}
+[28.172722] (-) TimerEvent: {}
+[28.272915] (-) TimerEvent: {}
+[28.373197] (-) TimerEvent: {}
+[28.473507] (-) TimerEvent: {}
+[28.573686] (-) TimerEvent: {}
+[28.673933] (-) TimerEvent: {}
+[28.774185] (-) TimerEvent: {}
+[28.874579] (-) TimerEvent: {}
+[28.974836] (-) TimerEvent: {}
+[29.074954] (-) TimerEvent: {}
+[29.175042] (-) TimerEvent: {}
+[29.275357] (-) TimerEvent: {}
+[29.375582] (-) TimerEvent: {}
+[29.475876] (-) TimerEvent: {}
+[29.576143] (-) TimerEvent: {}
+[29.676410] (-) TimerEvent: {}
+[29.776671] (-) TimerEvent: {}
+[29.876939] (-) TimerEvent: {}
+[29.977297] (-) TimerEvent: {}
+[30.029980] (sentry_simulation) CommandEnded: {'returncode': 0}
+[30.030710] (sentry_simulation) JobProgress: {'identifier': 'sentry_simulation', 'progress': 'install'}
+[30.034472] (sentry_simulation) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation'], 'cwd': '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('CODEX_CI', '1'), ('no_proxy', '*zhihu.com,*zhimg.com,*jd.com,100ime-iat-api.xfyun.cn,*360buyimg.com,localhost,*.local,127.*,10.*,172.16.*,172.17.*,172.18.*,172.19.*,172.2*,172.30.*,172.31.*,192.168.*'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'ethan'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ethan'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', '*zhihu.com,*zhimg.com,*jd.com,100ime-iat-api.xfyun.cn,*360buyimg.com,localhost,*.local,127.*,10.*,172.16.*,172.17.*,172.18.*,172.19.*,172.2*,172.30.*,172.31.*,192.168.*'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2340'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('https_proxy', 'http://127.0.0.1:7890/'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('CODEX_TOOL_CALL_ID', 'exec-7d03e94c-c99d-41ee-a09e-840046b3ec89'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ethan'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ethan'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ethan/.local/bin:/home/ethan/.codex/packages/app-server-daemon/releases/0.164.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.codex/tmp/arg0-linux/codex-arg0gnyoiq:/home/ethan/.codex/tmp/arg0/codex-arg0hHPeE0:/home/ethan/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ethan/.local/bin:/opt/ros/humble/bin:/home/ethan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/pc:@/tmp/.ICE-unix/2317,unix/pc:/tmp/.ICE-unix/2317'), ('CODEX_VERSION', '0.164.0'), ('CODEX_SESSION_ID', '01a16865-e0c7-7890-8e07-60932b7cbc47'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a919e55e_9fec_4c21_9eed_b27e46981054'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.107'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a16865-e0c7-7890-8e07-60932b7cbc47'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/ethan/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[30.038227] (sentry_simulation) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[30.038365] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/urdf\n'}
+[30.038393] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/urdf/sentry_simple.urdf\n'}
+[30.038415] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/ament_index/resource_index/package_run_dependencies/sentry_simulation\n'}
+[30.038436] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/ament_index/resource_index/parent_prefix_path/sentry_simulation\n'}
+[30.038456] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/ament_prefix_path.sh\n'}
+[30.038476] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/ament_prefix_path.dsv\n'}
+[30.038498] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/path.sh\n'}
+[30.038518] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/environment/path.dsv\n'}
+[30.038537] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.bash\n'}
+[30.038559] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.sh\n'}
+[30.038578] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.zsh\n'}
+[30.038597] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/local_setup.dsv\n'}
+[30.038615] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/package.dsv\n'}
+[30.038633] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/ament_index/resource_index/packages/sentry_simulation\n'}
+[30.038651] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/cmake/sentry_simulationConfig.cmake\n'}
+[30.038680] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/cmake/sentry_simulationConfig-version.cmake\n'}
+[30.038700] (sentry_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/package.xml\n'}
+[30.038719] (sentry_simulation) CommandEnded: {'returncode': 0}
+[30.044327] (sentry_simulation) JobEnded: {'identifier': 'sentry_simulation', 'rc': 0}
+[30.044540] (-) EventReactorShutdown: {}

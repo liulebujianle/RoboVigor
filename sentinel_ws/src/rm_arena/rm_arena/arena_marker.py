@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 
-import math
+"""Publish the installed RMUL field mesh for RViz."""
+
 from pathlib import Path
+
+from ament_index_python.packages import get_package_share_directory
 
 import rclpy
 from rclpy.node import Node
@@ -16,9 +19,10 @@ from visualization_msgs.msg import Marker
 
 
 class ArenaMarker(Node):
+    """Publish the field in world coordinates with embedded materials."""
 
     def __init__(self):
-
+        """Load the installed mesh and initialize the latched publisher."""
         super().__init__('arena_marker')
 
         # ==============================
@@ -41,26 +45,26 @@ class ArenaMarker(Node):
         )
 
         # ==============================
-        # 3. 获取 STL 路径
+        # 3. 获取 STEP DAE 路径
         # ==============================
 
-        self.stl_path = (
-            Path.home()
-            / 'RoboVigor'
-            / 'gazebo_arena'
+        self.mesh_path = (
+            Path(get_package_share_directory('rm_arena'))
+            / 'models'
+            / 'rmul_2027'
             / 'meshes'
-            / 'rmul_2027.stl'
+            / 'step_textured.dae'
         )
 
-        if not self.stl_path.is_file():
+        if not self.mesh_path.is_file():
             raise FileNotFoundError(
-                f'STL 文件不存在：{self.stl_path}'
+                f'STEP DAE 文件不存在：{self.mesh_path}'
             )
 
-        self.mesh_uri = self.stl_path.as_uri()
+        self.mesh_uri = self.mesh_path.as_uri()
 
         self.get_logger().info(
-            f'STL 模型路径：{self.mesh_uri}'
+            f'STEP DAE 模型路径：{self.mesh_uri}'
         )
 
         # ==============================
@@ -75,7 +79,7 @@ class ArenaMarker(Node):
         self.publish_marker()
 
     def publish_marker(self):
-
+        """Publish one field mesh with metre scale and identity pose."""
         marker = Marker()
 
         # 坐标系
@@ -89,41 +93,40 @@ class ArenaMarker(Node):
         marker.action = Marker.ADD
 
         marker.mesh_resource = self.mesh_uri
+        marker.mesh_use_embedded_materials = True
 
         # ==============================
         # 5. 场地位置
         # ==============================
 
-        marker.pose.position.x = -6.3
-        marker.pose.position.y = -4.3
-        marker.pose.position.z = 0.52
+        marker.pose.position.x = 0.0
+        marker.pose.position.y = 0.0
+        marker.pose.position.z = 0.0
 
         # ==============================
         # 6. 场地旋转
         # ==============================
 
-        angle = math.radians(-90)
-
-        marker.pose.orientation.x = math.sin(angle / 2)
+        marker.pose.orientation.x = 0.0
         marker.pose.orientation.y = 0.0
         marker.pose.orientation.z = 0.0
-        marker.pose.orientation.w = math.cos(angle / 2)
+        marker.pose.orientation.w = 1.0
 
         # ==============================
         # 7. 缩放比例
         # ==============================
 
-        marker.scale.x = 0.001
-        marker.scale.y = 0.001
-        marker.scale.z = 0.001
+        marker.scale.x = 1.0
+        marker.scale.y = 1.0
+        marker.scale.z = 1.0
 
         # ==============================
         # 8. 颜色
         # ==============================
 
-        marker.color.r = 0.8
-        marker.color.g = 0.8
-        marker.color.b = 0.8
+        marker.color.r = 1.0
+        marker.color.g = 1.0
+        marker.color.b = 1.0
         marker.color.a = 1.0
 
         # 发布
@@ -131,7 +134,7 @@ class ArenaMarker(Node):
 
 
 def main(args=None):
-
+    """Run the field marker node."""
     rclpy.init(args=args)
 
     node = ArenaMarker()

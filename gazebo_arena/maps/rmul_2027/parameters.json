@@ -1,0 +1,153 @@
+{
+  "geometry_authority": "Official user-supplied STEP R1; step_verified and step_measurements.json describe current geometry. manual_reference retains previous PDF reconstruction inputs for audit only.",
+  "units": "m (manual drawings use mm)",
+  "coordinate_frame": "southwest inner corner = (0,0), +x east, +y north, finished main floor G = z0; blue = (12-x,8-y)",
+  "step_verified": {
+    "source": "RMUL2027_3V3_V1.0.0.stp",
+    "sha256": "7d47c1b6a6a0253a732e46cb122bb84410b11d5134bcb5658104299db4a48ca4",
+    "inner_field_size": [
+      12,
+      8
+    ],
+    "outer_field_size": [
+      12.6,
+      8.6
+    ],
+    "perimeter_thickness": 0.3,
+    "perimeter_height": 0.42,
+    "supply_surface_z": 0.003,
+    "workbench_top_z": 0.403,
+    "highland_deck_z": 0.2,
+    "highland_control_top_z": 0.2012,
+    "highland_symbol_top_z": 0.2016,
+    "center_control_top_z": 0.01,
+    "center_symbol_top_z": 0.011,
+    "tunnel_floor_z": 0.0005,
+    "tunnel_underside_z": 0.25,
+    "tunnel_geometric_clearance": 0.2495,
+    "tunnel_roof_z": 0.27,
+    "tunnel_roof_length": 0.96,
+    "red_roof_xy_bounds": [
+      3.325,
+      6.98,
+      3.675,
+      7.94
+    ],
+    "measurements_file": "step_measurements.json"
+  },
+  "effective_simulation": {
+    "spawn_z": 0.001,
+    "floor_friction_mu": 0.8,
+    "map_resolution": 0.025,
+    "note": "Simulation choices, not CAD material properties. Spawn base clears the STEP supply surface at 3mm."
+  },
+  "appearance": {
+    "source_figure": "Fig 3-1, PDF page 23 embedded Im1.jp2, 1232x769 pixels",
+    "inner_field_crop_pixels": [
+      111,
+      58,
+      1120,
+      730
+    ],
+    "method": "Use the embedded official rendering as a UV atlas, preserving actual source pixels and red/blue/green markings. Source has baked lighting/shadows and finite resolution; rendered colors depend on lighting.",
+    "schematic_colors": "Blue control fill and yellow/green hatching in dimension diagrams are explanatory overlays, not physical floor colors. Physical appearance follows Figs 3-1 to 3-3.",
+    "step": "Default: PDF surface style plus actual STEP glyphs; optional rmul_2027_native uses actual AP214 face colors. Face color is not a physical material measurement."
+  },
+  "manual_reference": {
+    "source": "RoboMaster 2027 机甲大师高校联盟赛比赛规则手册 V1.0.0（20261015）",
+    "section": "3.2, printed pages 21-28; PDF pages 22-29",
+    "specified": {
+      "field_size": [
+        12.0,
+        8.0
+      ],
+      "pvc_thickness": 0.002,
+      "supply_size": [
+        2.5,
+        2.0
+      ],
+      "workbench_size": [
+        0.75,
+        0.45,
+        0.4
+      ],
+      "workbench_straight_edges": [
+        0.65,
+        0.35
+      ],
+      "highland_size": [
+        2.0,
+        4.06,
+        0.2
+      ],
+      "highland_southwest": [
+        2.5,
+        3.0
+      ],
+      "highland_parapet_width": 0.15,
+      "highland_parapet_length": 1.8,
+      "highland_parapet_south_offset": 0.9,
+      "highland_parapet_height_above_deck": 0.2,
+      "highland_control_size": [
+        1.2,
+        1.2
+      ],
+      "highland_control_southwest_offset": [
+        0.4,
+        1.2
+      ],
+      "center_control_size": [
+        3.0,
+        3.0
+      ],
+      "center_control_southwest": [
+        4.5,
+        2.5
+      ],
+      "tunnel_clear_span": 0.8,
+      "tunnel_clear_height": 0.25,
+      "tunnel_roof_top": 0.27,
+      "metal_strip_width": 0.35,
+      "metal_strip_west_offset": 0.825,
+      "interaction_card_size": [
+        0.092,
+        0.112
+      ],
+      "interaction_card_gap": [
+        0.028,
+        0.07
+      ]
+    },
+    "derived": {
+      "highland_north_y": 7.06,
+      "tunnel_outer_depth": 0.94,
+      "tunnel_far_support_depth": 0.14,
+      "workbench_corner_chamfer": 0.05,
+      "note": "Algebraic differences of specified dimensions, not additional measured dimensions."
+    },
+    "inferred": {
+      "perimeter_thickness": 0.3,
+      "perimeter_height": 0.4,
+      "floor_substructure_thickness": 0.1,
+      "highland_north_chamfer": 0.14,
+      "metal_transition_length": 0.14,
+      "floor_friction_mu": 0.8,
+      "map_resolution": 0.025,
+      "spawn_xy": [
+        1.25,
+        6.75
+      ],
+      "note": "Not specified by the manual. Geometry follows the figures; friction and spawn are simulation settings. No standard RGB/PBR/roughness or exact CAD is supplied."
+    }
+  },
+  "limitations": [
+    "STEP supplies previously undocumented geometry. CAD-to-physical-field identity and unpublished material properties still cannot be certified.",
+    "General dimensional tolerance +/-10%; battlefield angle +/-3 degrees; prop angle +/-1 degree; structures smaller than 100mm +/-5mm. Use nominal values, not random perturbations.",
+    "Interaction cards are under the extra 2mm PVC, so hidden card arrays are metadata, not visible checkerboard decorations.",
+    "The original robot uses planar VelocityControl with disabled gravity, no wheel contact/suspension/terrain following. Do not claim it can climb the 200mm deck.",
+    "The existing planar lidar is at 279.62mm: it can see over a 200mm deck and 270mm tunnel roof. A lidar-only occupancy slice differs from a chassis traversability map.",
+    "The supplied PGM conservatively blocks highlands and tunnel roof footprints for this planar robot. It is a model projection, not a SLAM result or localization-validated map.",
+    "Referee logic, health replenishment, control capture, RFID dead zones, bullets, external operator rooms and material-dependent magnetic effects are not simulated by this scenery."
+  ],
+  "source_sha256": "a8fd7b7f6ea5212b9e4dfa590b478827992598d91912ed671653c8bdd9727fd6"
+}

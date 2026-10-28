@@ -1,0 +1,23 @@
+Start testing: Oct 23 20:13 CST
+----------------------------------------------------------
+1/5 Testing: keyboard_control_logic
+1/5 Test: keyboard_control_logic
+Command: "/usr/bin/python3" "-m" "unittest" "discover" "-s" "/home/ethan/RoboVigor/sentinel_ws/src/sentry_simulation/test" "-p" "test_keyboard_control.py"
+Directory: /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation
+"keyboard_control_logic" start time: Oct 23 20:13 CST
+Output:
+----------------------------------------------------------
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"keyboard_control_logic" end time: Oct 23 20:13 CST
+"keyboard_control_logic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 23 20:13 CST

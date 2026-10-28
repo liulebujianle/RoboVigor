@@ -1,0 +1,3 @@
+[console_scripts]
+arena_marker = rm_arena.arena_marker:main
+

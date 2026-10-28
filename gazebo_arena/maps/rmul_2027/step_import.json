@@ -1,0 +1,24 @@
+{
+  "source": "RMUL2027_3V3_V1.0.0.stp",
+  "source_sha256": "7d47c1b6a6a0253a732e46cb122bb84410b11d5134bcb5658104299db4a48ca4",
+  "geometry": "OCCT tessellation of the full official B-rep, including frame cavities and perimeter cap",
+  "faces": 1274,
+  "triangles": 3811,
+  "bounds_m": [
+    -0.3,
+    -0.3,
+    -0.1,
+    12.3,
+    8.3,
+    0.42
+  ],
+  "linear_deflection_mm": 0.1,
+  "transform": "sim x=(6000-X)/1000, sim y=(4000-Z)/1000, sim z=-Y/1000; CAD mm, -Y up; red NW by AP214 red marker",
+  "default_appearance": "PDF top-surface atlas with STEP glyph colors; no geometry flattened",
+  "native_appearance": "AP214 source face colors in rmul_2027_native world",
+  "simulation_assumptions": {
+    "friction_mu": 0.8,
+    "map_projection_height_threshold_m": 0.1,
+    "robot_dynamics": "unchanged planar VelocityControl; no terrain following"
+  }
+}

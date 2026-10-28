@@ -1,6 +1,9 @@
-from setuptools import setup
+"""Install the ROS package and its complete field resource tree."""
+
 from glob import glob
 import os
+
+from setuptools import setup
 
 package_name = 'rm_arena'
 
@@ -42,7 +45,13 @@ setup(
             glob('rviz/*.rviz')
         ),
 
-    ],
+    ] + [
+        (os.path.join('share', package_name, directory),
+         [os.path.join(directory, filename) for filename in sorted(filenames)])
+        for root in ('models', 'worlds', 'docs')
+        for directory, _, filenames in os.walk(root)
+        if filenames
+    ] + [('share/' + package_name, ['README.md'])],
 
     install_requires=['setuptools'],
 

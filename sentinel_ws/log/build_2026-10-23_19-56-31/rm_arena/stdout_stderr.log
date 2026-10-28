@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/rm_arena/rm_arena.egg-info/PKG-INFO
+writing dependency_links to ../../build/rm_arena/rm_arena.egg-info/dependency_links.txt
+writing entry points to ../../build/rm_arena/rm_arena.egg-info/entry_points.txt
+writing requirements to ../../build/rm_arena/rm_arena.egg-info/requires.txt
+writing top-level names to ../../build/rm_arena/rm_arena.egg-info/top_level.txt
+reading manifest file '../../build/rm_arena/rm_arena.egg-info/SOURCES.txt'
+writing manifest file '../../build/rm_arena/rm_arena.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/simulation.launch.py -> /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/launch
+running install_egg_info
+removing '/home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm_arena-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/rm_arena/rm_arena.egg-info to /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm_arena-0.0.1-py3.10.egg-info
+running install_scripts
+Installing arena_marker script to /home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/rm_arena
+writing list of installed files to '/home/ethan/RoboVigor/sentinel_ws/build/rm_arena/install.log'

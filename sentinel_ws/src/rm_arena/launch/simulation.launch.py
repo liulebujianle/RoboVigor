@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# ROS2 Humble
-# Gazebo Classic 11 + RViz2
+"""Launch the installed field with ROS 2 Humble, Gazebo Classic and RViz."""
 
+import os
 from pathlib import Path
 
 from launch import LaunchDescription
@@ -17,6 +17,7 @@ from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
 
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 
 from ament_index_python.packages import (
     get_package_share_directory
@@ -24,7 +25,7 @@ from ament_index_python.packages import (
 
 
 def generate_launch_description():
-
+    """Resolve all field resources from the installed package share directory."""
     # 获取 ROS2 功能包安装目录
     package_dir = Path(
         get_package_share_directory('rm_arena')
@@ -32,9 +33,7 @@ def generate_launch_description():
 
     # Gazebo World 文件
     world_file = (
-        Path.home()
-        / 'RoboVigor'
-        / 'gazebo_arena'
+        package_dir
         / 'worlds'
         / 'arena.world'
     )
@@ -62,15 +61,24 @@ def generate_launch_description():
         cmd=[
             'gazebo',
             '--verbose',
+            # 初始化 ROS 2、发布仿真时钟，并提供模型生成服务。
+            '-s', 'libgazebo_ros_init.so',
+            '-s', 'libgazebo_ros_factory.so',
             str(world_file)
         ],
         output='screen',
+        additional_env={
+            'GAZEBO_MODEL_PATH': (
+                str(world_file.parents[1] / 'models')
+                + os.pathsep + os.environ.get('GAZEBO_MODEL_PATH', '')
+            ),
+        },
         condition=IfCondition(
             LaunchConfiguration('gazebo')
         )
     )
 
-    # 发布 STL 场地
+    # 发布新 STEP 场地
     marker_node = Node(
         package='rm_arena',
         executable='arena_marker',
@@ -84,6 +92,11 @@ def generate_launch_description():
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
+        parameters=[{
+            'use_sim_time': ParameterValue(
+                LaunchConfiguration('gazebo'), value_type=bool
+            ),
+        }],
         arguments=[
             '-d',
             str(rviz_file)

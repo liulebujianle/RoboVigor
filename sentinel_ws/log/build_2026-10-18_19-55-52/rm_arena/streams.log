@@ -1,0 +1,39 @@
+[0.236s] Invoking command in '/home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena': PYTHONPATH=/home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build
+[0.324s] running develop
+[0.372s] Removing /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm-arena.egg-link (link to .)
+[0.372s] Link points to ['/home/ethan/RoboVigor/sentinel_ws/build/rm_arena', '.']: uninstall aborted
+[0.381s] Invoked command in '/home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena' returned '0': PYTHONPATH=/home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build
+[0.381s] Invoking command in '/home/ethan/桌面/RoboVigor/sentinel_ws/src/rm_arena': PYTHONPATH=/home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rm_arena build --build-base /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build install --record /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/install.log --install-scripts $base/lib/rm_arena --single-version-externally-managed install_data --force
+[0.465s] running egg_info
+[0.465s] writing ../../build/rm_arena/rm_arena.egg-info/PKG-INFO
+[0.466s] writing dependency_links to ../../build/rm_arena/rm_arena.egg-info/dependency_links.txt
+[0.466s] writing entry points to ../../build/rm_arena/rm_arena.egg-info/entry_points.txt
+[0.466s] writing requirements to ../../build/rm_arena/rm_arena.egg-info/requires.txt
+[0.466s] writing top-level names to ../../build/rm_arena/rm_arena.egg-info/top_level.txt
+[0.467s] reading manifest file '../../build/rm_arena/rm_arena.egg-info/SOURCES.txt'
+[0.467s] writing manifest file '../../build/rm_arena/rm_arena.egg-info/SOURCES.txt'
+[0.467s] running build
+[0.467s] running build_py
+[0.467s] creating /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build
+[0.467s] creating /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build/lib
+[0.467s] creating /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build/lib/rm_arena
+[0.467s] copying rm_arena/arena_marker.py -> /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build/lib/rm_arena
+[0.467s] copying rm_arena/__init__.py -> /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build/lib/rm_arena
+[0.467s] running install
+[0.467s] running install_lib
+[0.468s] creating /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm_arena
+[0.468s] copying /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build/lib/rm_arena/arena_marker.py -> /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm_arena
+[0.468s] copying /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build/lib/rm_arena/__init__.py -> /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm_arena
+[0.468s] byte-compiling /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm_arena/arena_marker.py to arena_marker.cpython-310.pyc
+[0.468s] byte-compiling /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm_arena/__init__.py to __init__.cpython-310.pyc
+[0.468s] running install_data
+[0.468s] copying resource/rm_arena -> /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/share/ament_index/resource_index/packages
+[0.469s] copying package.xml -> /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena
+[0.469s] copying launch/simulation.launch.py -> /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/launch
+[0.469s] copying rviz/arena.rviz -> /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/share/rm_arena/rviz
+[0.470s] running install_egg_info
+[0.471s] Copying ../../build/rm_arena/rm_arena.egg-info to /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages/rm_arena-0.0.1-py3.10.egg-info
+[0.471s] running install_scripts
+[0.479s] Installing arena_marker script to /home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/rm_arena
+[0.479s] writing list of installed files to '/home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/install.log'
+[0.488s] Invoked command in '/home/ethan/桌面/RoboVigor/sentinel_ws/src/rm_arena' returned '0': PYTHONPATH=/home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/桌面/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rm_arena build --build-base /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/build install --record /home/ethan/桌面/RoboVigor/sentinel_ws/build/rm_arena/install.log --install-scripts $base/lib/rm_arena --single-version-externally-managed install_data --force
