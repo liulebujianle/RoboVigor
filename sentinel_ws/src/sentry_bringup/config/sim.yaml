@@ -1,0 +1,7 @@
+# Defaults explicitly loaded by sim_teleop.launch.py.
+gui: true
+rviz: true
+keyboard: true
+linear_speed: 0.8
+angular_speed: 1.5
+spin_speed: 3.0

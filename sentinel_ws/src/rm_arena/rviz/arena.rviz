@@ -1,83 +1,124 @@
 Panels:
-  - Class: rviz_common/Displays
-    Help Height: 78
-    Name: Displays
-    Property Tree Widget:
-      Expanded:
-        - /Global Options1
-        - /Status1
-        - /Marker1
-        - /Marker1/Topic1
-      Splitter Ratio: 0.5
-    Tree Height: 549
-  - Class: rviz_common/Selection
-    Name: Selection
-  - Class: rviz_common/Tool Properties
+- Class: rviz_common/Displays
+  Help Height: 78
+  Name: Displays
+  Property Tree Widget:
     Expanded:
-      - /2D Goal Pose1
-      - /Publish Point1
-    Name: Tool Properties
-    Splitter Ratio: 0.5886790156364441
-  - Class: rviz_common/Views
-    Expanded:
-      - /Current View1
-    Name: Views
+    - /Global Options1
+    - /Status1
+    - /Marker1
+    - /Marker1/Topic1
     Splitter Ratio: 0.5
-  - Class: rviz_common/Time
-    Experimental: false
-    Name: Time
-    SyncMode: 0
-    SyncSource: ""
+  Tree Height: 549
+- Class: rviz_common/Selection
+  Name: Selection
+- Class: rviz_common/Tool Properties
+  Expanded:
+  - /2D Goal Pose1
+  - /Publish Point1
+  Name: Tool Properties
+  Splitter Ratio: 0.5886790156364441
+- Class: rviz_common/Views
+  Expanded:
+  - /Current View1
+  Name: Views
+  Splitter Ratio: 0.5
+- Class: rviz_common/Time
+  Experimental: false
+  Name: Time
+  SyncMode: 0
+  SyncSource: ''
 Visualization Manager:
-  Class: ""
+  Class: ''
   Displays:
-    - Alpha: 0.5
-      Cell Size: 1
-      Class: rviz_default_plugins/Grid
-      Color: 160; 160; 164
-      Enabled: true
-      Line Style:
-        Line Width: 0.029999999329447746
-        Value: Lines
-      Name: Grid
-      Normal Cell Count: 0
-      Offset:
-        X: 6
-        Y: 4
-        Z: 0
-      Plane: XY
-      Plane Cell Count: 16
-      Reference Frame: <Fixed Frame>
-      Value: true
-    - Class: rviz_default_plugins/RobotModel
-      Enabled: true
-      Name: RobotModel
-      Alpha: 1
-      Visual Enabled: true
-      Collision Enabled: false
-      Description Source: Topic
-      Description Topic:
-        Value: /robot_description
-        Depth: 1
-        Durability Policy: Transient Local
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-      TF Prefix: ""
-      Update Interval: 0
-      Value: true
-    - Class: rviz_default_plugins/Marker
-      Enabled: true
-      Name: Marker
-      Namespaces:
-        rmul_2027: true
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /arena_marker
-      Value: true
+  - Alpha: 0.5
+    Cell Size: 1
+    Class: rviz_default_plugins/Grid
+    Color: 160; 160; 164
+    Enabled: true
+    Line Style:
+      Line Width: 0.029999999329447746
+      Value: Lines
+    Name: Grid
+    Normal Cell Count: 0
+    Offset:
+      X: 6
+      Y: 4
+      Z: 0
+    Plane: XY
+    Plane Cell Count: 16
+    Reference Frame: <Fixed Frame>
+    Value: true
+  - Class: rviz_default_plugins/RobotModel
+    Enabled: true
+    Name: RobotModel
+    Alpha: 1.0
+    Visual Enabled: true
+    Collision Enabled: false
+    Description Source: Topic
+    Description Topic:
+      Value: /robot_description
+      Depth: 1
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Reliability Policy: Reliable
+    TF Prefix: ''
+    Update Interval: 0
+    Value: true
+  - Class: rviz_default_plugins/Marker
+    Enabled: true
+    Name: Marker
+    Namespaces:
+      rmul_2027: true
+    Topic:
+      Depth: 5
+      Durability Policy: Volatile
+      Filter size: 10
+      History Policy: Keep Last
+      Reliability Policy: Reliable
+      Value: /arena_marker
+    Value: true
+  - Class: rviz_default_plugins/TF
+    Name: TF
+    Enabled: true
+    Show Axes: true
+    Show Names: false
+    Show Arrows: false
+    Marker Scale: 0.6
+    Frame Timeout: 15
+    Update Interval: 0
+    Frames:
+      All Enabled: false
+      world:
+        Value: false
+      odom:
+        Value: false
+      base_link:
+        Value: false
+      chassis_link:
+        Value: false
+      gimbal_yaw_link:
+        Value: false
+      wheel_1_link:
+        Value: true
+      wheel_2_link:
+        Value: true
+      wheel_3_link:
+        Value: true
+      wheel_4_link:
+        Value: true
+      lidar_link:
+        Value: true
+      lidar_aux_link:
+        Value: true
+      camera_link:
+        Value: true
+      camera_optical_frame:
+        Value: false
+      gun_link:
+        Value: true
+      muzzle_link:
+        Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -85,38 +126,38 @@ Visualization Manager:
     Frame Rate: 30
   Name: root
   Tools:
-    - Class: rviz_default_plugins/Interact
-      Hide Inactive Objects: true
-    - Class: rviz_default_plugins/MoveCamera
-    - Class: rviz_default_plugins/Select
-    - Class: rviz_default_plugins/FocusCamera
-    - Class: rviz_default_plugins/Measure
-      Line color: 128; 128; 0
-    - Class: rviz_default_plugins/SetInitialPose
-      Covariance x: 0.25
-      Covariance y: 0.25
-      Covariance yaw: 0.06853891909122467
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /initialpose
-    - Class: rviz_default_plugins/SetGoal
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /goal_pose
-    - Class: rviz_default_plugins/PublishPoint
-      Single click: true
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /clicked_point
+  - Class: rviz_default_plugins/Interact
+    Hide Inactive Objects: true
+  - Class: rviz_default_plugins/MoveCamera
+  - Class: rviz_default_plugins/Select
+  - Class: rviz_default_plugins/FocusCamera
+  - Class: rviz_default_plugins/Measure
+    Line color: 128; 128; 0
+  - Class: rviz_default_plugins/SetInitialPose
+    Covariance x: 0.25
+    Covariance y: 0.25
+    Covariance yaw: 0.06853891909122467
+    Topic:
+      Depth: 5
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Reliability Policy: Reliable
+      Value: /initialpose
+  - Class: rviz_default_plugins/SetGoal
+    Topic:
+      Depth: 5
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Reliability Policy: Reliable
+      Value: /goal_pose
+  - Class: rviz_default_plugins/PublishPoint
+    Single click: true
+    Topic:
+      Depth: 5
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Reliability Policy: Reliable
+      Value: /clicked_point
   Transformation:
     Current:
       Class: rviz_default_plugins/TF
@@ -143,7 +184,7 @@ Visualization Manager:
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
       Yaw: 0.7803980112075806
-    Saved: ~
+    Saved: null
 Window Geometry:
   Displays:
     collapsed: false

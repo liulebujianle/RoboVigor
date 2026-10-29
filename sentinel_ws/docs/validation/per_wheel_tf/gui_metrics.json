@@ -1,0 +1,29 @@
+{
+  "public_frames": [
+    "base_link",
+    "camera_link",
+    "camera_optical_frame",
+    "chassis_link",
+    "gimbal_yaw_link",
+    "gun_link",
+    "lidar_aux_link",
+    "lidar_link",
+    "muzzle_link",
+    "odom",
+    "wheel_1_link",
+    "wheel_2_link",
+    "wheel_3_link",
+    "wheel_4_link"
+  ],
+  "display_meshes": 118,
+  "physics_continuous_joints": 117,
+  "position": [
+    1.24979299431279,
+    6.750362441386785,
+    0.11429493989952624
+  ],
+  "launch_pid": 45885,
+  "restarted": [
+    42397
+  ]
+}

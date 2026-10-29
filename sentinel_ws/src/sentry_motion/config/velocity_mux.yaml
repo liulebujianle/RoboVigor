@@ -1,0 +1,7 @@
+# Only the manual source exists today; Nav2 source arbitration is future work.
+# This file is explicitly passed to the independent velocity guard.
+simulation_velocity_guard:
+  ros__parameters:
+    command_timeout: 0.5
+    max_linear: 1.2
+    max_angular: 4.0

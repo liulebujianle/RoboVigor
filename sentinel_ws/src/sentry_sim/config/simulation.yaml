@@ -1,0 +1,3 @@
+# Loaded explicitly by simulation/spawn launch files; SI units.
+spawn: {x: 1.25, y: 6.75, z: 0.118}
+entity: robovigor_sentry

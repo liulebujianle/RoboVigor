@@ -4,13 +4,13 @@ ROS 2 Humble / Gazebo Classic 11 的 RMUL 2027 场地包。场地 world、
 STEP 转换网格、纹理和 RViz 配置随包安装，无需依赖仓库外层的
 `gazebo_arena`，也不需要设置 `ROBOVIGOR_ROOT`。
 
-完整仿真（场地、机器人、Gazebo、RViz 和键盘控制）在 `sentinel_ws` 中启动：
+完整仿真（场地、用户 CAD 机器人、Gazebo 和 RViz）在 `sentinel_ws` 中启动：
 
 ```bash
 source /opt/ros/humble/setup.bash
 colcon build --packages-select rm_arena sentry_simulation
 source install/setup.bash
-ros2 launch sentry_simulation sim_teleop.launch.py
+ros2 launch sentry_simulation simulation.launch.py
 ```
 
 以下入口仅启动场地，不生成机器人：

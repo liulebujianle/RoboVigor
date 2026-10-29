@@ -1,6 +1,0 @@
-RMUL 2027 field reconstruction for the user's local simulation.
-Source: RoboMaster 2027 RMUL Rules V1.0.0 (20261015), section 3.2.
-The official_top.png atlas is cropped from the user-supplied PDF Fig 3-1.
-DJI/RoboMaster imagery and marks remain copyrighted by their owners; no new license is implied.
-The user-supplied official field STEP is included for geometry audit; no full rules PDF, robot CAD, credentials, datasets or model weights.
-Official field geometry now comes from STEP; materials/dynamics assumptions remain documented.

@@ -1,0 +1,1166 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="robovigor_sentry" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find sentry_description)/urdf/sentry.urdf.xacro" />
+  <gazebo reference="chassis_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="gimbal_yaw_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo>
+    <plugin name="sentry_gimbal_stabilizer" filename="libsentry_gimbal_stabilizer.so">
+      <ros>
+        <namespace>/</namespace>
+      </ros>
+    </plugin>
+    <plugin name="sentry_omni_drive" filename="libsentry_omni_drive.so">
+      <ros>
+        <namespace>/</namespace>
+      </ros>
+      <wheel joint="wheel_1_joint">
+        <radius>0.07610000042846267</radius>
+      </wheel>
+      <wheel joint="wheel_2_joint">
+        <radius>0.07610000042846263</radius>
+      </wheel>
+      <wheel joint="wheel_3_joint">
+        <radius>0.07610000042846263</radius>
+      </wheel>
+      <wheel joint="wheel_4_joint">
+        <radius>0.07610000042845878</radius>
+      </wheel>
+    </plugin>
+  </gazebo>
+  <gazebo reference="roller_001_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_002_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_003_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_004_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_005_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_006_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_007_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_008_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_009_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_010_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_011_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_012_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_013_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_014_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_015_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_016_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_017_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_018_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_019_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_020_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_021_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_022_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_023_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_024_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_025_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_026_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_027_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_028_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_029_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_030_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_031_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_032_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_033_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_034_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_035_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_036_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_037_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_038_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_039_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_040_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_041_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_042_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_043_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_044_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_045_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_046_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_047_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_048_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_049_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_050_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_051_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_052_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_053_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_054_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_055_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_056_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_057_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_058_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_059_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_060_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_061_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_062_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_063_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_064_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_065_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_066_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_067_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_068_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_069_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_070_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_071_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_072_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_073_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_074_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_075_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_076_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_077_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_078_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_079_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_080_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_081_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_082_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_083_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_084_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_085_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_086_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_087_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_088_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_089_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_090_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_091_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_092_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_093_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_094_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_095_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_096_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_097_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_098_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_099_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_100_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_101_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_102_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_103_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_104_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_105_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_106_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_107_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_108_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_109_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_110_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_111_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="roller_112_link">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <kp>100000</kp>
+    <kd>100</kd>
+    <minDepth>0.00005</minDepth>
+    <maxVel>0.1</maxVel>
+    <maxContacts>3</maxContacts>
+  </gazebo>
+  <gazebo reference="wheel_1_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="wheel_2_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="wheel_3_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="wheel_4_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+</robot>

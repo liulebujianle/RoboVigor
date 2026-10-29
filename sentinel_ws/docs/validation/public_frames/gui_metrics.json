@@ -1,0 +1,23 @@
+{
+  "public_frames": [
+    "base_link",
+    "camera_link",
+    "camera_optical_frame",
+    "chassis_link",
+    "gimbal_yaw_link",
+    "gun_link",
+    "lidar_aux_link",
+    "lidar_link",
+    "muzzle_link",
+    "odom",
+    "wheels_link"
+  ],
+  "full_count": 127,
+  "position": [
+    1.2497929943505355,
+    6.750362433802547,
+    0.11429493988359495
+  ],
+  "spin": false,
+  "launch_pid": 39335
+}

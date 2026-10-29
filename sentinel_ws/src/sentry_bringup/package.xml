@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>sentry_bringup</name><version>0.1.0</version>
+  <description>Compose the currently implemented simulation and motion modules</description>
+  <maintainer email="ethan@example.com">ethan</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>sentry_sim</exec_depend>
+  <exec_depend>sentry_motion</exec_depend>
+  <exec_depend>sentry_description</exec_depend>
+  <exec_depend>rm_arena</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

@@ -1,0 +1,50 @@
+{
+  "wheel_tf_rotation_rad": {
+    "wheel_4_link": 2.8951335078064737,
+    "wheel_3_link": 2.89472999566987,
+    "wheel_1_link": 2.855458149009726,
+    "wheel_2_link": 2.894329144348446
+  },
+  "physical_forward_m": 0.32531131970022664,
+  "wheel_positions": {
+    "wheel_1_link": [
+      -0.16731710127,
+      0.16731710127,
+      -0.0362828401707
+    ],
+    "wheel_2_link": [
+      0.16731710127,
+      0.16731710127,
+      -0.0362828401707
+    ],
+    "wheel_3_link": [
+      0.16731710127,
+      -0.16731710127,
+      -0.0362828401707
+    ],
+    "wheel_4_link": [
+      -0.16731710127,
+      -0.16731710127,
+      -0.0362828401707
+    ]
+  },
+  "public_frames": [
+    "base_link",
+    "camera_link",
+    "camera_optical_frame",
+    "chassis_link",
+    "gimbal_yaw_link",
+    "gun_link",
+    "lidar_aux_link",
+    "lidar_link",
+    "muzzle_link",
+    "odom",
+    "wheel_1_link",
+    "wheel_2_link",
+    "wheel_3_link",
+    "wheel_4_link"
+  ],
+  "display_meshes": 118,
+  "physics_joints": 117,
+  "public_moving_joints": 5
+}

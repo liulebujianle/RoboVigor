@@ -1,0 +1,9 @@
+{
+  "startup_drift_m": 7.734314010346177e-06,
+  "held_forward_m": 0.7561553628384738,
+  "chassis_rotation_rad": 7.4135870376311805,
+  "gimbal_max_error_rad": 0.0008095850566561119,
+  "straight_cross_track_max_m": 0.04702703790966217,
+  "straight_distance_m": 1.000986845021763,
+  "stopped_wz": 0.0011850549004338554
+}

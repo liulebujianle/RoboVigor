@@ -1,0 +1,271 @@
+name: "robovigor_sentry"
+id: 10
+is_static: false
+pose {
+  position {
+    x: 1.2499970636071749
+    y: 6.7500041749329105
+    z: 0.11600290512536275
+  }
+  orientation {
+    x: -1.5324525897309496e-05
+    y: -7.5949512189326807e-06
+    z: -1.5598417835763485e-06
+    w: 0.99999999985252142
+  }
+}
+link {
+  id: 11
+  name: "robovigor_sentry::base_link"
+  self_collide: false
+  gravity: true
+  kinematic: false
+  enabled: true
+  inertial {
+    mass: 10
+    pose {
+      position {
+        x: 0
+        y: 0
+        z: -0.013
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    ixx: 0.243583
+    ixy: 0
+    ixz: 0
+    iyy: 0.243583
+    iyz: 0
+    izz: 0.4205
+  }
+  pose {
+    position {
+      x: 0
+      y: 0
+      z: 0
+    }
+    orientation {
+      x: 0
+      y: 0
+      z: 0
+      w: 1
+    }
+  }
+  visual {
+    name: "robovigor_sentry::base_link"
+    id: 11
+    parent_name: "robovigor_sentry"
+    parent_id: 10
+    pose {
+      position {
+        x: 0
+        y: 0
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    type: LINK
+  }
+  visual {
+    name: "robovigor_sentry::base_link::base_link_fixed_joint_lump__body_link_visual"
+    id: 12
+    parent_name: "robovigor_sentry::base_link"
+    parent_id: 11
+    pose {
+      position {
+        x: 0
+        y: 0
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    geometry {
+      type: MESH
+      mesh {
+        filename: "file:///home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/meshes/sentry_cad.stl"
+        scale {
+          x: 1
+          y: 1
+          z: 1
+        }
+      }
+    }
+    material {
+      script {
+        uri: "file://media/materials/scripts/gazebo.material"
+        name: "Gazebo/Grey"
+      }
+    }
+    is_static: false
+    scale {
+      x: 1
+      y: 1
+      z: 1
+    }
+    type: VISUAL
+  }
+  collision {
+    id: 13
+    name: "robovigor_sentry::base_link::base_link_fixed_joint_lump__body_link_collision"
+    laser_retro: 0
+    pose {
+      position {
+        x: 0
+        y: 0
+        z: -0.013
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    geometry {
+      type: CYLINDER
+      cylinder {
+        radius: 0.29
+        length: 0.2
+      }
+    }
+    surface {
+      friction {
+        mu: 1
+        mu2: 1
+        fdir1 {
+          x: 0
+          y: 0
+          z: 0
+        }
+        slip1: 0
+        slip2: 0
+        torsional {
+          coefficient: 1
+          use_patch_radius: true
+          patch_radius: 0
+          surface_radius: 0
+          ode {
+            slip: 0
+          }
+        }
+      }
+      restitution_coefficient: 0
+      bounce_threshold: 100000
+      soft_cfm: 0
+      soft_erp: 0.2
+      kp: 1000000000000
+      kd: 1
+      max_vel: 0.01
+      min_depth: 0
+      collide_without_contact: false
+      collide_without_contact_bitmask: 1
+      collide_bitmask: 65535
+      elastic_modulus: 0
+    }
+    visual {
+      name: "robovigor_sentry::base_link::base_link_fixed_joint_lump__body_link_collision"
+      id: 13
+      parent_name: "robovigor_sentry::base_link"
+      parent_id: 11
+      pose {
+        position {
+          x: 0
+          y: 0
+          z: -0.013
+        }
+        orientation {
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+        }
+      }
+      type: COLLISION
+    }
+    visual {
+      name: "robovigor_sentry::base_link::base_link_fixed_joint_lump__body_link_collision__COLLISION_VISUAL__"
+      id: 14
+      parent_name: "robovigor_sentry::base_link"
+      parent_id: 11
+      cast_shadows: false
+      pose {
+        position {
+          x: 0
+          y: 0
+          z: -0.013
+        }
+        orientation {
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+        }
+      }
+      geometry {
+        type: CYLINDER
+        cylinder {
+          radius: 0.29
+          length: 0.2
+        }
+      }
+      material {
+        script {
+          uri: "file://media/materials/scripts/gazebo.material"
+          name: "Gazebo/OrangeTransparent"
+        }
+      }
+      is_static: false
+      type: COLLISION
+    }
+  }
+  canonical: true
+  enable_wind: false
+}
+visual {
+  name: "robovigor_sentry"
+  id: 10
+  parent_name: "rmul_2027"
+  parent_id: 1
+  pose {
+    position {
+      x: 1.2499970636071749
+      y: 6.7500041749329105
+      z: 0.11600290512536275
+    }
+    orientation {
+      x: -1.5324525897309496e-05
+      y: -7.5949512189326807e-06
+      z: -1.5598417835763485e-06
+      w: 0.99999999985252142
+    }
+  }
+  type: MODEL
+}
+scale {
+  x: 1
+  y: 1
+  z: 1
+}
+self_collide: false
+enable_wind: false
+plugin {
+  name: "sentry_planar_move"
+  filename: "libgazebo_ros_planar_move.so"
+  innerxml: "<ros>\n  <namespace>/</namespace>\n  <remapping>cmd_vel:=cmd_vel</remapping>\n  <remapping>odom:=odom</remapping>\n</ros>\n<update_rate>100.0</update_rate>\n<publish_rate>30.0</publish_rate>\n<publish_odom>1</publish_odom>\n<publish_odom_tf>1</publish_odom_tf>\n<odometry_frame>odom</odometry_frame>\n<robot_base_frame>base_link</robot_base_frame>\n"
+}
+

@@ -1,0 +1,427 @@
+name: "robovigor_sentry"
+id: 10
+is_static: false
+pose {
+  position {
+    x: 1.8768277517897256
+    y: 6.7877741007137367
+    z: 0.11599999998077735
+  }
+  orientation {
+    x: -8.3993695345199588e-11
+    y: 1.0041753747800019e-10
+    z: 0.50241269779441911
+    w: 0.86462794373934837
+  }
+}
+joint {
+  name: "robovigor_sentry::gimbal_yaw_joint"
+  id: 18
+  angle: -13.567109234566292
+  type: REVOLUTE
+  parent: "robovigor_sentry::base_link"
+  parent_id: 11
+  child: "robovigor_sentry::gimbal_yaw_link"
+  child_id: 16
+  pose {
+    position {
+      x: 0
+      y: 0
+      z: 0
+    }
+    orientation {
+      x: 0
+      y: 0
+      z: 0
+      w: 1
+    }
+  }
+  axis1 {
+    xyz {
+      x: 0
+      y: 0
+      z: 1
+    }
+    limit_lower: -1e+16
+    limit_upper: 1e+16
+    limit_effort: 200
+    limit_velocity: 20
+    damping: 0
+    friction: 0
+    use_parent_model_frame: false
+    xyz_expressed_in: ""
+  }
+}
+link {
+  id: 11
+  name: "robovigor_sentry::base_link"
+  self_collide: false
+  gravity: true
+  kinematic: false
+  enabled: true
+  inertial {
+    mass: 8
+    pose {
+      position {
+        x: 0
+        y: 0
+        z: -0.013
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    ixx: 0.221067
+    ixy: 0
+    ixz: 0
+    iyy: 0.221067
+    iyz: 0
+    izz: 0.3888
+  }
+  pose {
+    position {
+      x: 0
+      y: 0
+      z: 0
+    }
+    orientation {
+      x: 0
+      y: 0
+      z: 0
+      w: 1
+    }
+  }
+  visual {
+    name: "robovigor_sentry::base_link"
+    id: 11
+    parent_name: "robovigor_sentry"
+    parent_id: 10
+    pose {
+      position {
+        x: 0
+        y: 0
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    type: LINK
+  }
+  visual {
+    name: "robovigor_sentry::base_link::base_link_fixed_joint_lump__chassis_link_visual"
+    id: 12
+    parent_name: "robovigor_sentry::base_link"
+    parent_id: 11
+    pose {
+      position {
+        x: 0
+        y: 0
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    geometry {
+      type: MESH
+      mesh {
+        filename: "file:///home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/meshes/sentry_chassis.stl"
+        scale {
+          x: 1
+          y: 1
+          z: 1
+        }
+      }
+    }
+    material {
+      script {
+        uri: "file://media/materials/scripts/gazebo.material"
+        name: "Gazebo/Grey"
+      }
+    }
+    is_static: false
+    scale {
+      x: 1
+      y: 1
+      z: 1
+    }
+    type: VISUAL
+  }
+  collision {
+    id: 13
+    name: "robovigor_sentry::base_link::base_link_fixed_joint_lump__chassis_link_collision"
+    laser_retro: 0
+    pose {
+      position {
+        x: 0
+        y: 0
+        z: -0.013
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    geometry {
+      type: BOX
+      box {
+        size {
+          x: 0.54
+          y: 0.54
+          z: 0.2
+        }
+      }
+    }
+    surface {
+      friction {
+        mu: 1
+        mu2: 1
+        fdir1 {
+          x: 0
+          y: 0
+          z: 0
+        }
+        slip1: 0
+        slip2: 0
+        torsional {
+          coefficient: 1
+          use_patch_radius: true
+          patch_radius: 0
+          surface_radius: 0
+          ode {
+            slip: 0
+          }
+        }
+      }
+      restitution_coefficient: 0
+      bounce_threshold: 100000
+      soft_cfm: 0
+      soft_erp: 0.2
+      kp: 1000000000000
+      kd: 1
+      max_vel: 0.01
+      min_depth: 0
+      collide_without_contact: false
+      collide_without_contact_bitmask: 1
+      collide_bitmask: 65535
+      elastic_modulus: 0
+    }
+    visual {
+      name: "robovigor_sentry::base_link::base_link_fixed_joint_lump__chassis_link_collision"
+      id: 13
+      parent_name: "robovigor_sentry::base_link"
+      parent_id: 11
+      pose {
+        position {
+          x: 0
+          y: 0
+          z: -0.013
+        }
+        orientation {
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+        }
+      }
+      type: COLLISION
+    }
+    visual {
+      name: "robovigor_sentry::base_link::base_link_fixed_joint_lump__chassis_link_collision__COLLISION_VISUAL__"
+      id: 14
+      parent_name: "robovigor_sentry::base_link"
+      parent_id: 11
+      cast_shadows: false
+      pose {
+        position {
+          x: 0
+          y: 0
+          z: -0.013
+        }
+        orientation {
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+        }
+      }
+      geometry {
+        type: BOX
+        box {
+          size {
+            x: 0.54
+            y: 0.54
+            z: 0.2
+          }
+        }
+      }
+      material {
+        script {
+          uri: "file://media/materials/scripts/gazebo.material"
+          name: "Gazebo/OrangeTransparent"
+        }
+      }
+      is_static: false
+      type: COLLISION
+    }
+  }
+  canonical: true
+  enable_wind: false
+}
+link {
+  id: 16
+  name: "robovigor_sentry::gimbal_yaw_link"
+  self_collide: false
+  gravity: true
+  kinematic: false
+  enabled: true
+  inertial {
+    mass: 2
+    pose {
+      position {
+        x: 0.0325
+        y: -0.0015
+        z: 0.132
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    ixx: 0.0462795
+    ixy: 0
+    ixz: 0
+    iyy: 0.0403102
+    iyz: 0
+    izz: 0.0553777
+  }
+  pose {
+    position {
+      x: -3.4574276055541045e-11
+      y: 1.6036452899514318e-10
+      z: 0.051000000027970796
+    }
+    orientation {
+      x: -7.0393521256644455e-11
+      y: 5.2042860963255182e-11
+      z: -0.47974960600923722
+      w: 0.87740544535236487
+    }
+  }
+  visual {
+    name: "robovigor_sentry::gimbal_yaw_link"
+    id: 16
+    parent_name: "robovigor_sentry"
+    parent_id: 10
+    pose {
+      position {
+        x: -3.4574276055541045e-11
+        y: 1.6036452899514318e-10
+        z: 0.051000000027970796
+      }
+      orientation {
+        x: -7.0393521256644455e-11
+        y: 5.2042860963255182e-11
+        z: -0.47974960600923722
+        w: 0.87740544535236487
+      }
+    }
+    type: LINK
+  }
+  visual {
+    name: "robovigor_sentry::gimbal_yaw_link::gimbal_yaw_link_visual"
+    id: 17
+    parent_name: "robovigor_sentry::gimbal_yaw_link"
+    parent_id: 16
+    pose {
+      position {
+        x: 0
+        y: 0
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+      }
+    }
+    geometry {
+      type: MESH
+      mesh {
+        filename: "file:///home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/share/sentry_simulation/meshes/sentry_gimbal.stl"
+        scale {
+          x: 1
+          y: 1
+          z: 1
+        }
+      }
+    }
+    material {
+      script {
+        uri: "file://media/materials/scripts/gazebo.material"
+        name: "Gazebo/Grey"
+      }
+    }
+    is_static: false
+    scale {
+      x: 1
+      y: 1
+      z: 1
+    }
+    type: VISUAL
+  }
+  enable_wind: false
+}
+visual {
+  name: "robovigor_sentry"
+  id: 10
+  parent_name: "rmul_2027"
+  parent_id: 1
+  pose {
+    position {
+      x: 1.8768277517897256
+      y: 6.7877741007137367
+      z: 0.11599999998077735
+    }
+    orientation {
+      x: -8.3993695345199588e-11
+      y: 1.0041753747800019e-10
+      z: 0.50241269779441911
+      w: 0.86462794373934837
+    }
+  }
+  type: MODEL
+}
+scale {
+  x: 1
+  y: 1
+  z: 1
+}
+self_collide: false
+enable_wind: false
+plugin {
+  name: "sentry_planar_move"
+  filename: "libgazebo_ros_planar_move.so"
+  innerxml: "<ros>\n  <namespace>/</namespace>\n  <remapping>cmd_vel:=cmd_vel</remapping>\n  <remapping>odom:=odom</remapping>\n</ros>\n<update_rate>100.0</update_rate>\n<publish_rate>30.0</publish_rate>\n<publish_odom>1</publish_odom>\n<publish_odom_tf>1</publish_odom_tf>\n<odometry_frame>odom</odometry_frame>\n<robot_base_frame>base_link</robot_base_frame>\n"
+}
+plugin {
+  name: "sentry_gimbal_stabilizer"
+  filename: "/home/ethan/RoboVigor/sentinel_ws/install/sentry_simulation/lib/libsentry_gimbal_stabilizer.so"
+  innerxml: "<ros>\n  <namespace>/</namespace>\n</ros>\n"
+}
+

@@ -1,0 +1,249 @@
+Starting >>> rm_arena
+Starting >>> sentry_description
+Starting >>> sentry_motion
+--- output: sentry_motion
+UpdateCTestConfiguration  from :/home/ethan/RoboVigor/sentinel_ws/build/sentry_motion/CTestConfiguration.ini
+Parse Config file:/home/ethan/RoboVigor/sentinel_ws/build/sentry_motion/CTestConfiguration.ini
+   Site: pc
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20261029-1555 - Experimental
+UpdateCTestConfiguration  from :/home/ethan/RoboVigor/sentinel_ws/build/sentry_motion/CTestConfiguration.ini
+Parse Config file:/home/ethan/RoboVigor/sentinel_ws/build/sentry_motion/CTestConfiguration.ini
+Test project /home/ethan/RoboVigor/sentinel_ws/build/sentry_motion
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: keyboard_control_logic
+
+1: Test command: /usr/bin/python3 "-m" "unittest" "discover" "-s" "/home/ethan/RoboVigor/sentinel_ws/src/sentry_motion/test" "-p" "test_keyboard*.py"
+1: Test timeout computed to be: 10000000
+1: ................
+1: ----------------------------------------------------------------------
+1: Ran 16 tests in 0.013s
+1: 
+1: OK
+1/1 Test #1: keyboard_control_logic ...........   Passed    0.16 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.16 sec
+---
+Finished <<< sentry_motion [0.27s]
+--- output: sentry_description
+UpdateCTestConfiguration  from :/home/ethan/RoboVigor/sentinel_ws/build/sentry_description/CTestConfiguration.ini
+Parse Config file:/home/ethan/RoboVigor/sentinel_ws/build/sentry_description/CTestConfiguration.ini
+   Site: pc
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20261029-1555 - Experimental
+UpdateCTestConfiguration  from :/home/ethan/RoboVigor/sentinel_ws/build/sentry_description/CTestConfiguration.ini
+Parse Config file:/home/ethan/RoboVigor/sentinel_ws/build/sentry_description/CTestConfiguration.ini
+Test project /home/ethan/RoboVigor/sentinel_ws/build/sentry_description
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: cad_model_resources
+
+1: Test command: /usr/bin/python3 "-m" "pytest" "-q" "/home/ethan/RoboVigor/sentinel_ws/src/sentry_description/test"
+1: Test timeout computed to be: 10000000
+1: ........                                                                 [100%]=============================== warnings summary ===============================
+1: ../../../../../../opt/ros/humble/local/lib/python3.10/dist-packages/xacro/__init__.py:115
+1:   Warning: private variables, such as '_ConstructUnits__ConstructUnitsValue', will be normal attributes in 3.11
+1: 
+1: -- Docs: https://docs.pytest.org/en/stable/warnings.html
+1: 
+1: 8 passed, 1 warning in 0.32s
+1/1 Test #1: cad_model_resources ..............   Passed    0.46 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.46 sec
+---
+Finished <<< sentry_description [0.58s]
+--- output: rm_arena
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/ethan/RoboVigor/sentinel_ws/build/rm_arena/.pytest_cache
+rootdir: /home/ethan/RoboVigor/sentinel_ws/src/rm_arena
+plugins: ament-copyright-0.12.15, ament-lint-0.12.15, ament-flake8-0.12.15, launch-testing-1.0.15, ament-xmllint-0.12.15, ament-pep257-0.12.15, launch-testing-ros-0.19.14, cov-3.0.0, colcon-core-0.21.3
+collected 9 items
+
+test/test_copyright.py s                                                 [ 11%]
+test/test_flake8.py .                                                    [ 22%]
+test/test_launch_resources.py ...                                        [ 55%]
+test/test_pep257.py .                                                    [ 66%]
+
+=============================== warnings summary ===============================
+test/test_resources.py:3
+  Warning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+test/test_resources.py ...                                               [100%]
+- generated xml file: /home/ethan/RoboVigor/sentinel_ws/build/rm_arena/pytest.xml -
+=================== 8 passed, 1 skipped, 3 warnings in 1.13s ===================
+---
+--- stderr: rm_arena
+
+=============================== warnings summary ===============================
+test/test_resources.py:3
+  Warning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+---
+Finished <<< rm_arena [1.37s]
+Starting >>> sentry_sim
+--- output: sentry_sim
+UpdateCTestConfiguration  from :/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/CTestConfiguration.ini
+Parse Config file:/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/CTestConfiguration.ini
+   Site: pc
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20261029-1555 - Experimental
+UpdateCTestConfiguration  from :/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/CTestConfiguration.ini
+Parse Config file:/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/CTestConfiguration.ini
+Test project /home/ethan/RoboVigor/sentinel_ws/build/sentry_sim
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: gimbal_heading_math
+
+1: Test command: /home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_gimbal_math
+1: Test timeout computed to be: 10000000
+1/8 Test #1: gimbal_heading_math ..............   Passed    0.00 sec
+test 2
+    Start 2: omni_contact_kinematics
+
+2: Test command: /home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_omni_kinematics
+2: Test timeout computed to be: 10000000
+2/8 Test #2: omni_contact_kinematics ..........   Passed    0.00 sec
+test 3
+    Start 3: cppcheck
+
+3: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/cppcheck.xunit.xml" "--package-name" "sentry_sim" "--output-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/humble/bin/ament_cppcheck" "--xunit-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/cppcheck.xunit.xml" "--include_dirs" "/home/ethan/RoboVigor/sentinel_ws/src/sentry_sim/include"
+3: Test timeout computed to be: 300
+3: -- run_test.py: invoking following command in '/home/ethan/RoboVigor/sentinel_ws/src/sentry_sim':
+3:  - /opt/ros/humble/bin/ament_cppcheck --xunit-file /home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/cppcheck.xunit.xml --include_dirs /home/ethan/RoboVigor/sentinel_ws/src/sentry_sim/include
+3: cppcheck 2.7 has known performance issues and therefore will not be used, set the AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS environment variable to override this.
+3: -- run_test.py: return code 0
+3: -- run_test.py: verify result file '/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/cppcheck.xunit.xml'
+3/8 Test #3: cppcheck .........................   Passed    0.06 sec
+test 4
+    Start 4: flake8
+
+4: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/flake8.xunit.xml" "--package-name" "sentry_sim" "--output-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/ament_flake8/flake8.txt" "--command" "/opt/ros/humble/bin/ament_flake8" "--xunit-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/flake8.xunit.xml"
+4: Test timeout computed to be: 60
+4: -- run_test.py: invoking following command in '/home/ethan/RoboVigor/sentinel_ws/src/sentry_sim':
+4:  - /opt/ros/humble/bin/ament_flake8 --xunit-file /home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/flake8.xunit.xml
+4: 
+4: 2 files checked
+4: No problems found
+4: 
+4: Checked files:
+4: 
+4: * ./launch/spawn_robot.launch.py
+4: * ./launch/simulation.launch.py
+4: -- run_test.py: return code 0
+4: -- run_test.py: verify result file '/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/flake8.xunit.xml'
+4/8 Test #4: flake8 ...........................   Passed    0.11 sec
+test 5
+    Start 5: lint_cmake
+
+5: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/lint_cmake.xunit.xml" "--package-name" "sentry_sim" "--output-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/lint_cmake.xunit.xml"
+5: Test timeout computed to be: 60
+5: -- run_test.py: invoking following command in '/home/ethan/RoboVigor/sentinel_ws/src/sentry_sim':
+5:  - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/lint_cmake.xunit.xml
+5: 
+5: No problems found
+5: -- run_test.py: return code 0
+5: -- run_test.py: verify result file '/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/lint_cmake.xunit.xml'
+5/8 Test #5: lint_cmake .......................   Passed    0.06 sec
+test 6
+    Start 6: pep257
+
+6: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/pep257.xunit.xml" "--package-name" "sentry_sim" "--output-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/ament_pep257/pep257.txt" "--command" "/opt/ros/humble/bin/ament_pep257" "--xunit-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/pep257.xunit.xml"
+6: Test timeout computed to be: 60
+6: -- run_test.py: invoking following command in '/home/ethan/RoboVigor/sentinel_ws/src/sentry_sim':
+6:  - /opt/ros/humble/bin/ament_pep257 --xunit-file /home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/pep257.xunit.xml
+6: checking ./launch/simulation.launch.py
+6: checking ./launch/spawn_robot.launch.py
+6: No problems found
+6: -- run_test.py: return code 0
+6: -- run_test.py: verify result file '/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/pep257.xunit.xml'
+6/8 Test #6: pep257 ...........................   Passed    0.08 sec
+test 7
+    Start 7: uncrustify
+
+7: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/uncrustify.xunit.xml" "--package-name" "sentry_sim" "--output-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/humble/bin/ament_uncrustify" "--xunit-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/uncrustify.xunit.xml"
+7: Test timeout computed to be: 60
+7: -- run_test.py: invoking following command in '/home/ethan/RoboVigor/sentinel_ws/src/sentry_sim':
+7:  - /opt/ros/humble/bin/ament_uncrustify --xunit-file /home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/uncrustify.xunit.xml
+7: No code style divergence in file 'include/sentry_sim/gimbal_math.hpp'
+7: 
+7: No code style divergence in file 'include/sentry_sim/omni_kinematics.hpp'
+7: 
+7: No code style divergence in file 'src/gimbal_stabilizer.cpp'
+7: 
+7: No code style divergence in file 'src/omni_drive.cpp'
+7: 
+7: No code style divergence in file 'test/test_gimbal_math.cpp'
+7: 
+7: No code style divergence in file 'test/test_omni_kinematics.cpp'
+7: 
+7: No problems found
+7: -- run_test.py: return code 0
+7: -- run_test.py: verify result file '/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/uncrustify.xunit.xml'
+7/8 Test #7: uncrustify .......................   Passed    0.07 sec
+test 8
+    Start 8: xmllint
+
+8: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/xmllint.xunit.xml" "--package-name" "sentry_sim" "--output-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/xmllint.xunit.xml"
+8: Test timeout computed to be: 60
+8: -- run_test.py: invoking following command in '/home/ethan/RoboVigor/sentinel_ws/src/sentry_sim':
+8:  - /opt/ros/humble/bin/ament_xmllint --xunit-file /home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/xmllint.xunit.xml
+8: File 'package.xml' is valid
+8: 
+8: No problems found
+8: -- run_test.py: return code 0
+8: -- run_test.py: verify result file '/home/ethan/RoboVigor/sentinel_ws/build/sentry_sim/test_results/sentry_sim/xmllint.xunit.xml'
+8/8 Test #8: xmllint ..........................   Passed    0.06 sec
+
+100% tests passed, 0 tests failed out of 8
+
+Label Time Summary:
+cppcheck      =   0.06 sec*proc (1 test)
+flake8        =   0.11 sec*proc (1 test)
+lint_cmake    =   0.06 sec*proc (1 test)
+linter        =   0.45 sec*proc (6 tests)
+pep257        =   0.08 sec*proc (1 test)
+uncrustify    =   0.07 sec*proc (1 test)
+xmllint       =   0.06 sec*proc (1 test)
+
+Total Test time (real) =   0.45 sec
+---
+Finished <<< sentry_sim [0.47s]
+Starting >>> sentry_bringup
+Finished <<< sentry_bringup [0.01s]
+
+Summary: 5 packages finished [1.95s]
+  1 package had stderr output: rm_arena

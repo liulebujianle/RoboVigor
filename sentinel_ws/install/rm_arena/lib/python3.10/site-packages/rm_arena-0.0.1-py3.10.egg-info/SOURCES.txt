@@ -10,7 +10,9 @@ setup.py
 ../../build/rm_arena/rm_arena.egg-info/top_level.txt
 ../../build/rm_arena/rm_arena.egg-info/zip-safe
 docs/SOURCE_NOTICE.txt
+launch/arena_preview.launch.py
 launch/simulation.launch.py
+launch/world.launch.py
 models/rmul_2027/model.config
 models/rmul_2027/model.sdf
 models/rmul_2027/materials/textures/official_top.png
@@ -49,6 +51,8 @@ rm_arena/arena_marker.py
 rviz/arena.rviz
 test/test_copyright.py
 test/test_flake8.py
+test/test_launch_resources.py
 test/test_pep257.py
 test/test_resources.py
 worlds/arena.world
+worlds/empty.world

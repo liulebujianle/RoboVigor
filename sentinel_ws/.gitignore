@@ -1,0 +1,8 @@
+build/
+install/
+log/
+**/__pycache__/
+**/.pytest_cache/
+data/*
+!data/README.md
+!data/COLCON_IGNORE

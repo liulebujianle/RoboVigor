@@ -1,0 +1,58 @@
+{
+  "public_children": [
+    "base_link",
+    "camera_link",
+    "camera_optical_frame",
+    "chassis_link",
+    "gimbal_yaw_link",
+    "gun_link",
+    "lidar_aux_link",
+    "lidar_link",
+    "muzzle_link",
+    "odom",
+    "wheels_link"
+  ],
+  "full_children_count": 127,
+  "sensor_world_positions": {
+    "lidar_link": [
+      1.432827592208206,
+      6.7954518109569255,
+      0.3869062433415392
+    ],
+    "lidar_aux_link": [
+      1.1297469031422307,
+      6.794201456693285,
+      0.3442957431356002
+    ],
+    "camera_link": [
+      1.2603619980095115,
+      6.607013985960174,
+      0.38920673148134677
+    ],
+    "camera_optical_frame": [
+      1.2603619980095115,
+      6.607013985960174,
+      0.38920673148134677
+    ],
+    "gun_link": [
+      1.230484906993952,
+      6.697617199939605,
+      0.3777040585751038
+    ],
+    "muzzle_link": [
+      1.1827878016145466,
+      6.569088724831177,
+      0.33310864831686837
+    ]
+  },
+  "wheel_angle_change": -1.8938624909004513,
+  "world_heading_drift": {
+    "camera_link": -0.0008321355217828508,
+    "gun_link": -0.0006440599235075783,
+    "lidar_link": -2.6296410979620433e-05
+  },
+  "message_counts": [
+    404,
+    555
+  ]
+}

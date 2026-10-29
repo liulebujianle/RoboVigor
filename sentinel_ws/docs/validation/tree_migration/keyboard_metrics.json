@@ -1,0 +1,10 @@
+{
+  "forward_displacement_m": 0.3771978557873099,
+  "backward_displacement_m": -0.3551736822008711,
+  "chassis_spin_rad": 7.910926357946757,
+  "max_gimbal_yaw_drift_rad": 0.0011519312758844213,
+  "spin_forward_dx_m": 0.5368902962141238,
+  "spin_forward_dy_m": 0.001058392683906284,
+  "stopped_yaw_rate_rad_s": -0.0182491320155577,
+  "stopped_linear_speed_m_s": 0.009892631193133812
+}

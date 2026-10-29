@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Mechanical CAD references, not measured camera/Livox driver calibration. -->
+  <xacro:property name="frame_data" value="${xacro.load_yaml('$(find sentry_description)/config/frames.yaml')['frames']}"/>
+  <xacro:macro name="reference_frame" params="name">
+    <link name="${name}"/>
+    <joint name="${name}_fixed" type="fixed">
+      <parent link="${frame_data[name]['parent']}"/>
+      <child link="${name}"/>
+      <origin xyz="${frame_data[name]['xyz']}" rpy="${frame_data[name]['rpy']}"/>
+    </joint>
+  </xacro:macro>
+  <xacro:reference_frame name="lidar_link"/>
+  <xacro:reference_frame name="lidar_aux_link"/>
+  <xacro:reference_frame name="camera_link"/>
+  <xacro:reference_frame name="camera_optical_frame"/>
+  <xacro:reference_frame name="gun_link"/>
+  <xacro:reference_frame name="muzzle_link"/>
+</robot>

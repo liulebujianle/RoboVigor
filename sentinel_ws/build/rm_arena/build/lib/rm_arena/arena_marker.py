@@ -7,6 +7,7 @@ from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
 
 import rclpy
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 
 from rclpy.qos import (
@@ -142,12 +143,12 @@ def main(args=None):
     try:
         rclpy.spin(node)
 
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, ExternalShutdownException):
         pass
 
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        rclpy.try_shutdown()
 
 
 if __name__ == '__main__':
