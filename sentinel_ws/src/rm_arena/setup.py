@@ -1,80 +1,36 @@
-"""Install the ROS package and its complete field resource tree."""
+"""安装 rm_arena 包及其完整场地资源树。"""
 
 from glob import glob
 import os
 
 from setuptools import setup
 
-package_name = 'rm_arena'
+PACKAGE = 'rm_arena'
+SHARE = os.path.join('share', PACKAGE)
 
 setup(
-
-    name=package_name,
-
+    name=PACKAGE,
     version='0.0.1',
-
-    packages=[package_name],
-
+    packages=[PACKAGE],
     data_files=[
-
-        (
-            'share/ament_index/resource_index/packages',
-            ['resource/' + package_name]
-        ),
-
-        (
-            'share/' + package_name,
-            ['package.xml']
-        ),
-
-        (
-            os.path.join(
-                'share',
-                package_name,
-                'launch'
-            ),
-            glob('launch/*.launch.py')
-        ),
-
-        (
-            os.path.join(
-                'share',
-                package_name,
-                'rviz'
-            ),
-            glob('rviz/*.rviz')
-        ),
-
+        ('share/ament_index/resource_index/packages', ['resource/' + PACKAGE]),
+        (SHARE, ['package.xml', 'README.md']),
+        (os.path.join(SHARE, 'launch'), glob('launch/*.launch.py')),
+        (os.path.join(SHARE, 'rviz'), glob('rviz/*.rviz')),
     ] + [
-        (os.path.join('share', package_name, directory),
-         [os.path.join(directory, filename) for filename in sorted(filenames)])
+        # models / worlds / docs 整棵树原样安装，保留子目录结构
+        (os.path.join(SHARE, directory),
+         [os.path.join(directory, name) for name in sorted(names)])
         for root in ('models', 'worlds', 'docs')
-        for directory, _, filenames in os.walk(root)
-        if filenames
-    ] + [('share/' + package_name, ['README.md'])],
-
+        for directory, _, names in os.walk(root)
+        if names
+    ],
     install_requires=['setuptools'],
-
     zip_safe=True,
-
     maintainer='ethan',
-
     maintainer_email='ethan@example.com',
-
     description='RMUL 2027 simulation package',
-
     license='Apache-2.0',
-
     tests_require=['pytest'],
-
-    entry_points={
-
-        'console_scripts': [
-
-            'arena_marker = rm_arena.arena_marker:main',
-
-        ],
-
-    },
-
+    entry_points={'console_scripts': ['arena_marker = rm_arena.arena_marker:main']},
 )

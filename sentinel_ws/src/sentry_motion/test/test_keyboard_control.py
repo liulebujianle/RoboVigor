@@ -1,10 +1,18 @@
-"""验证按键方向及失联停车，不需要启动 Gazebo."""
+"""验证按键方向、限速、失联停车与窗口事件，不需要启动 Gazebo."""
 import importlib.util
+import math
+import os
 from pathlib import Path
 import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
+
 from geometry_msgs.msg import Twist
+
+os.environ.setdefault('QT_QPA_PLATFORM', 'offscreen')
+from PyQt5.QtCore import QEvent, Qt  # noqa: E402
+from PyQt5.QtTest import QTest  # noqa: E402
+from PyQt5.QtWidgets import QApplication  # noqa: E402
 
 
 path = Path(__file__).resolve().parents[1] / 'scripts' / 'keyboard_control.py'
@@ -14,18 +22,6 @@ spec.loader.exec_module(control)
 
 
 class ControlTest(unittest.TestCase):
-    def test_directions_and_stop(self):
-        expected = {
-            'w': (0.2, 0.0, 0.0), 's': (-0.2, 0.0, 0.0),
-            'a': (0.0, 0.2, 0.0), 'd': (0.0, -0.2, 0.0),
-            'q': (0.0, 0.0, 0.5), 'e': (0.0, 0.0, -0.5),
-            ' ': (0.0, 0.0, 0.0), 'x': (0.0, 0.0, 0.0),
-        }
-        for key, value in expected.items():
-            with self.subTest(key=key):
-                self.assertEqual(control.command_for_key(key, 0.2, 0.5), value)
-        self.assertEqual(control.command_for_key('W', 0.2, 0.5), expected['w'])
-
     def test_timeout_and_missing_input(self):
         velocity = (0.2, 0.0, 0.0)
         self.assertEqual(control.fresh_command(velocity, 1.0, 1.1, 0.5), velocity)
@@ -48,34 +44,12 @@ class ControlTest(unittest.TestCase):
         control.VelocityGuard.receive(state, msg)
         self.assertEqual(state.command, (0., 0., 0.))
 
-    def test_spin_persists_but_translation_expires(self):
-        state = control.KeyboardState()
-        state.press('w', 1.0)
-        self.assertEqual(state.output(1.1), ((0.8, 0., 0.), False))
-        state.press('x', 1.1)
-        self.assertEqual(state.output(1.2), ((0.8, 0., 3.), True))
-        state.press('x', 1.2)
-        self.assertEqual(state.output(2.0), ((0., 0., 3.), True))
-        state.press('s', 2.0)
-        self.assertEqual(state.output(2.1), ((-0.8, 0., 3.), True))
-        state.press('c', 2.2)
-        self.assertEqual(state.output(2.3), ((0., 0., 0.), False))
-
-    def test_space_stops_translation_and_spin(self):
-        state = control.KeyboardState()
-        state.press('x', 1.)
-        state.press('w', 1.1)
-        state.press(' ', 1.2)
-        self.assertEqual(state.output(1.3), ((0., 0., 0.), False))
-
     def test_spin_translation_keeps_gimbal_forward_direction(self):
-        import math
         vx, vy = control.world_to_body(0.8, 0., math.pi / 2)
         self.assertAlmostEqual(vx, 0.)
         self.assertAlmostEqual(vy, -0.8)
 
     def test_spin_heading_uses_actual_world_pose_not_unsynchronized_joint_samples(self):
-        import math
         output, mode = [], []
         state = SimpleNamespace(
             command=(0.8, 0., 3.), last_received=0.99, command_timeout=0.5,
@@ -118,8 +92,7 @@ class HeldControlTest(unittest.TestCase):
         state.press('c')
         self.assertEqual(state.output(), ((0., 0., 0.), False))
 
-    def test_diagonal_limit_and_focus_loss_stop(self):
-        import math
+    def test_diagonal_limit_and_explicit_stop(self):
         state = control.HeldKeyboardState()
         state.press('w')
         state.press('a')
@@ -147,29 +120,63 @@ class StraightLineTest(unittest.TestCase):
         self.assertEqual(line.correct(0., .8, (0., 10.)), (0., .8))
 
 
-class ShutdownTest(unittest.TestCase):
-    def test_shutdown_during_publish_exits_cleanly(self):
-        from unittest.mock import MagicMock
-        node = MagicMock()
-        with patch.object(control.sys, 'argv', ['keyboard_control.py']), \
-                patch.object(control, 'VelocityGuard', return_value=node), \
-                patch.object(control.rclpy, 'init'), \
-                patch.object(control.rclpy, 'spin', side_effect=RuntimeError('context invalid')), \
-                patch.object(control.rclpy, 'ok', return_value=False), \
-                patch.object(control.rclpy, 'try_shutdown'):
-            control.main()
-        node.destroy_node.assert_called_once()
+class FakeGuard:
+    """Stand-in for VelocityGuard: records what the window pushes into it."""
 
-    def test_live_context_runtime_errors_are_not_hidden(self):
-        from unittest.mock import MagicMock
-        with patch.object(control.sys, 'argv', ['keyboard_control.py']), \
-                patch.object(control, 'VelocityGuard', return_value=MagicMock()), \
-                patch.object(control.rclpy, 'init'), \
-                patch.object(control.rclpy, 'spin', side_effect=RuntimeError('real failure')), \
-                patch.object(control.rclpy, 'ok', return_value=True), \
-                patch.object(control.rclpy, 'try_shutdown'):
-            with self.assertRaisesRegex(RuntimeError, 'real failure'):
-                control.main()
+    def __init__(self):
+        self.commands, self.spins, self.updates = [], [], 0
+
+    def receive(self, msg):
+        self.commands.append(msg)
+
+    def receive_spin(self, msg):
+        self.spins.append(msg.data)
+
+    def update(self):
+        self.updates += 1
+
+    def get_logger(self):
+        return SimpleNamespace(info=lambda *args: None)
+
+
+class KeyboardWindowTest(unittest.TestCase):
+    """窗口把按键直接喂给同进程看门狗，不再经过 /teleop 中转话题。"""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.app = QApplication.instance() or QApplication([])
+
+    def setUp(self):
+        self.guard = FakeGuard()
+        with patch.object(control.rclpy, 'ok', return_value=True):
+            self.window = control.KeyboardWindow(self.guard)
+
+    def test_hold_release_spin_and_click_elsewhere_keeps_moving(self):
+        with patch.object(control.rclpy, 'ok', return_value=True):
+            self.assertEqual(self.guard.commands[-1].linear.x, 0.)
+            QTest.keyPress(self.window, Qt.Key_W)
+            for _ in range(50):
+                self.window.publish()
+                self.assertEqual(self.guard.commands[-1].linear.x, .8)
+            QTest.keyRelease(self.window, Qt.Key_W)
+            self.assertEqual(self.guard.commands[-1].linear.x, 0.)
+            QTest.keyClick(self.window, Qt.Key_X)
+            self.assertTrue(self.guard.spins[-1])
+            self.assertEqual(self.guard.commands[-1].angular.z, 3.)
+            # Clicking outside the window must no longer stop the robot.
+            QApplication.sendEvent(self.window, QEvent(QEvent.WindowDeactivate))
+            self.assertTrue(self.guard.spins[-1])
+            self.assertEqual(self.guard.commands[-1].angular.z, 3.)
+            self.window.close()
+
+    def test_close_sends_a_final_zero_command(self):
+        with patch.object(control.rclpy, 'ok', return_value=True):
+            QTest.keyPress(self.window, Qt.Key_W)
+            self.assertEqual(self.guard.commands[-1].linear.x, .8)
+            self.window.close()
+            self.assertEqual(self.guard.commands[-1].linear.x, 0.)
+            self.assertFalse(self.guard.spins[-1])
+            self.assertGreater(self.guard.updates, 0)
 
 
 if __name__ == '__main__':

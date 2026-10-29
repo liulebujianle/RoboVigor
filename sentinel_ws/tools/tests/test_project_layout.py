@@ -63,21 +63,18 @@ def test_cad_exporter_recreates_the_split_model(tmp_path):
     assert not restored.findall('gazebo')
 
 
-def test_default_control_session_is_a_valid_ros_topic_even_when_uuid_starts_with_digit(
-        tmp_path, monkeypatch):
+def test_motion_launch_starts_a_single_keyboard_node(tmp_path, monkeypatch):
+    """键盘窗口与看门狗已合并成一个进程：launch 里只剩一个 Node，没有会话前缀。"""
     monkeypatch.setenv('ROS_LOG_DIR', str(tmp_path / 'launch_logs'))
     import importlib.util
-    from types import SimpleNamespace
-    from unittest.mock import patch
-    from launch import LaunchContext
     from launch.actions import DeclareLaunchArgument
-    from rclpy.validate_topic_name import validate_topic_name
-    spec = importlib.util.spec_from_file_location('motion_launch', WS / 'src/sentry_motion/launch/motion.launch.py')
+    spec = importlib.util.spec_from_file_location(
+        'motion_launch', WS / 'src/sentry_motion/launch/motion.launch.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    with patch.object(module, 'uuid4', return_value=SimpleNamespace(hex='0123456789abcdef')):
-        description = module.generate_launch_description()
-    action = next(a for a in description.entities
-                  if isinstance(a, DeclareLaunchArgument) and a.name == 'control_session')
-    session = ''.join(part.perform(LaunchContext()) for part in action.default_value)
-    validate_topic_name('/teleop/' + session + '/cmd_vel')
+    description = module.generate_launch_description()
+    names = {a.name for a in description.entities
+             if isinstance(a, DeclareLaunchArgument)}
+    assert names == {'keyboard', 'linear_speed', 'angular_speed', 'spin_speed'}
+    nodes = [e for e in description.entities if type(e).__name__ == 'Node']
+    assert len(nodes) == 1

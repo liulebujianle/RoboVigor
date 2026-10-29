@@ -6,8 +6,6 @@ from pathlib import Path
 import subprocess
 import sys
 
-import pytest
-
 
 def test_server_and_client_receive_field_resources(tmp_path, monkeypatch):
     """Keep the field visible when server and GUI are separate processes."""
@@ -47,22 +45,18 @@ def test_server_and_client_receive_field_resources(tmp_path, monkeypatch):
         assert any((Path(root) / 'rmul_2027/model.sdf').is_file() for root in roots)
 
 
-@pytest.mark.parametrize(('closing', 'code', 'reason'), [
-    ('gzserver', 255, 'Gazebo server exited'),
-    ('gzclient', 0, 'Gazebo window closed'),
-])
-def test_server_failure_stops_the_remaining_launch(tmp_path, monkeypatch, closing, code, reason):
-    """Do not leave an empty GUI running after a port conflict kills the server."""
+def _launch_with_fake_gazebo(tmp_path, monkeypatch, failing, code):
+    """Run the launch against fake gzserver/gzclient; return its output."""
     for executable in ('gzserver', 'gzclient'):
         body = (f'time.sleep(0.2)\nraise SystemExit({code})\n'
-                if executable == closing else 'time.sleep(20)\n')
+                if executable == failing else 'time.sleep(20)\n')
         recorder = tmp_path / executable
         recorder.write_text('#!/usr/bin/python3\nimport time\n' + body)
         recorder.chmod(0o755)
     monkeypatch.setenv('PATH', str(tmp_path) + os.pathsep + os.environ['PATH'])
     monkeypatch.setenv('ROS_LOG_DIR', str(tmp_path / 'log'))
     source = Path(__file__).resolve().parents[1] / 'launch/simulation.launch.py'
-    driver = tmp_path / 'failure_probe.py'
+    driver = tmp_path / 'probe.py'
     driver.write_text(
         'from launch import LaunchDescription, LaunchService\n'
         'from launch.actions import IncludeLaunchDescription, TimerAction, EmitEvent\n'
@@ -78,5 +72,19 @@ def test_server_failure_stops_the_remaining_launch(tmp_path, monkeypatch, closin
     )
     result = subprocess.run([sys.executable, str(driver)], capture_output=True,
                             text=True, timeout=6)
-    assert reason in result.stdout + result.stderr
-    assert 'probe deadline' not in result.stdout + result.stderr
+    return result.stdout + result.stderr
+
+
+def test_window_close_stops_the_remaining_launch(tmp_path, monkeypatch):
+    """Closing the Gazebo window still tears the whole launch down."""
+    output = _launch_with_fake_gazebo(tmp_path, monkeypatch, 'gzclient', 0)
+    assert 'Gazebo window closed' in output
+    assert 'probe deadline' not in output
+
+
+def test_server_failure_only_warns(tmp_path, monkeypatch):
+    """A dead gzserver is logged but no longer stops RViz or the launch."""
+    output = _launch_with_fake_gazebo(tmp_path, monkeypatch, 'gzserver', 255)
+    assert 'Gazebo server exited' in output
+    # The launch must survive until the probe's own deadline fires.
+    assert 'probe deadline' in output

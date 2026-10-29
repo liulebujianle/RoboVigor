@@ -5,7 +5,8 @@
 入口链：sentry_bringup/sim_teleop.launch.py → sentry_sim/simulation.launch.py →
 rm_arena/simulation.launch.py（场地、Marker、RViz）＋ sentry_sim/spawn_robot.launch.py →
 sentry_description/description.launch.py 发布唯一 robot_description → Gazebo spawn_entity 读取同一话题。
-另一路 bringup → sentry_motion/motion.launch.py → Qt 键盘窗口（真实按下/松开事件）及独立速度保护 → 仿真轮轴插件。
+另一路 bringup → sentry_motion/motion.launch.py → keyboard_control.py（Qt 窗口 + 同进程速度看门狗）
+→ 仿真轮轴插件与云台插件。
 
 模型层仅定义车体、质量、惯量、关节及网格。sentry_sim 的 Xacro 引用模型，再加入 Gazebo 接触与驱动插件。
 四轮力矩、112 被动滚子及云台力矩控制保持原实现；没有把底盘运动改成位姿动画。
@@ -24,7 +25,8 @@ sentry_perception、sentry_interfaces、sentry_chassis_bridge、sentry_nav_plugi
 额外入口 sim_teleop.launch.py 是已有可验证功能的系统入口。目标中的 sim_navigation、mapping、
 robot_navigation、replay 在对应后端实现后再加入，避免名称暗示具备尚未接入的导航能力。
 
-运行保护：Gazebo 服务端异常退出会关闭整套 launch；当前唯一 guard 接收本次 UUID 会话的键盘输入，
+运行保护：关闭 Gazebo 窗口会关闭整套 launch；服务端异常退出（如旧 gzserver 仍占用 11345）只记录
+警告，不再中止整场。当前唯一 guard 接收本次 UUID 会话的键盘输入，
 启动时 gyro=false，Qt 子进程随 launch 结束。无焦点、松开移动键、C/空格均停止对应运动。
 
 当前TF直接由唯一原生RSP发布：四个实际轮轴与传感器独立，滚子只作为各轮外观而非独立TF。

@@ -34,7 +34,6 @@ RoboVigor/
     │   │   │   ├── arena_preview.launch.py
     │   │   │   ├── simulation.launch.py
     │   │   │   └── world.launch.py
-    │   │   ├── meshes/  # 保留全部实际资源，0 个文件
     │   │   ├── models/  # 保留全部实际资源，32 个文件
     │   │   ├── resource/
     │   │   │   └── rm_arena
@@ -50,8 +49,7 @@ RoboVigor/
     │   │   │   ├── test_pep257.py
     │   │   │   └── test_resources.py
     │   │   ├── worlds/
-    │   │   │   ├── arena.world
-    │   │   │   └── empty.world
+    │   │   │   └── arena.world
     │   │   ├── README.md
     │   │   ├── package.xml
     │   │   ├── setup.cfg
@@ -72,9 +70,7 @@ RoboVigor/
     │   │   │   └── frames.yaml
     │   │   ├── launch/
     │   │   │   └── description.launch.py
-    │   │   ├── meshes/  # 保留全部实际资源，119 个文件
-    │   │   ├── rviz/
-    │   │   │   └── model.rviz
+    │   │   ├── meshes/  # 保留全部实际资源，118 个文件
     │   │   ├── scripts/
     │   │   │   └── description_publisher.py
     │   │   ├── test/
@@ -98,11 +94,9 @@ RoboVigor/
     │   │   ├── launch/
     │   │   │   └── motion.launch.py
     │   │   ├── scripts/
-    │   │   │   ├── keyboard_control.py
-    │   │   │   └── keyboard_window.py
+    │   │   │   └── keyboard_control.py
     │   │   ├── test/
-    │   │   │   ├── test_keyboard_control.py
-    │   │   │   └── test_keyboard_window.py
+    │   │   │   └── test_keyboard_control.py
     │   │   ├── CMakeLists.txt
     │   │   ├── LICENSE
     │   │   ├── README.md
@@ -143,9 +137,7 @@ RoboVigor/
     ├── README.md
     ├── dependencies.repos
     ├── data/  # 本机归档数据
-    ├── build/  # 自动生成
-    ├── install/  # 自动生成
-    └── log/  # 自动生成
+    ├── build/ install/ log/  # 自动生成，已清理，重新 build 时重建
 ```
 
 | 原位置 | 当前维护位置 |
@@ -164,5 +156,11 @@ RoboVigor/
 STEP/DAE 模型、完整碰撞和纹理，保留 rm_arena/models；sim 的现有 C++ 插件和 motion 的
 实际键盘代码必须保留 src/include/scripts/test。新增已验证 sim_teleop 启动入口；未实现
 Nav2、真机和地图的目标入口不以空文件冒充功能。
+
+2026-10-30 清理：112 个滚子的 link/joint 在 chassis.xacro 里改为 `cad_roller` 宏 + 112 行数据
+（3157 → 241 行），sentry_sim.urdf.xacro 的滚子接触块改为 `roller_surface` 宏（1166 → 181 行），
+展开结果与清理前逐元素相同（tools/tests/test_project_layout.py 的模型指纹未变）。同时删除
+sentry_cad.stl（46 MB，无引用）、sentry_description/rviz/model.rviz、rm_arena/worlds/empty.world、
+rm_arena/meshes/rmul_2027.stl（不是 STL）以及 build/install/log。
 
 后续包和文件遵守目标树的对应职责，实际实现后再创建；完整状态见 architecture.md。

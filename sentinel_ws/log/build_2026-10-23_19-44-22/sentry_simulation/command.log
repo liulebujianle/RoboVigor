@@ -1,4 +1,0 @@
-Invoking command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation -- -j24 -l24
-Invoked command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation -- -j24 -l24
-Invoking command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation
-Invoked command in '/home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/sentinel_ws/build/sentry_simulation

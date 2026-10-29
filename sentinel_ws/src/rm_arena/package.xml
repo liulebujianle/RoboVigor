@@ -4,7 +4,7 @@
   <name>rm_arena</name>
   <version>0.0.1</version>
   <description>RMUL 2027 field for Gazebo Classic and RViz</description>
-  <maintainer email="hhhrrrppp123654@gmail.com.com">ethan</maintainer>
+  <maintainer email="hhhrrrppp123654@gmail.com">ethan</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_python</buildtool_depend>

@@ -1,4 +1,4 @@
-import os
+﻿import os
 os.environ['QT_QPA_PLATFORM']='offscreen'
 from pathlib import Path
 import sys,time,math,json,signal,subprocess
@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5.QtTest import QTest
 from PyQt5.QtCore import Qt
 sys.path.insert(0,str(Path(get_package_prefix('sentry_motion'))/'lib/sentry_motion'))
-from keyboard_window import KeyboardWindow
+from keyboard_control import KeyboardWindow
 out=Path('/tmp/robovigor-control-session-validation');out.mkdir(exist_ok=True)
 log=(out/'launch.log').open('w')
 p=subprocess.Popen(['ros2','launch','sentry_bringup','sim_teleop.launch.py','gui:=false','rviz:=false','keyboard:=false','control_session:=verify_keys'],stdout=log,stderr=subprocess.STDOUT,start_new_session=True)

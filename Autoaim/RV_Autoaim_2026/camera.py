@@ -2,9 +2,6 @@ import gxipy as gx
 import threading
 import time
 import sys
-import cv2
-from PIL import Image
-import numpy as np
 
 class GalaxyCamera:
 

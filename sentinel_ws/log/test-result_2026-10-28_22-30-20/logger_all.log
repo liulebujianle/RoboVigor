@@ -1,5 +1,0 @@
-[0.033s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'test-result', '--test-result-base', 'build/rm_arena', '--verbose']
-[0.033s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='test-result', test_result_base='build/rm_arena', all=False, result_files_only=False, verbose=True, delete=False, delete_yes=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x75197e064a90>, verb_extension=<colcon_test_result.verb.test_result.TestResultVerb object at 0x75197e175210>, main=<bound method TestResultVerb.main of <colcon_test_result.verb.test_result.TestResultVerb object at 0x75197e175210>>)
-[0.036s] Level 1:colcon.colcon_test_result.test_result:get_test_results(ctest)
-[0.036s] Level 1:colcon.colcon_test_result.test_result:get_test_results(xunit)
-[0.036s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/rm_arena/package.xml': the root tag is neither 'testsuite' nor 'testsuites'

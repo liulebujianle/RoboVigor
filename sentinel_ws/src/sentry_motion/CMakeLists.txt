@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 project(sentry_motion)
 find_package(ament_cmake REQUIRED)
-install(PROGRAMS scripts/keyboard_control.py scripts/keyboard_window.py DESTINATION lib/${PROJECT_NAME})
+install(PROGRAMS scripts/keyboard_control.py DESTINATION lib/${PROJECT_NAME})
 if(BUILD_TESTING)
   find_package(Python3 REQUIRED COMPONENTS Interpreter)
   add_test(NAME keyboard_control_logic COMMAND ${Python3_EXECUTABLE} -m unittest discover -s ${CMAKE_CURRENT_SOURCE_DIR}/test -p "test_keyboard*.py")

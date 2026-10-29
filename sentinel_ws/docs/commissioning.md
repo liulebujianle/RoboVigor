@@ -12,4 +12,4 @@
 
 启动后不按键确认 gyro=false 与出生点；点击控制窗口后再操作。
 按 X 开启小陀螺，按住 W 验证世界参考直线；松开 W 只停止平移，C/空格全停。
-切换窗口全停；关闭 Gazebo 窗口后检查没有残留 gzserver 或 keyboard_window.py。
+点窗口外不再停车（2026-10-30 起取消失焦全停）；关闭 Gazebo 窗口后检查没有残留 gzserver 或 keyboard_control.py。

@@ -10,9 +10,7 @@
   <exec_depend>launch</exec_depend>
   <exec_depend>launch_ros</exec_depend>
   <exec_depend>ament_index_python</exec_depend>
-  <exec_depend>rviz2</exec_depend>
   <test_depend>python3-pytest</test_depend>
-  <test_depend>python3-numpy</test_depend>
   <exec_depend>rclpy</exec_depend>
   <exec_depend>python3-yaml</exec_depend>
   <exec_depend>std_msgs</exec_depend>

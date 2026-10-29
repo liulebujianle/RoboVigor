@@ -10,7 +10,8 @@
 - Gazebo 服务退出或关闭 Gazebo 客户端窗口，停止整套 launch，包括受管理的键盘窗口。
 - 每次启动用 s_ 开头的 UUID 控制会话；默认话题不会因 UUID 首字符为数字而非法。
   原始输入为 /teleop/<control_session>/cmd_vel 与 spin_mode，最终输出仍为唯一 guard 的 /cmd_vel。
-- 默认前端为直接由 launch 管理的 Qt keyboard_window.py，真实按下/松开事件；
+- 默认前端为直接由 launch 管理的 Qt 窗口（当时是 keyboard_window.py，现已并入 keyboard_control.py），
+  真实按下/松开事件；
   启动不抢走其他窗口的键盘焦点。启动 spin=false，X 幂等开启；C/空格和失焦全停。
   移动按住持续，松开减速停止平移；松开 X 不关闭已开启的小陀螺。
 - 100 Hz 世界参考方向转换；实际 odom 横向纠偏（增益6 s⁻¹，附加横向速度限0.25m/s），

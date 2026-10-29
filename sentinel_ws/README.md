@@ -39,8 +39,9 @@ ros2 launch sentry_bringup sim_teleop.launch.py
 [docs/architecture.md](docs/architecture.md)。旧包 sentry_simulation 已退出源码与安装索引，
 其旧启动命令应换为上述入口。Autoaim 保持独立，未改动。
 
-每次启动使用独立 control_session 原始输入话题，旧键盘窗口不能控制新仿真。
-新键盘窗口由 launch 直接管理，关闭主启动后会一起退出，不再留下 GNOME 终端孤儿进程。
+键盘窗口与速度看门狗已合并成 `keyboard_control.py` 一个进程一个节点，输入不再经
+`/teleop/<会话>/` 中转；点窗口外不会停车（松键或 C/空格才停），关窗会先发一帧全停。
+键盘节点由 launch 直接管理，关闭主启动后一起退出，不再留下 GNOME 终端孤儿进程。
 
 `src` 是维护的源码，`build/install/log` 是生成产物。运行资源全部从 ament 包安装目录读取。
 当前环境为 Ubuntu 22.04、ROS 2 Humble、Gazebo Classic 11；不需要下载新的外部算法仓库。

@@ -1,1 +1,0 @@
-/home/ethan/RoboVigor/sentinel_ws/src/sentry_navigation/setup.py
