@@ -6,6 +6,7 @@ from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 
@@ -16,6 +17,7 @@ def generate_launch_description():
     arena = Path(get_package_share_directory('rm_arena'))
     config = yaml.safe_load((sim / 'config/simulation.yaml').read_text())
     return LaunchDescription([
+        DeclareLaunchArgument('gazebo', default_value='true'),
         DeclareLaunchArgument('rviz_config', default_value=str(arena / 'rviz/arena.rviz')),
         DeclareLaunchArgument('gui', default_value='true'),
         DeclareLaunchArgument('rviz', default_value='true'),
@@ -25,15 +27,18 @@ def generate_launch_description():
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(str(arena / 'launch/simulation.launch.py')),
             launch_arguments={
-                'gazebo': 'true', 'gui': LaunchConfiguration('gui'),
+                'gazebo': LaunchConfiguration('gazebo'),
+                'gui': LaunchConfiguration('gui'),
                 'rviz': LaunchConfiguration('rviz'),
                 'rviz_config': LaunchConfiguration('rviz_config'),
                 'tf_topic': '/tf',
                 'tf_static_topic': '/tf_static',
             }.items(),
         ),
+        # 没有 Gazebo 就没有 spawn 服务，gazebo:=false 时跳过生成
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(str(sim / 'launch/spawn_robot.launch.py')),
             launch_arguments={axis: LaunchConfiguration(axis) for axis in ('x', 'y', 'z')}.items(),
+            condition=IfCondition(LaunchConfiguration('gazebo')),
         ),
     ])

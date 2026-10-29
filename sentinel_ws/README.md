@@ -18,9 +18,9 @@ ros2 launch sentry_bringup sim_teleop.launch.py
 ```
 
 先关闭旧仿真。点击 RoboVigor 键盘控制窗口：按住 W/S 前后、A/D 横移，松开即停止平移；Q/E 普通旋转。
-启动默认关闭小陀螺，按一次 X 开启，C/空格全停；切换窗口也全停。
+启动默认关闭小陀螺，按一次 X 开启，C/空格全停；点窗口外不再停车，关窗会全停。
 默认平移 0.8 m/s，小陀螺 3 rad/s。可追加 `linear_speed:=1.0`、`spin_speed:=3.5`。
-无界面回归可追加 `gui:=false rviz:=false keyboard:=false`。
+无界面回归可追加 `gui:=false rviz:=false keyboard:=false`；不要 Gazebo 只留 RViz 用 `gazebo:=false`。
 
 | 包 | 维护位置与职责 |
 | --- | --- |
