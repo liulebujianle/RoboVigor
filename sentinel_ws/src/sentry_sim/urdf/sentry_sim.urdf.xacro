@@ -15,7 +15,7 @@
 
   <!-- 滚子接触参数：高刚度 + 软阻尼，压住全向轮打滑 -->
   <xacro:macro name="roller_surface" params="n">
-    <gazebo reference="roller_${n}_link">
+    <gazebo reference="roller_${'%03d' % int(n)}_link">
       <material>Gazebo/Grey</material>
       <mu1>0.9</mu1>
       <mu2>0.9</mu2>

@@ -33,8 +33,10 @@
   <!-- 一个被动滚子 = 1 个 link + 1 个 continuous 关节。
        碰撞体是包住滚子的球，惯量按球近似，球心/质心用 CAD 的 com。 -->
   <xacro:macro name="cad_roller" params="id parent xyz axis com r i">
-    <link name="roller_${id}_link">
-      <xacro:cad_visual file="roller_${id}_link.stl"/>
+    <!-- Xacro 将 001 等参数解析为整数；显式补零以匹配 CAD 文件名。 -->
+    <xacro:property name="roller_name" value="${'roller_%03d' % int(id)}"/>
+    <link name="${roller_name}_link">
+      <xacro:cad_visual file="${roller_name}_link.stl"/>
       <inertial>
         <mass value="${roller_mass}"/>
         <origin xyz="${com}"/>
@@ -47,9 +49,9 @@
         <origin xyz="${com}"/>
       </collision>
     </link>
-    <joint name="roller_${id}_joint" type="continuous">
+    <joint name="${roller_name}_joint" type="continuous">
       <parent link="${parent}"/>
-      <child link="roller_${id}_link"/>
+      <child link="${roller_name}_link"/>
       <origin xyz="${xyz}"/>
       <axis xyz="${axis}"/>
       <limit effort="${roller_effort}" velocity="${roller_velocity}"/>
