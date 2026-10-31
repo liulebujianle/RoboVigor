@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<robot name="robovigor_sentry" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="chassis.xacro"/>
-  <xacro:include filename="gimbal.xacro"/>
-  <xacro:include filename="sensors.xacro"/>
-</robot>
