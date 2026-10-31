@@ -35,7 +35,8 @@ def test_preserved_robot_and_gazebo_composition():
     simulation = ET.fromstring(xacro.process_file(str(WS / 'src/sentry_sim/urdf/sentry_sim.urdf.xacro')).toxml())
     assert not description.findall('gazebo')
     assert signature(description) == signature(simulation)
-    assert len(simulation.findall('.//plugin')) == 2
+    # 两个自写插件（云台稳定、四轮驱动）+ 可选件里的仿真雷达
+    assert len(simulation.findall('.//plugin')) == 3
     assert len(simulation.findall("joint[@type='continuous']")) == 5
     for mesh in description.findall('.//mesh'):
         assert mesh.get('filename').startswith('package://sentry_description/meshes/')
@@ -59,7 +60,7 @@ def test_cad_exporter_recreates_the_split_model(tmp_path):
     restored = ET.fromstring(xacro.process_file(str(description / 'urdf/sentry.urdf.xacro')).toxml())
     assert signature(restored) == signature(robot)
     assert len(restored.findall('.//visual/geometry/mesh')) == 0
-    assert len(ET.parse(simulation / 'urdf/sentry_sim.urdf.xacro').findall('.//plugin')) == 2
+    assert len(ET.parse(simulation / 'urdf/sentry_sim.urdf.xacro').findall('.//plugin')) == 3
     assert not restored.findall('gazebo')
 
 

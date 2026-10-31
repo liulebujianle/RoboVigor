@@ -45,10 +45,10 @@ RoboVigor/
     │
     └── src/
         │
-        ├── rm_arena/                                # 保留已有包，继续作为第一个学习任务
+        ├── rm_arena/                                   # 场地：world + RMUL 模型 + Marker + RViz 预览          [已有]
         │   └── ...                                  # world/STL 资源整理方案不变
         │
-        ├── sentry_description/
+        ├── sentry_description/                         # 模型：纯 URDF，车体/云台/传感器坐标系，无 <gazebo>    [已有]
         │   ├── CMakeLists.txt
         │   ├── package.xml
         │   ├── urdf/
@@ -64,7 +64,7 @@ RoboVigor/
         │   └── rviz/
         │       └── model.rviz
         │
-        ├── sentry_sensors/                          # 我们自己的设备集成包
+        ├── sentry_sensors/                             # 设备：拉起官方 odin_ros_driver，统一话题名/QoS        [真机]
         │   ├── CMakeLists.txt
         │   ├── package.xml
         │   ├── launch/
@@ -77,7 +77,7 @@ RoboVigor/
         │   └── rviz/
         │       └── odin_debug.rviz                  # 查看点云、位姿与设备坐标系
         │
-        ├── sentry_localization/                     # 改为“定位接入与监测”
+        ├── sentry_localization/                        # 定位：设备位姿 → odom + map→odom，含超时监测          [之后]
         │   ├── CMakeLists.txt
         │   ├── package.xml
         │   ├── include/sentry_localization/
@@ -97,7 +97,7 @@ RoboVigor/
         │   └── test/
         │       └── test_frame_conversion.cpp        # 安装外参与位姿转换验证
         │
-        ├── sentry_perception/
+        ├── sentry_perception/                          # 感知：点云滤波（去车体点）+ 点云 → /scan              [下一步]
         │   ├── CMakeLists.txt
         │   ├── package.xml
         │   ├── include/sentry_perception/
@@ -113,7 +113,7 @@ RoboVigor/
         │       ├── terrain.yaml
         │       └── pointcloud_to_scan.yaml          # 如需 LaserScan，处理实际可观测角度
         │
-        ├── sentry_maps/
+        ├── sentry_maps/                                # 地图资产：map.pgm/yaml + Odin 先验 + 航点（无代码）   [之后]
         │   ├── CMakeLists.txt
         │   ├── package.xml
         │   └── maps/
@@ -131,7 +131,7 @@ RoboVigor/
         │           ├── regions.yaml
         │           └── waypoints.yaml
         │
-        ├── sentry_sim/
+        ├── sentry_sim/                                 # 仿真：Gazebo 插件（四轮力矩/云台）+ spawn + 虚拟雷达  [已有]
         │   ├── CMakeLists.txt
         │   ├── package.xml
         │   ├── urdf/
@@ -145,7 +145,7 @@ RoboVigor/
         │       ├── controllers.yaml
         │       └── sensors.yaml                     # 不再按 360° 雷达配置
         │
-        ├── sentry_bringup/
+        ├── sentry_bringup/                             # 组合：把上面拼成一个入口 + 默认参数 + RViz            [已有]
         │   ├── CMakeLists.txt
         │   ├── package.xml
         │   ├── launch/
@@ -160,12 +160,12 @@ RoboVigor/
         │   └── rviz/
         │       └── navigation.rviz
         │
-        ├── odin_ros_driver/                         # 官方上游驱动，保留原包名
+        ├── odin_ros_driver/                            # 第三方：厂商驱动，保留原包名、固定版本                [clone]
         │   └── ...                                  # 按 dependencies.repos 固定版本
         │
-        ├── sentry_navigation/                       # 沿用上一版完整结构
-        ├── sentry_motion/                           # 沿用，调整实际观测范围与停止区域
-        ├── sentry_tasks/                            # 沿用
-        ├── sentry_interfaces/                       # 沿用，按实际状态接口决定自定义消息
-        ├── sentry_chassis_bridge/                   # 沿用
-        └── sentry_nav_plugins/                      # 后期可选，仍不提前自研
+        ├── sentry_navigation/                          # 规划：Nav2 参数（costmap/planner/controller/BT）      [之后]
+        ├── sentry_motion/                              # 遥控：键盘 → /cmd_vel，限速 + 失联归零                [已有]
+        ├── sentry_tasks/                               # 任务：巡逻、决策、比赛状态机                          [最后]
+        ├── sentry_interfaces/                          # 自定义 msg/srv/action（标准消息够用就不建）           [按需]
+        ├── sentry_chassis_bridge/                      # 底盘：串口/CAN ↔ /cmd_vel, /odom, /joint_states       [真机]
+        └── sentry_nav_plugins/                         # 自研 Nav2 插件（后期可选）                            [可永不建]

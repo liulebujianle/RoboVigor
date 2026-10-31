@@ -4,7 +4,7 @@ frames:
   lidar_link:
     parent: gimbal_yaw_link
     xyz: 0.183570132434 0.0406768784564 0.221961784851
-    rpy: -0.837758040957 5.56965841183e-17 -1.94780621162
+    rpy: 0 0 0
     source: 0云台总装-1@哨兵总装/mid-360-asm（带范围）V2.001-1@哨兵总装
     convention: CAD origin; x=CAD X, y=-CAD Z, z=CAD Y (hardware-up); driver extrinsics
       uncalibrated

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  可选件：仿真雷达（Gazebo Classic）。不 include 就不存在，纯 RViz 看模型时不要用。
+
+  雷达的“性能参数”全在这个文件里，一共 8 个值，都在下面的常量区：
+    出帧率 / 水平点数 / 垂直线数 / 水平半视场 / 垂直上下沿 / 最近与最远测距
+  数值严格按 Manifold Odin1 规格：FOV 120°×90°、0.5°×0.5°、15 FPS 上限、0.2–30 m。
+
+  注意：这是仿真替身，不是真机驱动。真机的 30 m@10%、±3 cm、940 nm 在这里都没有对应项。
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ================= 性能常量区：严格按 Odin1 规格 ================= -->
+  <!-- 规格：FOV 120°×90°、角分辨率 0.5°×0.5°、15 FPS 上限、0.2–30 m(@10%)、70 万点/s -->
+  <xacro:property name="lidar_rate" value="10"/>              <!-- Hz；Odin1 上限 15，仿真取 10 省算力 -->
+  <xacro:property name="lidar_h_samples" value="240"/>        <!-- 120°/0.5° = 240 段 -->
+  <xacro:property name="lidar_v_samples" value="180"/>        <!-- 90°/0.5° = 180 段 -->
+  <xacro:property name="lidar_h_fov" value="1.0471975512"/>   <!-- 60° = π/3，水平半视场 -->
+  <xacro:property name="lidar_v_min" value="-0.7853981634"/>  <!-- -45° = -π/4，垂直下沿 -->
+  <xacro:property name="lidar_v_max" value="0.7853981634"/>   <!-- +45° = +π/4，垂直上沿 -->
+  <xacro:property name="lidar_range_min" value="0.2"/>        <!-- Odin1 最小测距 -->
+  <xacro:property name="lidar_range_max" value="30.0"/>       <!-- 30 m @10% 反射率（70 m @90% 不取） -->
+  <!-- 每帧射线 = 240×180 = 43200；10 Hz → 43.2 万/秒，与 Odin1 的 70 万点/秒同量级 -->
+  <!-- ================================================================ -->
+
+  <gazebo reference="lidar_link">
+    <sensor type="gpu_ray" name="odin1">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>${lidar_rate}</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>${lidar_h_samples}</samples>
+            <resolution>1</resolution>
+            <min_angle>-${lidar_h_fov}</min_angle>
+            <max_angle>${lidar_h_fov}</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>${lidar_v_samples}</samples>
+            <resolution>1</resolution>
+            <min_angle>${lidar_v_min}</min_angle>
+            <max_angle>${lidar_v_max}</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>${lidar_range_min}</min>
+          <max>${lidar_range_max}</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin name="lidar_ros" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=lidar/points</remapping>
+        </ros>
+        <output_type>sensor_msgs/PointCloud2</output_type>
+        <frame_name>lidar_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+</robot>

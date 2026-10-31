@@ -1,0 +1,28 @@
+# 点云 → 扫描线。所有数值都对着 Odin1 规格表，不要凭手感改。
+#
+#   Odin1 规格                →  这里的参数
+#   FOV 120°(H) × 90°(V)      →  angle_min/max = ±60°；垂直靠高度带体现
+#   角分辨率 0.5° × 0.5°      →  angle_increment = 0.0087266463（0.5°）
+#                                水平段数 = 120/0.5 + 1 = 241
+#   帧率最高 15 FPS           →  scan_time = 0.1（10 Hz，跟仿真雷达对齐；要 15 Hz 改 0.0667）
+#   测距 0.2 m ~ 30 m(@10%)   →  range_min / range_max
+#   点云 240(H) × 180(V)      →  不改，只影响切片前的原始点密度
+#
+#   安装：光心离地 0.393 m，俯仰 0°，base_link 离地 0.118 m
+#   高度带换算：min_height = 想扫的离地高度 - 0.118
+#     想扫“离地 0.05 ~ 0.80 m”（矮台到云台下方）→ -0.068 ~ 0.682
+#     想避开轮子和地面噪点（离地 0.22 ~ 0.72 m）→ 0.10 ~ 0.60  ← 当前取值
+pointcloud_to_laserscan:
+  ros__parameters:
+    target_frame: base_link
+    transform_tolerance: 0.05
+    min_height: 0.10              # 离地 0.218 m：车轮上方，避地面噪点
+    max_height: 0.60              # 离地 0.718 m：云台下方
+    angle_min: -1.0471975512      # -60°，Odin1 水平半视场
+    angle_max: 1.0471975512       # +60°
+    angle_increment: 0.0087266463 # 0.5°，Odin1 角分辨率
+    scan_time: 0.1                # 10 Hz（Odin1 上限 15 Hz）
+    range_min: 0.2                # Odin1 最小测距
+    range_max: 30.0               # Odin1 30 m @10% 反射率（70 m @90% 太乐观，导航不用）
+    use_inf: true                 # 没打到的方向填 inf，costmap 才能区分“空旷”和“没数据”
+    inf_epsilon: 1.0
