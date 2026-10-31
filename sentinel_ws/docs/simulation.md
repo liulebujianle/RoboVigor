@@ -9,7 +9,7 @@ launch 参数可覆盖公开的默认值；配置文件不会仅凭文件名自�
 spawn 在安装目录展开 Xacro，解析网格为安装资源 file URI、插件为安装 lib 绝对路径，
 再把同一字符串交给 description.launch.py 发布及 spawn_entity 使用。
 
-质量、摩擦和电机参数尚未按实车标定；滚子碰撞为拟合球。详见 validation/wheel_physics。
+质量、摩擦和电机参数尚未按实车标定；当前轮子为圆柱，低轴向摩擦近似全向侧向自由度。历史完整滚子验证见 validation/wheel_physics，当前见 validation/lightweight_omni。
 场地是现有带材质的 STEP/DAE，保留 rm_arena/models/rmul_2027 完整模型和纹理。
 目标树里的旧 rmul_2027.stl 不是当前显示模型，不用它替换已经验证的资源。
 
@@ -38,5 +38,9 @@ Qt 窗口与速度看门狗是同一进程同一节点，输入不经话题中�
 
 当前轮子与相机/雷达一样是原生TF中的独立部件，四个wheel_i_link位于真实轮轴中心并随角度旋转。
 RViz直接订阅 /robot_description 和公开TF。Gazebo生成订阅完整的
-/sentry_description/robot_description_physics，仍使用全部112个被动滚子物理。
+/sentry_description/robot_description_physics，使用4个圆柱轮和1个云台的轻量物理。
 没有 wheels_link 聚合底部轴，也没有 MarkerArray 车轮动画。详见 frames_and_time.md。
+
+当前入口仍使用 `ros2 launch sentry_bringup sim_teleop.launch.py`。
+RViz场地Marker使用Transient Local，以接收启动前已发布的场地；默认视角为Field Overview。
+CAD提取工具生成完整结构；若重新提取，需重新应用轻量轮模型，不应把112个滚子重新引入当前默认仿真。

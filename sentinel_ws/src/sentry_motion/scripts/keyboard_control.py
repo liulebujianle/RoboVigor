@@ -220,7 +220,7 @@ class KeyboardWindow(QWidget):
             '点击此窗口后操作\n\n'
             '按住 W/S 前后、A/D 横移，松开停止平移\n'
             'Q/E 普通旋转；X 开启小陀螺，C / 空格全停\n'
-            '小陀螺时按云台朝向直线移动\n'
+            '全向圆柱轮近似：小陀螺时按云台朝向直线移动\n'
             f'平移 {linear} m/s；小陀螺 {spin_speed} rad/s'))
         self.status = QLabel()
         layout.addWidget(self.status)

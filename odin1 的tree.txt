@@ -1,0 +1,171 @@
+RoboVigor/
+├── Autoaim/                                         # 已有自瞄工程，继续独立维护
+│   └── ...                                          # 内部结构沿用上一版
+│
+└── sentinel_ws/
+    ├── README.md                                    # 更新硬件说明：使用 ODIN1
+    ├── dependencies.repos                           # 记录 ODIN 驱动来源和固定提交
+    │
+    ├── docs/
+    │   ├── architecture.md                          # 更新数据流：ODIN 定位结果→导航适配→Nav2
+    │   ├── interfaces.md                            # 记录实际 ODIN 话题、类型、frame 和 QoS
+    │   ├── frames_and_time.md                       # 设备时间、ROS 时间、TF 发布职责
+    │   ├── hardware.md                              # ODIN1 数量、固件、安装方式与连接配置
+    │   ├── simulation.md                            # 仿真传感器覆盖范围与接口约定
+    │   ├── mapping_and_localization.md              # ODIN 建图、加载地图、定位验证
+    │   ├── chassis_protocol.md                      # 沿用原规划
+    │   └── commissioning.md                         # 增加 ODIN 数据与重定位验收
+    │
+    ├── scripts/
+    │   ├── build.sh                                 # 按固定版本处理官方驱动构建要求
+    │   ├── sim.sh
+    │   ├── mapping.sh                               # 调用选定的建图入口
+    │   ├── nav.sh
+    │   ├── bag_record.sh                            # 增加 ODIN 原始点云、位姿和必要状态
+    │   └── replay.sh                                # 回放时不重复启动真实设备
+    │
+    ├── deploy/
+    │   ├── sentry-nav@.service
+    │   └── udev/
+    │       ├── 99-sentry.rules                      # 底盘设备规则
+    │       └── 99-odin.rules                        # ODIN 设备访问规则，按官方版本核对
+    │
+    ├── tools/
+    │   ├── check_tf.py
+    │   ├── check_topics.py
+    │   ├── waypoint_convert.py
+    │   └── check_odin.py                            # 后期：设备话题、时间与定位状态检查
+    │
+    ├── data/
+    │   ├── README.md
+    │   ├── bags/
+    │   ├── mapping/                                 # 建图中间数据
+    │   └── odin_runtime/                            # 可选运行目录，由启动显式指定
+    │                                                # 保存设备生成的标定/日志等，不写入源码
+    │
+    └── src/
+        │
+        ├── rm_arena/                                # 保留已有包，继续作为第一个学习任务
+        │   └── ...                                  # world/STL 资源整理方案不变
+        │
+        ├── sentry_description/
+        │   ├── CMakeLists.txt
+        │   ├── package.xml
+        │   ├── urdf/
+        │   │   ├── sentry.urdf.xacro
+        │   │   ├── chassis.xacro
+        │   │   ├── gimbal.xacro
+        │   │   └── sensors.xacro                    # 改为 ODIN1 的车体安装关系
+        │   ├── meshes/
+        │   │   ├── chassis.stl
+        │   │   └── odin1.stl                        # 可选外观模型；没有时先用几何体
+        │   ├── launch/
+        │   │   └── description.launch.py
+        │   └── rviz/
+        │       └── model.rviz
+        │
+        ├── sentry_sensors/                          # 我们自己的设备集成包
+        │   ├── CMakeLists.txt
+        │   ├── package.xml
+        │   ├── launch/
+        │   │   └── odin.launch.py                   # 统一配置路径，启动所需官方节点
+        │   ├── config/
+        │   │   ├── odin_odometry.yaml               # 按固定驱动版本编写：里程计模式
+        │   │   ├── odin_mapping.yaml                # 建图模式
+        │   │   ├── odin_localization.yaml           # 加载地图定位模式
+        │   │   └── sensor_topics.yaml               # 自定义话题映射，由启动代码读取
+        │   └── rviz/
+        │       └── odin_debug.rviz                  # 查看点云、位姿与设备坐标系
+        │
+        ├── sentry_localization/                     # 改为“定位接入与监测”
+        │   ├── CMakeLists.txt
+        │   ├── package.xml
+        │   ├── include/sentry_localization/
+        │   │   ├── odometry_adapter.hpp
+        │   │   ├── localization_monitor.hpp
+        │   │   └── relocalization_client.hpp
+        │   ├── src/
+        │   │   ├── odometry_adapter.cpp             # 设备位姿→车体里程计，处理安装外参
+        │   │   ├── localization_monitor.cpp         # 数据超时、初始化与定位有效性检查
+        │   │   └── relocalization_client.cpp        # 按实际接口封装请求与状态反馈
+        │   ├── launch/
+        │   │   ├── localization.launch.py           # 调用 ODIN 定位配置＋适配＋监测
+        │   │   └── mapping.launch.py                # 调用 ODIN 建图配置及必要辅助节点
+        │   ├── config/
+        │   │   ├── odometry_adapter.yaml            # 源话题、源坐标系、输出和 TF 开关
+        │   │   └── localization_monitor.yaml        # 超时、恢复和定位放行条件
+        │   └── test/
+        │       └── test_frame_conversion.cpp        # 安装外参与位姿转换验证
+        │
+        ├── sentry_perception/
+        │   ├── CMakeLists.txt
+        │   ├── package.xml
+        │   ├── include/sentry_perception/
+        │   │   ├── cloud_filter.hpp
+        │   │   └── terrain_analysis.hpp
+        │   ├── src/
+        │   │   ├── cloud_filter.cpp                 # ODIN 点云过滤，按实际字段处理
+        │   │   └── terrain_analysis.cpp             # 后期地形分析
+        │   ├── launch/
+        │   │   └── perception.launch.py
+        │   └── config/
+        │       ├── cloud_filter.yaml                # 去车体点、范围、置信度等
+        │       ├── terrain.yaml
+        │       └── pointcloud_to_scan.yaml          # 如需 LaserScan，处理实际可观测角度
+        │
+        ├── sentry_maps/
+        │   ├── CMakeLists.txt
+        │   ├── package.xml
+        │   └── maps/
+        │       └── rmul_2027/
+        │           ├── README.md                    # 地图来源、制作和坐标对齐方法
+        │           ├── manifest.yaml                # 资源清单，由启动代码读取
+        │           ├── navigation/
+        │           │   ├── map.yaml                 # Nav2 二维地图元数据
+        │           │   └── map.pgm                  # 建图/转换并验证后生成
+        │           ├── odin/
+        │           │   ├── prior.bin                # ODIN 原生定位地图，名称为项目约定
+        │           │   └── metadata.yaml            # 我们记录的固件、驱动、基准与采集信息
+        │           ├── geometry/
+        │           │   └── prior.pcd                # 可选几何点云，用于检查或栅格地图制作
+        │           ├── regions.yaml
+        │           └── waypoints.yaml
+        │
+        ├── sentry_sim/
+        │   ├── CMakeLists.txt
+        │   ├── package.xml
+        │   ├── urdf/
+        │   │   └── sentry_sim.urdf.xacro             # 按 ODIN 安装位置和视场设置仿真传感器
+        │   ├── launch/
+        │   │   ├── simulation.launch.py
+        │   │   ├── spawn_robot.launch.py
+        │   │   └── sensors.launch.py                # 输出导航所需的统一接口
+        │   └── config/
+        │       ├── simulation.yaml
+        │       ├── controllers.yaml
+        │       └── sensors.yaml                     # 不再按 360° 雷达配置
+        │
+        ├── sentry_bringup/
+        │   ├── CMakeLists.txt
+        │   ├── package.xml
+        │   ├── launch/
+        │   │   ├── sim_navigation.launch.py
+        │   │   ├── sim_mapping.launch.py
+        │   │   ├── robot_navigation.launch.py       # 装配 ODIN 定位、感知和 Nav2
+        │   │   ├── robot_mapping.launch.py          # 装配 ODIN 建图模式
+        │   │   └── replay.launch.py
+        │   ├── config/
+        │   │   ├── sim.yaml
+        │   │   └── robot.yaml                       # 指定定位来源及 ODIN 配置
+        │   └── rviz/
+        │       └── navigation.rviz
+        │
+        ├── odin_ros_driver/                         # 官方上游驱动，保留原包名
+        │   └── ...                                  # 按 dependencies.repos 固定版本
+        │
+        ├── sentry_navigation/                       # 沿用上一版完整结构
+        ├── sentry_motion/                           # 沿用，调整实际观测范围与停止区域
+        ├── sentry_tasks/                            # 沿用
+        ├── sentry_interfaces/                       # 沿用，按实际状态接口决定自定义消息
+        ├── sentry_chassis_bridge/                   # 沿用
+        └── sentry_nav_plugins/                      # 后期可选，仍不提前自研

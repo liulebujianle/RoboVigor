@@ -1,6 +1,6 @@
 # RoboVigor 哨兵工作空间
 
-当前已实现：RMUL 2027 场地、真实 CAD 哨兵、四轮及 112 滚子物理驱动、RViz、键盘控制与云台小陀螺。
+当前已实现：RMUL 2027 场地、真实 CAD 哨兵、四个简单圆柱轮的轻量全向驱动、RViz、键盘控制与云台小陀螺。
 本次按桌面《算法导航提示词.md》的职责拆包。导航、建图、真机雷达、定位、通信及自瞄联动尚未实现；不将目录或启动成功视为具备这些功能。
 
 ```bash
@@ -49,3 +49,7 @@ ros2 launch sentry_bringup sim_teleop.launch.py
 部件TF维护在 `src/sentry_description`。四个轮子各有独立的 wheel_1_link～wheel_4_link，
 直接跟随实际轮角；定义在 urdf/chassis.xacro。雷达/相机/枪管定义在 sensors.xacro 与 frames.yaml。
 没有底部 wheels_link 和独立滚子TF；不再使用专门的车轮Marker绘制。见 docs/frames_and_time.md。
+
+2026-10-31：按新装配体保留四轮45°安装位置/轴线；轮子改成普通圆柱几何，方向摩擦近似全向侧向自由度。
+活动关节仅4轮+云台共5个，原CAD车体/云台采用轻量显示网格。四轮均有独立旋转TF；默认RViz为场地总览。
+详细尺寸、性能与近似限制见 src/sentry_description/README.md 和 docs/validation/lightweight_omni/README.md。

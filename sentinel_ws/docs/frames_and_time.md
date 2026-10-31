@@ -40,18 +40,17 @@ odom→base_link：Gazebo 轮地动力学插件的实际姿态。
 
 模型分为两个明确话题：
 - `/robot_description`：RViz 和原生 TF 使用的描述，5个活动关节（4轮+主云台）。
-  每个车轮包含轮毂与28个滚子的可视/碰撞几何，共118个CAD网格；这些细节不单独成为TF。
-- `/sentry_description/robot_description_physics`：Gazebo生成使用的完整117活动关节描述，
-  仍有112个真实被动滚子及全部惯量、接触和力矩插件。
+  每个轮子仅一个圆柱，车体与云台使用两个轻量CAD网格。
+- `/sentry_description/robot_description_physics`：Gazebo生成使用的5活动关节描述，
+  使用圆柱接触和方向摩擦近似全向自由度，不再创建112个滚子刚体。
 
-RViz用标准RobotModel和普通 `/tf`、`/tf_static`，四轮各自刚性外观随实测轮角旋转。
-被动滚子的独立物理旋转仍在Gazebo中计算；RViz把滚子几何归属对应车轮，不发布滚子TF。
+RViz用标准RobotModel和普通 `/tf`、`/tf_static`，四轮随实测轮角旋转。
 默认TF显示显式选中四个轮轴、雷达、相机和枪管；不显示根坐标的底盘底部轴标志。
 手动增加TF显示也只会取得这棵精简原生树，不会出现112个滚子帧。
 
 ## 安装位姿与限制
 
-四个轮轴中心相对chassis_link为 (±0.167317,±0.167317,-0.036283)m，轴线保持原CAD/URDF定义。
+四个轮轴中心相对chassis_link为 (±0.167317,±0.167317,-0.036283)m，轴线保持新装配体的45°定义；圆柱半径76.1 mm、轴向宽39.798 mm。
 雷达、相机和枪管从当前保存的原生CAD实例矩阵恢复，单位米/弧度。
 camera_optical_frame使用x右/y下/z前，原点仍为名义CAD相机原点，尚未标定真实光心。
 枪口是发射轴与测速模块前机械平面的名义交点。小yaw/pitch当前固定在CAD保存姿态。

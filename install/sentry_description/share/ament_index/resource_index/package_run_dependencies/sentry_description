@@ -1,0 +1,1 @@
+robot_state_publisher;xacro;launch;launch_ros;ament_index_python;rclpy;python3-yaml;std_msgs;python3-numpy;python3-pytest

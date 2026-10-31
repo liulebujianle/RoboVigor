@@ -1,0 +1,176 @@
+[30.032s] Invoking command in '/home/ethan/RoboVigor/build/sentry_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake /home/ethan/RoboVigor/sentinel_ws/src/sentry_description -DCMAKE_INSTALL_PREFIX=/home/ethan/RoboVigor/install/sentry_description
+[30.084s] -- The C compiler identification is GNU 11.4.0
+[30.112s] -- The CXX compiler identification is GNU 11.4.0
+[30.117s] -- Detecting C compiler ABI info
+[30.151s] -- Detecting C compiler ABI info - done
+[30.154s] -- Check for working C compiler: /usr/bin/cc - skipped
+[30.154s] -- Detecting C compile features
+[30.155s] -- Detecting C compile features - done
+[30.158s] -- Detecting CXX compiler ABI info
+[30.193s] -- Detecting CXX compiler ABI info - done
+[30.195s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[30.195s] -- Detecting CXX compile features
+[30.195s] -- Detecting CXX compile features - done
+[30.197s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[30.263s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[30.363s] -- Configuring done
+[30.364s] -- Generating done
+[30.364s] -- Build files have been written to: /home/ethan/RoboVigor/build/sentry_description
+[60.041s] Invoked command in '/home/ethan/RoboVigor/build/sentry_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake /home/ethan/RoboVigor/sentinel_ws/src/sentry_description -DCMAKE_INSTALL_PREFIX=/home/ethan/RoboVigor/install/sentry_description
+[60.041s] Invoking command in '/home/ethan/RoboVigor/build/sentry_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/build/sentry_description -- -j24 -l24
+[90.067s] Invoked command in '/home/ethan/RoboVigor/build/sentry_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/build/sentry_description -- -j24 -l24
+[90.073s] Invoking command in '/home/ethan/RoboVigor/build/sentry_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/build/sentry_description
+[90.076s] -- Install configuration: ""
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/lib/sentry_description/description_publisher.py
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/sentry_cad.json
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/chassis.xacro
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/sentry.urdf.xacro
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/sensors.xacro
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/sentry_original.urdf
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/gimbal.xacro
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_099_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_025_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_013_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_063_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_023_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_101_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_103_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_039_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_104_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_076_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_047_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_008_link.stl
+[90.076s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_069_link.stl
+[90.077s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_020_link.stl
+[90.077s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_006_link.stl
+[90.077s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_015_link.stl
+[90.077s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_060_link.stl
+[90.077s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_044_link.stl
+[90.077s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_011_link.stl
+[90.077s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/wheel_2_link.stl
+[90.077s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_012_link.stl
+[90.077s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/gimbal_low.stl
+[90.079s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_086_link.stl
+[90.079s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_093_link.stl
+[90.079s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_024_link.stl
+[90.079s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_084_link.stl
+[90.079s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_017_link.stl
+[90.079s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/wheel_1_link.stl
+[90.080s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/chassis_low.stl
+[90.081s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_018_link.stl
+[90.081s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_112_link.stl
+[90.081s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_009_link.stl
+[90.081s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_016_link.stl
+[90.081s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_082_link.stl
+[90.081s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_004_link.stl
+[90.081s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_067_link.stl
+[90.081s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_019_link.stl
+[90.081s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/wheel_4_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_033_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_035_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_028_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_032_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_098_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_062_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_065_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_073_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_061_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_030_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_003_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_058_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_079_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_029_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_106_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_034_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_055_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_085_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_064_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_074_link.stl
+[90.082s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_105_link.stl
+[90.083s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_097_link.stl
+[90.083s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_056_link.stl
+[90.083s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_077_link.stl
+[90.083s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/chassis.stl
+[90.088s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_087_link.stl
+[90.088s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_088_link.stl
+[90.088s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_038_link.stl
+[90.088s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_100_link.stl
+[90.088s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_075_link.stl
+[90.088s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_090_link.stl
+[90.088s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/gimbal.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_070_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_036_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_037_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_080_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_094_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_109_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_027_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_005_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_102_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_048_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_054_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_108_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_095_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_050_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_052_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_066_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_107_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_041_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_057_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_110_link.stl
+[90.095s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_059_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_010_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_042_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_089_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_002_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_092_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_021_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_022_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_083_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_072_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_046_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_068_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_001_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_045_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_026_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_040_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_071_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/wheel_3_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_007_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_078_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_014_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_081_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_049_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_096_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_031_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_053_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_111_link.stl
+[90.096s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_091_link.stl
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_043_link.stl
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_051_link.stl
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/launch
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/launch/__pycache__
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/launch/__pycache__/description.launch.cpython-310.pyc
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/launch/description.launch.py
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/config
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/config/visual_simplification.json
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/config/wheel_dimensions.json
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/config/frames.yaml
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/ament_index/resource_index/package_run_dependencies/sentry_description
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/ament_index/resource_index/parent_prefix_path/sentry_description
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/environment/ament_prefix_path.sh
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/environment/ament_prefix_path.dsv
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/environment/path.sh
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/environment/path.dsv
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/local_setup.bash
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/local_setup.sh
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/local_setup.zsh
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/local_setup.dsv
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.dsv
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/ament_index/resource_index/packages/sentry_description
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/cmake/sentry_descriptionConfig.cmake
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/cmake/sentry_descriptionConfig-version.cmake
+[90.097s] -- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.xml
+[120.097s] Invoked command in '/home/ethan/RoboVigor/build/sentry_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/build/sentry_description

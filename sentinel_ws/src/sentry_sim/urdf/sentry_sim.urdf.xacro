@@ -13,26 +13,22 @@
     </gazebo>
   </xacro:macro>
 
-  <!-- 滚子接触参数：高刚度 + 软阻尼，压住全向轮打滑 -->
-  <xacro:macro name="roller_surface" params="n">
-    <gazebo reference="roller_${'%03d' % int(n)}_link">
-      <material>Gazebo/Grey</material>
-      <mu1>0.9</mu1>
-      <mu2>0.9</mu2>
-      <kp>100000</kp>
-      <kd>100</kd>
-      <minDepth>0.00005</minDepth>
-      <maxVel>0.1</maxVel>
-      <maxContacts>3</maxContacts>
+  <!-- fdir1 沿圆柱局部 Z（轮轴）：沿轮轴低摩擦近似被动滚子自由度，圆周方向保留牵引。 -->
+  <xacro:macro name="tire_surface" params="n">
+    <gazebo reference="wheel_${n}_link">
+      <material>Gazebo/Black</material>
+      <mu1>0.001</mu1><mu2>0.9</mu2><fdir1>0 0 1</fdir1>
+      <kp>100000</kp><kd>100</kd><minDepth>0.00005</minDepth>
+      <maxVel>0.1</maxVel><maxContacts>8</maxContacts>
     </gazebo>
   </xacro:macro>
 
   <xacro:gazebo_grey link="chassis_link"/>
   <xacro:gazebo_grey link="gimbal_yaw_link"/>
-  <xacro:gazebo_grey link="wheel_1_link"/>
-  <xacro:gazebo_grey link="wheel_2_link"/>
-  <xacro:gazebo_grey link="wheel_3_link"/>
-  <xacro:gazebo_grey link="wheel_4_link"/>
+  <xacro:tire_surface n="1"/>
+  <xacro:tire_surface n="2"/>
+  <xacro:tire_surface n="3"/>
+  <xacro:tire_surface n="4"/>
 
   <!-- 两个自写插件挂在同一个 <gazebo> 下：
        云台力矩稳定（收 /spin_mode，发 /gimbal_pose）+ 四轮力矩驱动（/odom、/joint_states）。 -->
@@ -61,121 +57,4 @@
     </plugin>
   </gazebo>
 
-  <!-- 112 个滚子的接触参数，与上面 roller_surface 宏一一对应 -->
-  <!-- wheel_1_link -->
-  <xacro:roller_surface n="001"/>
-  <xacro:roller_surface n="002"/>
-  <xacro:roller_surface n="003"/>
-  <xacro:roller_surface n="004"/>
-  <xacro:roller_surface n="005"/>
-  <xacro:roller_surface n="006"/>
-  <xacro:roller_surface n="007"/>
-  <xacro:roller_surface n="008"/>
-  <xacro:roller_surface n="009"/>
-  <xacro:roller_surface n="010"/>
-  <xacro:roller_surface n="011"/>
-  <xacro:roller_surface n="012"/>
-  <xacro:roller_surface n="013"/>
-  <xacro:roller_surface n="014"/>
-  <xacro:roller_surface n="015"/>
-  <xacro:roller_surface n="016"/>
-  <xacro:roller_surface n="017"/>
-  <xacro:roller_surface n="018"/>
-  <xacro:roller_surface n="019"/>
-  <xacro:roller_surface n="020"/>
-  <xacro:roller_surface n="021"/>
-  <xacro:roller_surface n="022"/>
-  <xacro:roller_surface n="023"/>
-  <xacro:roller_surface n="024"/>
-  <xacro:roller_surface n="025"/>
-  <xacro:roller_surface n="026"/>
-  <xacro:roller_surface n="027"/>
-  <xacro:roller_surface n="028"/>
-  <!-- wheel_3_link -->
-  <xacro:roller_surface n="029"/>
-  <xacro:roller_surface n="030"/>
-  <xacro:roller_surface n="031"/>
-  <xacro:roller_surface n="032"/>
-  <xacro:roller_surface n="033"/>
-  <xacro:roller_surface n="034"/>
-  <xacro:roller_surface n="035"/>
-  <xacro:roller_surface n="036"/>
-  <xacro:roller_surface n="037"/>
-  <xacro:roller_surface n="038"/>
-  <xacro:roller_surface n="039"/>
-  <xacro:roller_surface n="040"/>
-  <xacro:roller_surface n="041"/>
-  <xacro:roller_surface n="042"/>
-  <xacro:roller_surface n="043"/>
-  <xacro:roller_surface n="044"/>
-  <xacro:roller_surface n="045"/>
-  <xacro:roller_surface n="046"/>
-  <xacro:roller_surface n="047"/>
-  <xacro:roller_surface n="048"/>
-  <xacro:roller_surface n="049"/>
-  <xacro:roller_surface n="050"/>
-  <xacro:roller_surface n="051"/>
-  <xacro:roller_surface n="052"/>
-  <xacro:roller_surface n="053"/>
-  <xacro:roller_surface n="054"/>
-  <xacro:roller_surface n="055"/>
-  <xacro:roller_surface n="056"/>
-  <!-- wheel_4_link -->
-  <xacro:roller_surface n="057"/>
-  <xacro:roller_surface n="058"/>
-  <xacro:roller_surface n="059"/>
-  <xacro:roller_surface n="060"/>
-  <xacro:roller_surface n="061"/>
-  <xacro:roller_surface n="062"/>
-  <xacro:roller_surface n="063"/>
-  <xacro:roller_surface n="064"/>
-  <xacro:roller_surface n="065"/>
-  <xacro:roller_surface n="066"/>
-  <xacro:roller_surface n="067"/>
-  <xacro:roller_surface n="068"/>
-  <xacro:roller_surface n="069"/>
-  <xacro:roller_surface n="070"/>
-  <xacro:roller_surface n="071"/>
-  <xacro:roller_surface n="072"/>
-  <xacro:roller_surface n="073"/>
-  <xacro:roller_surface n="074"/>
-  <xacro:roller_surface n="075"/>
-  <xacro:roller_surface n="076"/>
-  <xacro:roller_surface n="077"/>
-  <xacro:roller_surface n="078"/>
-  <xacro:roller_surface n="079"/>
-  <xacro:roller_surface n="080"/>
-  <xacro:roller_surface n="081"/>
-  <xacro:roller_surface n="082"/>
-  <xacro:roller_surface n="083"/>
-  <xacro:roller_surface n="084"/>
-  <!-- wheel_2_link -->
-  <xacro:roller_surface n="085"/>
-  <xacro:roller_surface n="086"/>
-  <xacro:roller_surface n="087"/>
-  <xacro:roller_surface n="088"/>
-  <xacro:roller_surface n="089"/>
-  <xacro:roller_surface n="090"/>
-  <xacro:roller_surface n="091"/>
-  <xacro:roller_surface n="092"/>
-  <xacro:roller_surface n="093"/>
-  <xacro:roller_surface n="094"/>
-  <xacro:roller_surface n="095"/>
-  <xacro:roller_surface n="096"/>
-  <xacro:roller_surface n="097"/>
-  <xacro:roller_surface n="098"/>
-  <xacro:roller_surface n="099"/>
-  <xacro:roller_surface n="100"/>
-  <xacro:roller_surface n="101"/>
-  <xacro:roller_surface n="102"/>
-  <xacro:roller_surface n="103"/>
-  <xacro:roller_surface n="104"/>
-  <xacro:roller_surface n="105"/>
-  <xacro:roller_surface n="106"/>
-  <xacro:roller_surface n="107"/>
-  <xacro:roller_surface n="108"/>
-  <xacro:roller_surface n="109"/>
-  <xacro:roller_surface n="110"/>
-  <xacro:roller_surface n="111"/>
-  <xacro:roller_surface n="112"/>
 </robot>

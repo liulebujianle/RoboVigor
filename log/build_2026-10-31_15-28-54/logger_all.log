@@ -1,0 +1,169 @@
+[0.039s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'sentry_description', '--base-paths', 'sentinel_ws/src']
+[0.039s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['sentinel_ws/src'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['sentry_description'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7dc38d169390>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7dc38d168e80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7dc38d168e80>>)
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.096s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ethan/RoboVigor/sentinel_ws/src'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extension 'ignore'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extension 'ignore_ament_install'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extensions ['colcon_pkg']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extension 'colcon_pkg'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extensions ['colcon_meta']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extension 'colcon_meta'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extensions ['ros']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extension 'ros'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extensions ['cmake', 'python']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extension 'cmake'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extension 'python'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extensions ['python_setup_py']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src) by extension 'python_setup_py'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/rm_arena) by extensions ['ignore', 'ignore_ament_install']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/rm_arena) by extension 'ignore'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/rm_arena) by extension 'ignore_ament_install'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/rm_arena) by extensions ['colcon_pkg']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/rm_arena) by extension 'colcon_pkg'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/rm_arena) by extensions ['colcon_meta']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/rm_arena) by extension 'colcon_meta'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/rm_arena) by extensions ['ros']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/rm_arena) by extension 'ros'
+[0.101s] DEBUG:colcon.colcon_core.package_identification:Package 'sentinel_ws/src/rm_arena' with type 'ros.ament_python' and name 'rm_arena'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_bringup) by extension 'ignore'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_bringup) by extension 'ignore_ament_install'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_bringup) by extensions ['colcon_pkg']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_bringup) by extension 'colcon_pkg'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_bringup) by extensions ['colcon_meta']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_bringup) by extension 'colcon_meta'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_bringup) by extensions ['ros']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_bringup) by extension 'ros'
+[0.102s] DEBUG:colcon.colcon_core.package_identification:Package 'sentinel_ws/src/sentry_bringup' with type 'ros.ament_cmake' and name 'sentry_bringup'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_description) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_description) by extension 'ignore'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_description) by extension 'ignore_ament_install'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_description) by extensions ['colcon_pkg']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_description) by extension 'colcon_pkg'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_description) by extensions ['colcon_meta']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_description) by extension 'colcon_meta'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_description) by extensions ['ros']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_description) by extension 'ros'
+[0.102s] DEBUG:colcon.colcon_core.package_identification:Package 'sentinel_ws/src/sentry_description' with type 'ros.ament_cmake' and name 'sentry_description'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_motion) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_motion) by extension 'ignore'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_motion) by extension 'ignore_ament_install'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_motion) by extensions ['colcon_pkg']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_motion) by extension 'colcon_pkg'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_motion) by extensions ['colcon_meta']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_motion) by extension 'colcon_meta'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_motion) by extensions ['ros']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_motion) by extension 'ros'
+[0.103s] DEBUG:colcon.colcon_core.package_identification:Package 'sentinel_ws/src/sentry_motion' with type 'ros.ament_cmake' and name 'sentry_motion'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_sim) by extension 'ignore'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_sim) by extension 'ignore_ament_install'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_sim) by extensions ['colcon_pkg']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_sim) by extension 'colcon_pkg'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_sim) by extensions ['colcon_meta']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_sim) by extension 'colcon_meta'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_sim) by extensions ['ros']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(sentinel_ws/src/sentry_sim) by extension 'ros'
+[0.103s] DEBUG:colcon.colcon_core.package_identification:Package 'sentinel_ws/src/sentry_sim' with type 'ros.ament_cmake' and name 'sentry_sim'
+[0.103s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.115s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rm_arena' in 'sentinel_ws/src/rm_arena'
+[0.115s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sentry_motion' in 'sentinel_ws/src/sentry_motion'
+[0.115s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sentry_sim' in 'sentinel_ws/src/sentry_sim'
+[0.115s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sentry_bringup' in 'sentinel_ws/src/sentry_bringup'
+[0.115s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.115s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.116s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/ethan/RoboVigor/sentinel_ws/install
+[0.117s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 441 installed packages in /opt/ros/humble
+[0.117s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.136s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'sentry_description' is in: /home/ethan/RoboVigor/sentinel_ws/install/sentry_description
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding sentry_description
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'sentry_description' build argument 'cmake_args' from command line to 'None'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'sentry_description' build argument 'cmake_target' from command line to 'None'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'sentry_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'sentry_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'sentry_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'sentry_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'sentry_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'sentry_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.137s] Level 5:colcon.colcon_core.verb:set package 'sentry_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.137s] DEBUG:colcon.colcon_core.verb:Building package 'sentry_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ethan/RoboVigor/build/sentry_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ethan/RoboVigor/install/sentry_description', 'merge_install': False, 'path': '/home/ethan/RoboVigor/sentinel_ws/src/sentry_description', 'symlink_install': False, 'test_result_base': None}
+[0.137s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.138s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.138s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ethan/RoboVigor/sentinel_ws/src/sentry_description' with build type 'ament_cmake'
+[0.138s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ethan/RoboVigor/sentinel_ws/src/sentry_description'
+[0.139s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.139s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.139s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.170s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ethan/RoboVigor/build/sentry_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake /home/ethan/RoboVigor/sentinel_ws/src/sentry_description -DCMAKE_INSTALL_PREFIX=/home/ethan/RoboVigor/install/sentry_description
+[60.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ethan/RoboVigor/build/sentry_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake /home/ethan/RoboVigor/sentinel_ws/src/sentry_description -DCMAKE_INSTALL_PREFIX=/home/ethan/RoboVigor/install/sentry_description
+[60.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ethan/RoboVigor/build/sentry_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/build/sentry_description -- -j24 -l24
+[90.205s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ethan/RoboVigor/build/sentry_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake --build /home/ethan/RoboVigor/build/sentry_description -- -j24 -l24
+[90.211s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ethan/RoboVigor/build/sentry_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/build/sentry_description
+[120.235s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sentry_description)
+[120.236s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ethan/RoboVigor/build/sentry_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble /usr/bin/cmake --install /home/ethan/RoboVigor/build/sentry_description
+[120.236s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description' for CMake module files
+[120.237s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description' for CMake config files
+[120.237s] Level 1:colcon.colcon_core.shell:create_environment_hook('sentry_description', 'cmake_prefix_path')
+[120.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/hook/cmake_prefix_path.ps1'
+[120.237s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/hook/cmake_prefix_path.dsv'
+[120.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/hook/cmake_prefix_path.sh'
+[120.237s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/lib'
+[120.237s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/bin'
+[120.237s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/lib/pkgconfig/sentry_description.pc'
+[120.238s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/lib/python3.10/site-packages'
+[120.238s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/bin'
+[120.238s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.ps1'
+[120.238s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.dsv'
+[120.238s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.sh'
+[120.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.bash'
+[120.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.zsh'
+[120.239s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ethan/RoboVigor/install/sentry_description/share/colcon-core/packages/sentry_description)
+[120.239s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sentry_description)
+[120.239s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description' for CMake module files
+[120.240s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description' for CMake config files
+[120.240s] Level 1:colcon.colcon_core.shell:create_environment_hook('sentry_description', 'cmake_prefix_path')
+[120.240s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/hook/cmake_prefix_path.ps1'
+[120.240s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/hook/cmake_prefix_path.dsv'
+[120.240s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/hook/cmake_prefix_path.sh'
+[120.240s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/lib'
+[120.240s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/bin'
+[120.240s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/lib/pkgconfig/sentry_description.pc'
+[120.240s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/lib/python3.10/site-packages'
+[120.240s] Level 1:colcon.colcon_core.environment:checking '/home/ethan/RoboVigor/install/sentry_description/bin'
+[120.240s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.ps1'
+[120.241s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.dsv'
+[120.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.sh'
+[120.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.bash'
+[120.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.zsh'
+[120.241s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ethan/RoboVigor/install/sentry_description/share/colcon-core/packages/sentry_description)
+[120.241s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[120.241s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[120.241s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[120.241s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[120.244s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[120.244s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[120.244s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[120.244s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.AccessDenied: Failed to connect to socket /run/user/1000/bus: Operation not permitted
+[120.244s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[120.244s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ethan/RoboVigor/install/local_setup.ps1'
+[120.245s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ethan/RoboVigor/install/_local_setup_util_ps1.py'
+[120.245s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ethan/RoboVigor/install/setup.ps1'
+[120.246s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ethan/RoboVigor/install/local_setup.sh'
+[120.246s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ethan/RoboVigor/install/_local_setup_util_sh.py'
+[120.246s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ethan/RoboVigor/install/setup.sh'
+[120.246s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ethan/RoboVigor/install/local_setup.bash'
+[120.246s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ethan/RoboVigor/install/setup.bash'
+[120.247s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ethan/RoboVigor/install/local_setup.zsh'
+[120.247s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ethan/RoboVigor/install/setup.zsh'

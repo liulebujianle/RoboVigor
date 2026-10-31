@@ -72,7 +72,7 @@ Visualization Manager:
       rmul_2027: true
     Topic:
       Depth: 5
-      Durability Policy: Volatile
+      Durability Policy: Transient Local
       Filter size: 10
       History Policy: Keep Last
       Reliability Policy: Reliable
@@ -165,23 +165,23 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.6
+      Distance: 16
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.0
-        Y: 0.0
-        Z: 0.06
+        X: 6
+        Y: 4
+        Z: 0
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5
-      Target Frame: chassis_link
+      Pitch: 0.785398006439209
+      Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
       Yaw: 0.7803980112075806
     Saved:

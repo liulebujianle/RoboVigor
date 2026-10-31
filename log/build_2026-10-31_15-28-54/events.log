@@ -1,0 +1,1387 @@
+[0.000000] (-) TimerEvent: {}
+[0.000106] (-) JobUnselected: {'identifier': 'rm_arena'}
+[0.000154] (-) JobUnselected: {'identifier': 'sentry_bringup'}
+[0.000191] (-) JobUnselected: {'identifier': 'sentry_motion'}
+[0.000220] (-) JobUnselected: {'identifier': 'sentry_sim'}
+[0.000253] (sentry_description) JobQueued: {'identifier': 'sentry_description', 'dependencies': OrderedDict()}
+[0.000288] (sentry_description) JobStarted: {'identifier': 'sentry_description'}
+[0.099715] (-) TimerEvent: {}
+[0.200163] (-) TimerEvent: {}
+[0.300673] (-) TimerEvent: {}
+[0.401052] (-) TimerEvent: {}
+[0.501360] (-) TimerEvent: {}
+[0.601520] (-) TimerEvent: {}
+[0.701647] (-) TimerEvent: {}
+[0.801866] (-) TimerEvent: {}
+[0.902088] (-) TimerEvent: {}
+[1.002298] (-) TimerEvent: {}
+[1.102608] (-) TimerEvent: {}
+[1.202910] (-) TimerEvent: {}
+[1.303212] (-) TimerEvent: {}
+[1.403457] (-) TimerEvent: {}
+[1.503886] (-) TimerEvent: {}
+[1.604138] (-) TimerEvent: {}
+[1.704546] (-) TimerEvent: {}
+[1.804849] (-) TimerEvent: {}
+[1.905212] (-) TimerEvent: {}
+[2.005586] (-) TimerEvent: {}
+[2.105989] (-) TimerEvent: {}
+[2.206438] (-) TimerEvent: {}
+[2.306866] (-) TimerEvent: {}
+[2.407370] (-) TimerEvent: {}
+[2.507675] (-) TimerEvent: {}
+[2.607937] (-) TimerEvent: {}
+[2.708197] (-) TimerEvent: {}
+[2.808441] (-) TimerEvent: {}
+[2.908677] (-) TimerEvent: {}
+[3.008914] (-) TimerEvent: {}
+[3.109259] (-) TimerEvent: {}
+[3.209506] (-) TimerEvent: {}
+[3.309711] (-) TimerEvent: {}
+[3.409950] (-) TimerEvent: {}
+[3.510149] (-) TimerEvent: {}
+[3.610352] (-) TimerEvent: {}
+[3.710629] (-) TimerEvent: {}
+[3.810955] (-) TimerEvent: {}
+[3.911248] (-) TimerEvent: {}
+[4.011512] (-) TimerEvent: {}
+[4.111770] (-) TimerEvent: {}
+[4.211974] (-) TimerEvent: {}
+[4.312234] (-) TimerEvent: {}
+[4.412516] (-) TimerEvent: {}
+[4.512870] (-) TimerEvent: {}
+[4.613189] (-) TimerEvent: {}
+[4.713617] (-) TimerEvent: {}
+[4.813899] (-) TimerEvent: {}
+[4.914241] (-) TimerEvent: {}
+[5.014513] (-) TimerEvent: {}
+[5.114790] (-) TimerEvent: {}
+[5.215178] (-) TimerEvent: {}
+[5.315276] (-) TimerEvent: {}
+[5.415378] (-) TimerEvent: {}
+[5.515479] (-) TimerEvent: {}
+[5.615577] (-) TimerEvent: {}
+[5.715677] (-) TimerEvent: {}
+[5.815778] (-) TimerEvent: {}
+[5.916074] (-) TimerEvent: {}
+[6.016256] (-) TimerEvent: {}
+[6.116355] (-) TimerEvent: {}
+[6.216449] (-) TimerEvent: {}
+[6.316547] (-) TimerEvent: {}
+[6.416642] (-) TimerEvent: {}
+[6.516738] (-) TimerEvent: {}
+[6.617143] (-) TimerEvent: {}
+[6.717252] (-) TimerEvent: {}
+[6.817354] (-) TimerEvent: {}
+[6.917446] (-) TimerEvent: {}
+[7.017553] (-) TimerEvent: {}
+[7.117647] (-) TimerEvent: {}
+[7.217736] (-) TimerEvent: {}
+[7.317827] (-) TimerEvent: {}
+[7.417944] (-) TimerEvent: {}
+[7.518041] (-) TimerEvent: {}
+[7.618140] (-) TimerEvent: {}
+[7.718232] (-) TimerEvent: {}
+[7.818320] (-) TimerEvent: {}
+[7.918413] (-) TimerEvent: {}
+[8.018514] (-) TimerEvent: {}
+[8.118673] (-) TimerEvent: {}
+[8.219066] (-) TimerEvent: {}
+[8.319207] (-) TimerEvent: {}
+[8.419302] (-) TimerEvent: {}
+[8.519396] (-) TimerEvent: {}
+[8.619494] (-) TimerEvent: {}
+[8.719760] (-) TimerEvent: {}
+[8.819970] (-) TimerEvent: {}
+[8.920123] (-) TimerEvent: {}
+[9.020220] (-) TimerEvent: {}
+[9.120315] (-) TimerEvent: {}
+[9.220412] (-) TimerEvent: {}
+[9.320504] (-) TimerEvent: {}
+[9.420617] (-) TimerEvent: {}
+[9.520733] (-) TimerEvent: {}
+[9.620831] (-) TimerEvent: {}
+[9.720894] (-) TimerEvent: {}
+[9.821155] (-) TimerEvent: {}
+[9.921255] (-) TimerEvent: {}
+[10.021353] (-) TimerEvent: {}
+[10.121448] (-) TimerEvent: {}
+[10.221542] (-) TimerEvent: {}
+[10.321921] (-) TimerEvent: {}
+[10.422014] (-) TimerEvent: {}
+[10.522246] (-) TimerEvent: {}
+[10.622382] (-) TimerEvent: {}
+[10.722485] (-) TimerEvent: {}
+[10.822845] (-) TimerEvent: {}
+[10.923193] (-) TimerEvent: {}
+[11.023295] (-) TimerEvent: {}
+[11.123391] (-) TimerEvent: {}
+[11.223472] (-) TimerEvent: {}
+[11.323917] (-) TimerEvent: {}
+[11.424013] (-) TimerEvent: {}
+[11.524078] (-) TimerEvent: {}
+[11.624173] (-) TimerEvent: {}
+[11.724269] (-) TimerEvent: {}
+[11.824362] (-) TimerEvent: {}
+[11.924577] (-) TimerEvent: {}
+[12.024877] (-) TimerEvent: {}
+[12.125159] (-) TimerEvent: {}
+[12.225263] (-) TimerEvent: {}
+[12.325377] (-) TimerEvent: {}
+[12.425493] (-) TimerEvent: {}
+[12.525780] (-) TimerEvent: {}
+[12.626181] (-) TimerEvent: {}
+[12.726282] (-) TimerEvent: {}
+[12.826377] (-) TimerEvent: {}
+[12.926471] (-) TimerEvent: {}
+[13.026570] (-) TimerEvent: {}
+[13.126753] (-) TimerEvent: {}
+[13.227069] (-) TimerEvent: {}
+[13.327133] (-) TimerEvent: {}
+[13.427233] (-) TimerEvent: {}
+[13.527333] (-) TimerEvent: {}
+[13.627771] (-) TimerEvent: {}
+[13.728137] (-) TimerEvent: {}
+[13.828394] (-) TimerEvent: {}
+[13.928496] (-) TimerEvent: {}
+[14.028718] (-) TimerEvent: {}
+[14.129007] (-) TimerEvent: {}
+[14.229283] (-) TimerEvent: {}
+[14.329703] (-) TimerEvent: {}
+[14.429991] (-) TimerEvent: {}
+[14.530123] (-) TimerEvent: {}
+[14.630245] (-) TimerEvent: {}
+[14.730339] (-) TimerEvent: {}
+[14.830545] (-) TimerEvent: {}
+[14.930710] (-) TimerEvent: {}
+[15.031085] (-) TimerEvent: {}
+[15.131181] (-) TimerEvent: {}
+[15.231274] (-) TimerEvent: {}
+[15.331638] (-) TimerEvent: {}
+[15.431979] (-) TimerEvent: {}
+[15.532314] (-) TimerEvent: {}
+[15.632414] (-) TimerEvent: {}
+[15.732510] (-) TimerEvent: {}
+[15.832838] (-) TimerEvent: {}
+[15.932971] (-) TimerEvent: {}
+[16.033321] (-) TimerEvent: {}
+[16.133420] (-) TimerEvent: {}
+[16.233726] (-) TimerEvent: {}
+[16.334029] (-) TimerEvent: {}
+[16.434123] (-) TimerEvent: {}
+[16.534486] (-) TimerEvent: {}
+[16.634786] (-) TimerEvent: {}
+[16.735115] (-) TimerEvent: {}
+[16.835266] (-) TimerEvent: {}
+[16.935363] (-) TimerEvent: {}
+[17.035457] (-) TimerEvent: {}
+[17.135550] (-) TimerEvent: {}
+[17.235835] (-) TimerEvent: {}
+[17.336092] (-) TimerEvent: {}
+[17.436205] (-) TimerEvent: {}
+[17.536296] (-) TimerEvent: {}
+[17.636389] (-) TimerEvent: {}
+[17.736724] (-) TimerEvent: {}
+[17.836821] (-) TimerEvent: {}
+[17.936892] (-) TimerEvent: {}
+[18.036988] (-) TimerEvent: {}
+[18.137071] (-) TimerEvent: {}
+[18.237159] (-) TimerEvent: {}
+[18.337251] (-) TimerEvent: {}
+[18.437348] (-) TimerEvent: {}
+[18.537446] (-) TimerEvent: {}
+[18.637598] (-) TimerEvent: {}
+[18.737981] (-) TimerEvent: {}
+[18.838130] (-) TimerEvent: {}
+[18.938236] (-) TimerEvent: {}
+[19.038348] (-) TimerEvent: {}
+[19.138458] (-) TimerEvent: {}
+[19.238739] (-) TimerEvent: {}
+[19.339128] (-) TimerEvent: {}
+[19.439224] (-) TimerEvent: {}
+[19.539319] (-) TimerEvent: {}
+[19.639412] (-) TimerEvent: {}
+[19.739511] (-) TimerEvent: {}
+[19.839590] (-) TimerEvent: {}
+[19.939961] (-) TimerEvent: {}
+[20.040294] (-) TimerEvent: {}
+[20.140663] (-) TimerEvent: {}
+[20.240954] (-) TimerEvent: {}
+[20.341243] (-) TimerEvent: {}
+[20.441391] (-) TimerEvent: {}
+[20.541674] (-) TimerEvent: {}
+[20.642036] (-) TimerEvent: {}
+[20.742328] (-) TimerEvent: {}
+[20.842429] (-) TimerEvent: {}
+[20.942534] (-) TimerEvent: {}
+[21.042639] (-) TimerEvent: {}
+[21.142830] (-) TimerEvent: {}
+[21.242902] (-) TimerEvent: {}
+[21.343190] (-) TimerEvent: {}
+[21.443313] (-) TimerEvent: {}
+[21.543528] (-) TimerEvent: {}
+[21.643963] (-) TimerEvent: {}
+[21.744289] (-) TimerEvent: {}
+[21.844403] (-) TimerEvent: {}
+[21.944746] (-) TimerEvent: {}
+[22.044855] (-) TimerEvent: {}
+[22.144955] (-) TimerEvent: {}
+[22.245063] (-) TimerEvent: {}
+[22.345361] (-) TimerEvent: {}
+[22.445480] (-) TimerEvent: {}
+[22.545653] (-) TimerEvent: {}
+[22.645777] (-) TimerEvent: {}
+[22.746102] (-) TimerEvent: {}
+[22.846235] (-) TimerEvent: {}
+[22.946412] (-) TimerEvent: {}
+[23.046711] (-) TimerEvent: {}
+[23.147033] (-) TimerEvent: {}
+[23.247289] (-) TimerEvent: {}
+[23.347607] (-) TimerEvent: {}
+[23.447814] (-) TimerEvent: {}
+[23.548174] (-) TimerEvent: {}
+[23.648545] (-) TimerEvent: {}
+[23.748776] (-) TimerEvent: {}
+[23.849054] (-) TimerEvent: {}
+[23.949297] (-) TimerEvent: {}
+[24.049559] (-) TimerEvent: {}
+[24.149962] (-) TimerEvent: {}
+[24.250271] (-) TimerEvent: {}
+[24.350367] (-) TimerEvent: {}
+[24.450459] (-) TimerEvent: {}
+[24.550814] (-) TimerEvent: {}
+[24.651144] (-) TimerEvent: {}
+[24.751253] (-) TimerEvent: {}
+[24.851584] (-) TimerEvent: {}
+[24.951884] (-) TimerEvent: {}
+[25.052232] (-) TimerEvent: {}
+[25.152325] (-) TimerEvent: {}
+[25.252691] (-) TimerEvent: {}
+[25.353025] (-) TimerEvent: {}
+[25.453183] (-) TimerEvent: {}
+[25.553388] (-) TimerEvent: {}
+[25.653677] (-) TimerEvent: {}
+[25.753870] (-) TimerEvent: {}
+[25.854115] (-) TimerEvent: {}
+[25.954229] (-) TimerEvent: {}
+[26.054325] (-) TimerEvent: {}
+[26.154551] (-) TimerEvent: {}
+[26.254658] (-) TimerEvent: {}
+[26.354935] (-) TimerEvent: {}
+[26.455196] (-) TimerEvent: {}
+[26.555351] (-) TimerEvent: {}
+[26.655623] (-) TimerEvent: {}
+[26.755736] (-) TimerEvent: {}
+[26.856137] (-) TimerEvent: {}
+[26.956304] (-) TimerEvent: {}
+[27.056532] (-) TimerEvent: {}
+[27.156627] (-) TimerEvent: {}
+[27.256722] (-) TimerEvent: {}
+[27.356813] (-) TimerEvent: {}
+[27.456902] (-) TimerEvent: {}
+[27.557004] (-) TimerEvent: {}
+[27.657103] (-) TimerEvent: {}
+[27.757198] (-) TimerEvent: {}
+[27.857310] (-) TimerEvent: {}
+[27.957425] (-) TimerEvent: {}
+[28.057574] (-) TimerEvent: {}
+[28.157850] (-) TimerEvent: {}
+[28.258078] (-) TimerEvent: {}
+[28.358173] (-) TimerEvent: {}
+[28.458270] (-) TimerEvent: {}
+[28.558629] (-) TimerEvent: {}
+[28.658942] (-) TimerEvent: {}
+[28.759153] (-) TimerEvent: {}
+[28.859525] (-) TimerEvent: {}
+[28.959979] (-) TimerEvent: {}
+[29.060128] (-) TimerEvent: {}
+[29.160232] (-) TimerEvent: {}
+[29.260585] (-) TimerEvent: {}
+[29.360995] (-) TimerEvent: {}
+[29.461320] (-) TimerEvent: {}
+[29.561425] (-) TimerEvent: {}
+[29.661513] (-) TimerEvent: {}
+[29.761608] (-) TimerEvent: {}
+[29.861895] (-) TimerEvent: {}
+[29.962042] (-) TimerEvent: {}
+[30.030932] (sentry_description) JobProgress: {'identifier': 'sentry_description', 'progress': 'cmake'}
+[30.032078] (sentry_description) Command: {'cmd': ['/usr/bin/cmake', '/home/ethan/RoboVigor/sentinel_ws/src/sentry_description', '-DCMAKE_INSTALL_PREFIX=/home/ethan/RoboVigor/install/sentry_description'], 'cwd': '/home/ethan/RoboVigor/build/sentry_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'ethan'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ethan/RoboVigor/sentinel_ws/install/sentry_sim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ethan'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2319'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bd7cc0131317e76e54f9627e6ae59191'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://127.0.0.1:7897/'), ('COLCON_PREFIX_PATH', '/home/ethan/RoboVigor/sentinel_ws/install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('CODEX_TOOL_CALL_ID', 'exec-54ec017b-44bb-4a08-b235-9a8382cf09bc'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ethan'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ethan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ethan/.codex/packages/app-server-daemon/releases/0.166.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.local/bin:/home/ethan/.codex/tmp/arg0-linux/codex-arg0Vm2n32:/home/ethan/.codex/packages/app-server-daemon/releases/0.166.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.codex/tmp/arg0-linux/codex-arg0972Er9:/home/ethan/.codex/packages/app-server-daemon/releases/0.165.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.codex/tmp/arg0/codex-arg055GCAM:/home/ethan/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ethan/.local/bin:/opt/ros/humble/bin:/home/ethan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/pc:@/tmp/.ICE-unix/2319,unix/pc:/tmp/.ICE-unix/2319'), ('CODEX_VERSION', '0.166.0'), ('CODEX_SESSION_ID', '01a182e2-9ffc-7012-9d22-9e463e9441c8'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7b469c03_070c_4810_9abd_3bd761d357bc'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.144'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ethan/RoboVigor/sentinel_ws/install/sentry_bringup:/home/ethan/RoboVigor/sentinel_ws/install/sentry_sim:/home/ethan/RoboVigor/sentinel_ws/install/sentry_motion:/home/ethan/RoboVigor/sentinel_ws/install/sentry_description:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a182e2-9ffc-7012-9d22-9e463e9441c8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ethan/RoboVigor/build/sentry_description'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bd7cc0131317e76e54f9627e6ae59191'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/ethan/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ethan/RoboVigor/sentinel_ws/install/sentry_bringup:/home/ethan/RoboVigor/sentinel_ws/install/sentry_sim:/home/ethan/RoboVigor/sentinel_ws/install/sentry_motion:/home/ethan/RoboVigor/sentinel_ws/install/sentry_description:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble')]), 'shell': False}
+[30.062115] (-) TimerEvent: {}
+[30.084474] (sentry_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[30.112023] (sentry_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[30.117080] (sentry_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[30.151196] (sentry_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[30.154050] (sentry_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[30.154318] (sentry_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[30.154819] (sentry_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[30.158104] (sentry_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[30.162215] (-) TimerEvent: {}
+[30.192950] (sentry_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[30.195640] (sentry_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[30.195693] (sentry_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[30.195772] (sentry_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[30.197565] (sentry_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[30.262502] (-) TimerEvent: {}
+[30.263467] (sentry_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[30.362690] (-) TimerEvent: {}
+[30.363172] (sentry_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[30.363902] (sentry_description) StdoutLine: {'line': b'-- Generating done\n'}
+[30.364474] (sentry_description) StdoutLine: {'line': b'-- Build files have been written to: /home/ethan/RoboVigor/build/sentry_description\n'}
+[30.462917] (-) TimerEvent: {}
+[30.563226] (-) TimerEvent: {}
+[30.663469] (-) TimerEvent: {}
+[30.763739] (-) TimerEvent: {}
+[30.863962] (-) TimerEvent: {}
+[30.964306] (-) TimerEvent: {}
+[31.064423] (-) TimerEvent: {}
+[31.164520] (-) TimerEvent: {}
+[31.264617] (-) TimerEvent: {}
+[31.364714] (-) TimerEvent: {}
+[31.464812] (-) TimerEvent: {}
+[31.565124] (-) TimerEvent: {}
+[31.665253] (-) TimerEvent: {}
+[31.765361] (-) TimerEvent: {}
+[31.865462] (-) TimerEvent: {}
+[31.965560] (-) TimerEvent: {}
+[32.065885] (-) TimerEvent: {}
+[32.166066] (-) TimerEvent: {}
+[32.266330] (-) TimerEvent: {}
+[32.366681] (-) TimerEvent: {}
+[32.466801] (-) TimerEvent: {}
+[32.567067] (-) TimerEvent: {}
+[32.667399] (-) TimerEvent: {}
+[32.767489] (-) TimerEvent: {}
+[32.867580] (-) TimerEvent: {}
+[32.967672] (-) TimerEvent: {}
+[33.067771] (-) TimerEvent: {}
+[33.167876] (-) TimerEvent: {}
+[33.267969] (-) TimerEvent: {}
+[33.368059] (-) TimerEvent: {}
+[33.468149] (-) TimerEvent: {}
+[33.568248] (-) TimerEvent: {}
+[33.668345] (-) TimerEvent: {}
+[33.768541] (-) TimerEvent: {}
+[33.868633] (-) TimerEvent: {}
+[33.968731] (-) TimerEvent: {}
+[34.068995] (-) TimerEvent: {}
+[34.169137] (-) TimerEvent: {}
+[34.269259] (-) TimerEvent: {}
+[34.369381] (-) TimerEvent: {}
+[34.469585] (-) TimerEvent: {}
+[34.569756] (-) TimerEvent: {}
+[34.670077] (-) TimerEvent: {}
+[34.770223] (-) TimerEvent: {}
+[34.870347] (-) TimerEvent: {}
+[34.970566] (-) TimerEvent: {}
+[35.070727] (-) TimerEvent: {}
+[35.171072] (-) TimerEvent: {}
+[35.271278] (-) TimerEvent: {}
+[35.371384] (-) TimerEvent: {}
+[35.471597] (-) TimerEvent: {}
+[35.571859] (-) TimerEvent: {}
+[35.672086] (-) TimerEvent: {}
+[35.772326] (-) TimerEvent: {}
+[35.872664] (-) TimerEvent: {}
+[35.972959] (-) TimerEvent: {}
+[36.073181] (-) TimerEvent: {}
+[36.173304] (-) TimerEvent: {}
+[36.273394] (-) TimerEvent: {}
+[36.373487] (-) TimerEvent: {}
+[36.473591] (-) TimerEvent: {}
+[36.573714] (-) TimerEvent: {}
+[36.673829] (-) TimerEvent: {}
+[36.773909] (-) TimerEvent: {}
+[36.874025] (-) TimerEvent: {}
+[36.974145] (-) TimerEvent: {}
+[37.074266] (-) TimerEvent: {}
+[37.174389] (-) TimerEvent: {}
+[37.274507] (-) TimerEvent: {}
+[37.374723] (-) TimerEvent: {}
+[37.475016] (-) TimerEvent: {}
+[37.575165] (-) TimerEvent: {}
+[37.675260] (-) TimerEvent: {}
+[37.775355] (-) TimerEvent: {}
+[37.875641] (-) TimerEvent: {}
+[37.975768] (-) TimerEvent: {}
+[38.076113] (-) TimerEvent: {}
+[38.176217] (-) TimerEvent: {}
+[38.276313] (-) TimerEvent: {}
+[38.376402] (-) TimerEvent: {}
+[38.476638] (-) TimerEvent: {}
+[38.576819] (-) TimerEvent: {}
+[38.676897] (-) TimerEvent: {}
+[38.776988] (-) TimerEvent: {}
+[38.877081] (-) TimerEvent: {}
+[38.977174] (-) TimerEvent: {}
+[39.077267] (-) TimerEvent: {}
+[39.177372] (-) TimerEvent: {}
+[39.277655] (-) TimerEvent: {}
+[39.377973] (-) TimerEvent: {}
+[39.478121] (-) TimerEvent: {}
+[39.578233] (-) TimerEvent: {}
+[39.678625] (-) TimerEvent: {}
+[39.778964] (-) TimerEvent: {}
+[39.879117] (-) TimerEvent: {}
+[39.979398] (-) TimerEvent: {}
+[40.079486] (-) TimerEvent: {}
+[40.179584] (-) TimerEvent: {}
+[40.279706] (-) TimerEvent: {}
+[40.379984] (-) TimerEvent: {}
+[40.480077] (-) TimerEvent: {}
+[40.580186] (-) TimerEvent: {}
+[40.680276] (-) TimerEvent: {}
+[40.780367] (-) TimerEvent: {}
+[40.880635] (-) TimerEvent: {}
+[40.980911] (-) TimerEvent: {}
+[41.081148] (-) TimerEvent: {}
+[41.181252] (-) TimerEvent: {}
+[41.281346] (-) TimerEvent: {}
+[41.381438] (-) TimerEvent: {}
+[41.481536] (-) TimerEvent: {}
+[41.581628] (-) TimerEvent: {}
+[41.681736] (-) TimerEvent: {}
+[41.781928] (-) TimerEvent: {}
+[41.882063] (-) TimerEvent: {}
+[41.982203] (-) TimerEvent: {}
+[42.082306] (-) TimerEvent: {}
+[42.182405] (-) TimerEvent: {}
+[42.282680] (-) TimerEvent: {}
+[42.382961] (-) TimerEvent: {}
+[42.483081] (-) TimerEvent: {}
+[42.583179] (-) TimerEvent: {}
+[42.683275] (-) TimerEvent: {}
+[42.783369] (-) TimerEvent: {}
+[42.883527] (-) TimerEvent: {}
+[42.983786] (-) TimerEvent: {}
+[43.084015] (-) TimerEvent: {}
+[43.184121] (-) TimerEvent: {}
+[43.284215] (-) TimerEvent: {}
+[43.384332] (-) TimerEvent: {}
+[43.484527] (-) TimerEvent: {}
+[43.584722] (-) TimerEvent: {}
+[43.685029] (-) TimerEvent: {}
+[43.785239] (-) TimerEvent: {}
+[43.885540] (-) TimerEvent: {}
+[43.985784] (-) TimerEvent: {}
+[44.086110] (-) TimerEvent: {}
+[44.186221] (-) TimerEvent: {}
+[44.286316] (-) TimerEvent: {}
+[44.386516] (-) TimerEvent: {}
+[44.486679] (-) TimerEvent: {}
+[44.586904] (-) TimerEvent: {}
+[44.687101] (-) TimerEvent: {}
+[44.787223] (-) TimerEvent: {}
+[44.887323] (-) TimerEvent: {}
+[44.987425] (-) TimerEvent: {}
+[45.087514] (-) TimerEvent: {}
+[45.187807] (-) TimerEvent: {}
+[45.288104] (-) TimerEvent: {}
+[45.388210] (-) TimerEvent: {}
+[45.488304] (-) TimerEvent: {}
+[45.588399] (-) TimerEvent: {}
+[45.688566] (-) TimerEvent: {}
+[45.788775] (-) TimerEvent: {}
+[45.889109] (-) TimerEvent: {}
+[45.989216] (-) TimerEvent: {}
+[46.089385] (-) TimerEvent: {}
+[46.189752] (-) TimerEvent: {}
+[46.290047] (-) TimerEvent: {}
+[46.390170] (-) TimerEvent: {}
+[46.490261] (-) TimerEvent: {}
+[46.590370] (-) TimerEvent: {}
+[46.690555] (-) TimerEvent: {}
+[46.790731] (-) TimerEvent: {}
+[46.890888] (-) TimerEvent: {}
+[46.990969] (-) TimerEvent: {}
+[47.091084] (-) TimerEvent: {}
+[47.191174] (-) TimerEvent: {}
+[47.291264] (-) TimerEvent: {}
+[47.391462] (-) TimerEvent: {}
+[47.491616] (-) TimerEvent: {}
+[47.591893] (-) TimerEvent: {}
+[47.691980] (-) TimerEvent: {}
+[47.792066] (-) TimerEvent: {}
+[47.892150] (-) TimerEvent: {}
+[47.992239] (-) TimerEvent: {}
+[48.092322] (-) TimerEvent: {}
+[48.192404] (-) TimerEvent: {}
+[48.292485] (-) TimerEvent: {}
+[48.392568] (-) TimerEvent: {}
+[48.492830] (-) TimerEvent: {}
+[48.593145] (-) TimerEvent: {}
+[48.693260] (-) TimerEvent: {}
+[48.793348] (-) TimerEvent: {}
+[48.893433] (-) TimerEvent: {}
+[48.993575] (-) TimerEvent: {}
+[49.093793] (-) TimerEvent: {}
+[49.194113] (-) TimerEvent: {}
+[49.294231] (-) TimerEvent: {}
+[49.394317] (-) TimerEvent: {}
+[49.494402] (-) TimerEvent: {}
+[49.594491] (-) TimerEvent: {}
+[49.694635] (-) TimerEvent: {}
+[49.794723] (-) TimerEvent: {}
+[49.894882] (-) TimerEvent: {}
+[49.995070] (-) TimerEvent: {}
+[50.095155] (-) TimerEvent: {}
+[50.195238] (-) TimerEvent: {}
+[50.295324] (-) TimerEvent: {}
+[50.395411] (-) TimerEvent: {}
+[50.495497] (-) TimerEvent: {}
+[50.595678] (-) TimerEvent: {}
+[50.695792] (-) TimerEvent: {}
+[50.795890] (-) TimerEvent: {}
+[50.895976] (-) TimerEvent: {}
+[50.996060] (-) TimerEvent: {}
+[51.096143] (-) TimerEvent: {}
+[51.196225] (-) TimerEvent: {}
+[51.296311] (-) TimerEvent: {}
+[51.396396] (-) TimerEvent: {}
+[51.496678] (-) TimerEvent: {}
+[51.596955] (-) TimerEvent: {}
+[51.697199] (-) TimerEvent: {}
+[51.797316] (-) TimerEvent: {}
+[51.897404] (-) TimerEvent: {}
+[51.997652] (-) TimerEvent: {}
+[52.097996] (-) TimerEvent: {}
+[52.198098] (-) TimerEvent: {}
+[52.298184] (-) TimerEvent: {}
+[52.398273] (-) TimerEvent: {}
+[52.498365] (-) TimerEvent: {}
+[52.598581] (-) TimerEvent: {}
+[52.698669] (-) TimerEvent: {}
+[52.798757] (-) TimerEvent: {}
+[52.898840] (-) TimerEvent: {}
+[52.998887] (-) TimerEvent: {}
+[53.098969] (-) TimerEvent: {}
+[53.199051] (-) TimerEvent: {}
+[53.299134] (-) TimerEvent: {}
+[53.399217] (-) TimerEvent: {}
+[53.499302] (-) TimerEvent: {}
+[53.599578] (-) TimerEvent: {}
+[53.699852] (-) TimerEvent: {}
+[53.799952] (-) TimerEvent: {}
+[53.900122] (-) TimerEvent: {}
+[54.000216] (-) TimerEvent: {}
+[54.100302] (-) TimerEvent: {}
+[54.200389] (-) TimerEvent: {}
+[54.300474] (-) TimerEvent: {}
+[54.400557] (-) TimerEvent: {}
+[54.500833] (-) TimerEvent: {}
+[54.600887] (-) TimerEvent: {}
+[54.700973] (-) TimerEvent: {}
+[54.801060] (-) TimerEvent: {}
+[54.901145] (-) TimerEvent: {}
+[55.001228] (-) TimerEvent: {}
+[55.101312] (-) TimerEvent: {}
+[55.201395] (-) TimerEvent: {}
+[55.301481] (-) TimerEvent: {}
+[55.401585] (-) TimerEvent: {}
+[55.501793] (-) TimerEvent: {}
+[55.601996] (-) TimerEvent: {}
+[55.702113] (-) TimerEvent: {}
+[55.802201] (-) TimerEvent: {}
+[55.902286] (-) TimerEvent: {}
+[56.002372] (-) TimerEvent: {}
+[56.102647] (-) TimerEvent: {}
+[56.202914] (-) TimerEvent: {}
+[56.303071] (-) TimerEvent: {}
+[56.403188] (-) TimerEvent: {}
+[56.503274] (-) TimerEvent: {}
+[56.603359] (-) TimerEvent: {}
+[56.703517] (-) TimerEvent: {}
+[56.803830] (-) TimerEvent: {}
+[56.904127] (-) TimerEvent: {}
+[57.004223] (-) TimerEvent: {}
+[57.104308] (-) TimerEvent: {}
+[57.204393] (-) TimerEvent: {}
+[57.304476] (-) TimerEvent: {}
+[57.404638] (-) TimerEvent: {}
+[57.504907] (-) TimerEvent: {}
+[57.604972] (-) TimerEvent: {}
+[57.705067] (-) TimerEvent: {}
+[57.805157] (-) TimerEvent: {}
+[57.905244] (-) TimerEvent: {}
+[58.005331] (-) TimerEvent: {}
+[58.105486] (-) TimerEvent: {}
+[58.205657] (-) TimerEvent: {}
+[58.305849] (-) TimerEvent: {}
+[58.406117] (-) TimerEvent: {}
+[58.506221] (-) TimerEvent: {}
+[58.606308] (-) TimerEvent: {}
+[58.706396] (-) TimerEvent: {}
+[58.806484] (-) TimerEvent: {}
+[58.906567] (-) TimerEvent: {}
+[59.006777] (-) TimerEvent: {}
+[59.107054] (-) TimerEvent: {}
+[59.207144] (-) TimerEvent: {}
+[59.307231] (-) TimerEvent: {}
+[59.407344] (-) TimerEvent: {}
+[59.507449] (-) TimerEvent: {}
+[59.607734] (-) TimerEvent: {}
+[59.708011] (-) TimerEvent: {}
+[59.808099] (-) TimerEvent: {}
+[59.908185] (-) TimerEvent: {}
+[60.008284] (-) TimerEvent: {}
+[60.040826] (sentry_description) CommandEnded: {'returncode': 0}
+[60.041011] (sentry_description) JobProgress: {'identifier': 'sentry_description', 'progress': 'build'}
+[60.041022] (sentry_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ethan/RoboVigor/build/sentry_description', '--', '-j24', '-l24'], 'cwd': '/home/ethan/RoboVigor/build/sentry_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'ethan'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ethan/RoboVigor/sentinel_ws/install/sentry_sim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ethan'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2319'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bd7cc0131317e76e54f9627e6ae59191'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://127.0.0.1:7897/'), ('COLCON_PREFIX_PATH', '/home/ethan/RoboVigor/sentinel_ws/install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('CODEX_TOOL_CALL_ID', 'exec-54ec017b-44bb-4a08-b235-9a8382cf09bc'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ethan'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ethan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ethan/.codex/packages/app-server-daemon/releases/0.166.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.local/bin:/home/ethan/.codex/tmp/arg0-linux/codex-arg0Vm2n32:/home/ethan/.codex/packages/app-server-daemon/releases/0.166.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.codex/tmp/arg0-linux/codex-arg0972Er9:/home/ethan/.codex/packages/app-server-daemon/releases/0.165.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.codex/tmp/arg0/codex-arg055GCAM:/home/ethan/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ethan/.local/bin:/opt/ros/humble/bin:/home/ethan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/pc:@/tmp/.ICE-unix/2319,unix/pc:/tmp/.ICE-unix/2319'), ('CODEX_VERSION', '0.166.0'), ('CODEX_SESSION_ID', '01a182e2-9ffc-7012-9d22-9e463e9441c8'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7b469c03_070c_4810_9abd_3bd761d357bc'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.144'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ethan/RoboVigor/sentinel_ws/install/sentry_bringup:/home/ethan/RoboVigor/sentinel_ws/install/sentry_sim:/home/ethan/RoboVigor/sentinel_ws/install/sentry_motion:/home/ethan/RoboVigor/sentinel_ws/install/sentry_description:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a182e2-9ffc-7012-9d22-9e463e9441c8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ethan/RoboVigor/build/sentry_description'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bd7cc0131317e76e54f9627e6ae59191'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/ethan/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ethan/RoboVigor/sentinel_ws/install/sentry_bringup:/home/ethan/RoboVigor/sentinel_ws/install/sentry_sim:/home/ethan/RoboVigor/sentinel_ws/install/sentry_motion:/home/ethan/RoboVigor/sentinel_ws/install/sentry_description:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble')]), 'shell': False}
+[60.108351] (-) TimerEvent: {}
+[60.208447] (-) TimerEvent: {}
+[60.308533] (-) TimerEvent: {}
+[60.408619] (-) TimerEvent: {}
+[60.508705] (-) TimerEvent: {}
+[60.609093] (-) TimerEvent: {}
+[60.709217] (-) TimerEvent: {}
+[60.809304] (-) TimerEvent: {}
+[60.909393] (-) TimerEvent: {}
+[61.009662] (-) TimerEvent: {}
+[61.109952] (-) TimerEvent: {}
+[61.210064] (-) TimerEvent: {}
+[61.310182] (-) TimerEvent: {}
+[61.410302] (-) TimerEvent: {}
+[61.510390] (-) TimerEvent: {}
+[61.610473] (-) TimerEvent: {}
+[61.710659] (-) TimerEvent: {}
+[61.810766] (-) TimerEvent: {}
+[61.910953] (-) TimerEvent: {}
+[62.011084] (-) TimerEvent: {}
+[62.111169] (-) TimerEvent: {}
+[62.211256] (-) TimerEvent: {}
+[62.311406] (-) TimerEvent: {}
+[62.411596] (-) TimerEvent: {}
+[62.511682] (-) TimerEvent: {}
+[62.611870] (-) TimerEvent: {}
+[62.712029] (-) TimerEvent: {}
+[62.812091] (-) TimerEvent: {}
+[62.912184] (-) TimerEvent: {}
+[63.012269] (-) TimerEvent: {}
+[63.112353] (-) TimerEvent: {}
+[63.212436] (-) TimerEvent: {}
+[63.312519] (-) TimerEvent: {}
+[63.412602] (-) TimerEvent: {}
+[63.512705] (-) TimerEvent: {}
+[63.612868] (-) TimerEvent: {}
+[63.713025] (-) TimerEvent: {}
+[63.813112] (-) TimerEvent: {}
+[63.913198] (-) TimerEvent: {}
+[64.013283] (-) TimerEvent: {}
+[64.113369] (-) TimerEvent: {}
+[64.213739] (-) TimerEvent: {}
+[64.314127] (-) TimerEvent: {}
+[64.414244] (-) TimerEvent: {}
+[64.514330] (-) TimerEvent: {}
+[64.614504] (-) TimerEvent: {}
+[64.714850] (-) TimerEvent: {}
+[64.815005] (-) TimerEvent: {}
+[64.915103] (-) TimerEvent: {}
+[65.015353] (-) TimerEvent: {}
+[65.115448] (-) TimerEvent: {}
+[65.215534] (-) TimerEvent: {}
+[65.315622] (-) TimerEvent: {}
+[65.415714] (-) TimerEvent: {}
+[65.515784] (-) TimerEvent: {}
+[65.615871] (-) TimerEvent: {}
+[65.716131] (-) TimerEvent: {}
+[65.816363] (-) TimerEvent: {}
+[65.916463] (-) TimerEvent: {}
+[66.016709] (-) TimerEvent: {}
+[66.116854] (-) TimerEvent: {}
+[66.216974] (-) TimerEvent: {}
+[66.317059] (-) TimerEvent: {}
+[66.417154] (-) TimerEvent: {}
+[66.517238] (-) TimerEvent: {}
+[66.617333] (-) TimerEvent: {}
+[66.717430] (-) TimerEvent: {}
+[66.817635] (-) TimerEvent: {}
+[66.917887] (-) TimerEvent: {}
+[67.017960] (-) TimerEvent: {}
+[67.118108] (-) TimerEvent: {}
+[67.218211] (-) TimerEvent: {}
+[67.318325] (-) TimerEvent: {}
+[67.418517] (-) TimerEvent: {}
+[67.518728] (-) TimerEvent: {}
+[67.618953] (-) TimerEvent: {}
+[67.719128] (-) TimerEvent: {}
+[67.819232] (-) TimerEvent: {}
+[67.919326] (-) TimerEvent: {}
+[68.019416] (-) TimerEvent: {}
+[68.119751] (-) TimerEvent: {}
+[68.219947] (-) TimerEvent: {}
+[68.320125] (-) TimerEvent: {}
+[68.420221] (-) TimerEvent: {}
+[68.520310] (-) TimerEvent: {}
+[68.620406] (-) TimerEvent: {}
+[68.720494] (-) TimerEvent: {}
+[68.820681] (-) TimerEvent: {}
+[68.920956] (-) TimerEvent: {}
+[69.021064] (-) TimerEvent: {}
+[69.121154] (-) TimerEvent: {}
+[69.221244] (-) TimerEvent: {}
+[69.321330] (-) TimerEvent: {}
+[69.421603] (-) TimerEvent: {}
+[69.521878] (-) TimerEvent: {}
+[69.621969] (-) TimerEvent: {}
+[69.722138] (-) TimerEvent: {}
+[69.822232] (-) TimerEvent: {}
+[69.922319] (-) TimerEvent: {}
+[70.022594] (-) TimerEvent: {}
+[70.122888] (-) TimerEvent: {}
+[70.223061] (-) TimerEvent: {}
+[70.323148] (-) TimerEvent: {}
+[70.423241] (-) TimerEvent: {}
+[70.523326] (-) TimerEvent: {}
+[70.623420] (-) TimerEvent: {}
+[70.723515] (-) TimerEvent: {}
+[70.823605] (-) TimerEvent: {}
+[70.923695] (-) TimerEvent: {}
+[71.023780] (-) TimerEvent: {}
+[71.123864] (-) TimerEvent: {}
+[71.223950] (-) TimerEvent: {}
+[71.324041] (-) TimerEvent: {}
+[71.424179] (-) TimerEvent: {}
+[71.524273] (-) TimerEvent: {}
+[71.624361] (-) TimerEvent: {}
+[71.724450] (-) TimerEvent: {}
+[71.824615] (-) TimerEvent: {}
+[71.924930] (-) TimerEvent: {}
+[72.025123] (-) TimerEvent: {}
+[72.125240] (-) TimerEvent: {}
+[72.225327] (-) TimerEvent: {}
+[72.325437] (-) TimerEvent: {}
+[72.425769] (-) TimerEvent: {}
+[72.526111] (-) TimerEvent: {}
+[72.626236] (-) TimerEvent: {}
+[72.726330] (-) TimerEvent: {}
+[72.826418] (-) TimerEvent: {}
+[72.926505] (-) TimerEvent: {}
+[73.026693] (-) TimerEvent: {}
+[73.126904] (-) TimerEvent: {}
+[73.226978] (-) TimerEvent: {}
+[73.327112] (-) TimerEvent: {}
+[73.427200] (-) TimerEvent: {}
+[73.527289] (-) TimerEvent: {}
+[73.627378] (-) TimerEvent: {}
+[73.727697] (-) TimerEvent: {}
+[73.827971] (-) TimerEvent: {}
+[73.928263] (-) TimerEvent: {}
+[74.028608] (-) TimerEvent: {}
+[74.128913] (-) TimerEvent: {}
+[74.229104] (-) TimerEvent: {}
+[74.329246] (-) TimerEvent: {}
+[74.429362] (-) TimerEvent: {}
+[74.529422] (-) TimerEvent: {}
+[74.629634] (-) TimerEvent: {}
+[74.729953] (-) TimerEvent: {}
+[74.830056] (-) TimerEvent: {}
+[74.930141] (-) TimerEvent: {}
+[75.030228] (-) TimerEvent: {}
+[75.130313] (-) TimerEvent: {}
+[75.230400] (-) TimerEvent: {}
+[75.330488] (-) TimerEvent: {}
+[75.430668] (-) TimerEvent: {}
+[75.530935] (-) TimerEvent: {}
+[75.631096] (-) TimerEvent: {}
+[75.731207] (-) TimerEvent: {}
+[75.831299] (-) TimerEvent: {}
+[75.931388] (-) TimerEvent: {}
+[76.031474] (-) TimerEvent: {}
+[76.131558] (-) TimerEvent: {}
+[76.231642] (-) TimerEvent: {}
+[76.331696] (-) TimerEvent: {}
+[76.431969] (-) TimerEvent: {}
+[76.532182] (-) TimerEvent: {}
+[76.632305] (-) TimerEvent: {}
+[76.732398] (-) TimerEvent: {}
+[76.832488] (-) TimerEvent: {}
+[76.932757] (-) TimerEvent: {}
+[77.033007] (-) TimerEvent: {}
+[77.133068] (-) TimerEvent: {}
+[77.233158] (-) TimerEvent: {}
+[77.333247] (-) TimerEvent: {}
+[77.433335] (-) TimerEvent: {}
+[77.533423] (-) TimerEvent: {}
+[77.633564] (-) TimerEvent: {}
+[77.733883] (-) TimerEvent: {}
+[77.834117] (-) TimerEvent: {}
+[77.934210] (-) TimerEvent: {}
+[78.034330] (-) TimerEvent: {}
+[78.134418] (-) TimerEvent: {}
+[78.234508] (-) TimerEvent: {}
+[78.334778] (-) TimerEvent: {}
+[78.435076] (-) TimerEvent: {}
+[78.535167] (-) TimerEvent: {}
+[78.635263] (-) TimerEvent: {}
+[78.735355] (-) TimerEvent: {}
+[78.835440] (-) TimerEvent: {}
+[78.935523] (-) TimerEvent: {}
+[79.035791] (-) TimerEvent: {}
+[79.135885] (-) TimerEvent: {}
+[79.235969] (-) TimerEvent: {}
+[79.336054] (-) TimerEvent: {}
+[79.436137] (-) TimerEvent: {}
+[79.536219] (-) TimerEvent: {}
+[79.636303] (-) TimerEvent: {}
+[79.736386] (-) TimerEvent: {}
+[79.836469] (-) TimerEvent: {}
+[79.936551] (-) TimerEvent: {}
+[80.036744] (-) TimerEvent: {}
+[80.137093] (-) TimerEvent: {}
+[80.237201] (-) TimerEvent: {}
+[80.337286] (-) TimerEvent: {}
+[80.437372] (-) TimerEvent: {}
+[80.537642] (-) TimerEvent: {}
+[80.637976] (-) TimerEvent: {}
+[80.738116] (-) TimerEvent: {}
+[80.838221] (-) TimerEvent: {}
+[80.938315] (-) TimerEvent: {}
+[81.038410] (-) TimerEvent: {}
+[81.138680] (-) TimerEvent: {}
+[81.238963] (-) TimerEvent: {}
+[81.339113] (-) TimerEvent: {}
+[81.439223] (-) TimerEvent: {}
+[81.539311] (-) TimerEvent: {}
+[81.639470] (-) TimerEvent: {}
+[81.739669] (-) TimerEvent: {}
+[81.839964] (-) TimerEvent: {}
+[81.940060] (-) TimerEvent: {}
+[82.040115] (-) TimerEvent: {}
+[82.140201] (-) TimerEvent: {}
+[82.240285] (-) TimerEvent: {}
+[82.340372] (-) TimerEvent: {}
+[82.440459] (-) TimerEvent: {}
+[82.540762] (-) TimerEvent: {}
+[82.641039] (-) TimerEvent: {}
+[82.741161] (-) TimerEvent: {}
+[82.841266] (-) TimerEvent: {}
+[82.941353] (-) TimerEvent: {}
+[83.041439] (-) TimerEvent: {}
+[83.141522] (-) TimerEvent: {}
+[83.241785] (-) TimerEvent: {}
+[83.342108] (-) TimerEvent: {}
+[83.442227] (-) TimerEvent: {}
+[83.542317] (-) TimerEvent: {}
+[83.642409] (-) TimerEvent: {}
+[83.742706] (-) TimerEvent: {}
+[83.842952] (-) TimerEvent: {}
+[83.943061] (-) TimerEvent: {}
+[84.043180] (-) TimerEvent: {}
+[84.143268] (-) TimerEvent: {}
+[84.243354] (-) TimerEvent: {}
+[84.343447] (-) TimerEvent: {}
+[84.443530] (-) TimerEvent: {}
+[84.543807] (-) TimerEvent: {}
+[84.644064] (-) TimerEvent: {}
+[84.744187] (-) TimerEvent: {}
+[84.844274] (-) TimerEvent: {}
+[84.944361] (-) TimerEvent: {}
+[85.044506] (-) TimerEvent: {}
+[85.144763] (-) TimerEvent: {}
+[85.245046] (-) TimerEvent: {}
+[85.345135] (-) TimerEvent: {}
+[85.445220] (-) TimerEvent: {}
+[85.545305] (-) TimerEvent: {}
+[85.645390] (-) TimerEvent: {}
+[85.745475] (-) TimerEvent: {}
+[85.845658] (-) TimerEvent: {}
+[85.945851] (-) TimerEvent: {}
+[86.045996] (-) TimerEvent: {}
+[86.146098] (-) TimerEvent: {}
+[86.246188] (-) TimerEvent: {}
+[86.346278] (-) TimerEvent: {}
+[86.446367] (-) TimerEvent: {}
+[86.546683] (-) TimerEvent: {}
+[86.647055] (-) TimerEvent: {}
+[86.747173] (-) TimerEvent: {}
+[86.847262] (-) TimerEvent: {}
+[86.947348] (-) TimerEvent: {}
+[87.047518] (-) TimerEvent: {}
+[87.147833] (-) TimerEvent: {}
+[87.247955] (-) TimerEvent: {}
+[87.348043] (-) TimerEvent: {}
+[87.448130] (-) TimerEvent: {}
+[87.548218] (-) TimerEvent: {}
+[87.648310] (-) TimerEvent: {}
+[87.748399] (-) TimerEvent: {}
+[87.848689] (-) TimerEvent: {}
+[87.948965] (-) TimerEvent: {}
+[88.049070] (-) TimerEvent: {}
+[88.149157] (-) TimerEvent: {}
+[88.249243] (-) TimerEvent: {}
+[88.349328] (-) TimerEvent: {}
+[88.449414] (-) TimerEvent: {}
+[88.549500] (-) TimerEvent: {}
+[88.649774] (-) TimerEvent: {}
+[88.750099] (-) TimerEvent: {}
+[88.850212] (-) TimerEvent: {}
+[88.950300] (-) TimerEvent: {}
+[89.050388] (-) TimerEvent: {}
+[89.150477] (-) TimerEvent: {}
+[89.250675] (-) TimerEvent: {}
+[89.350897] (-) TimerEvent: {}
+[89.450994] (-) TimerEvent: {}
+[89.551094] (-) TimerEvent: {}
+[89.651186] (-) TimerEvent: {}
+[89.751271] (-) TimerEvent: {}
+[89.851354] (-) TimerEvent: {}
+[89.951438] (-) TimerEvent: {}
+[90.051594] (-) TimerEvent: {}
+[90.067120] (sentry_description) CommandEnded: {'returncode': 0}
+[90.068297] (sentry_description) JobProgress: {'identifier': 'sentry_description', 'progress': 'install'}
+[90.073308] (sentry_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ethan/RoboVigor/build/sentry_description'], 'cwd': '/home/ethan/RoboVigor/build/sentry_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'ethan'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ethan/RoboVigor/sentinel_ws/install/sentry_sim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ethan'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2319'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bd7cc0131317e76e54f9627e6ae59191'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://127.0.0.1:7897/'), ('COLCON_PREFIX_PATH', '/home/ethan/RoboVigor/sentinel_ws/install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('CODEX_TOOL_CALL_ID', 'exec-54ec017b-44bb-4a08-b235-9a8382cf09bc'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ethan'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ethan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ethan/.codex/packages/app-server-daemon/releases/0.166.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.local/bin:/home/ethan/.codex/tmp/arg0-linux/codex-arg0Vm2n32:/home/ethan/.codex/packages/app-server-daemon/releases/0.166.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.codex/tmp/arg0-linux/codex-arg0972Er9:/home/ethan/.codex/packages/app-server-daemon/releases/0.165.0-x86_64-unknown-linux-musl/codex-path:/home/ethan/.codex/tmp/arg0/codex-arg055GCAM:/home/ethan/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ethan/.local/bin:/opt/ros/humble/bin:/home/ethan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/pc:@/tmp/.ICE-unix/2319,unix/pc:/tmp/.ICE-unix/2319'), ('CODEX_VERSION', '0.166.0'), ('CODEX_SESSION_ID', '01a182e2-9ffc-7012-9d22-9e463e9441c8'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7b469c03_070c_4810_9abd_3bd761d357bc'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.144'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ethan/RoboVigor/sentinel_ws/install/sentry_bringup:/home/ethan/RoboVigor/sentinel_ws/install/sentry_sim:/home/ethan/RoboVigor/sentinel_ws/install/sentry_motion:/home/ethan/RoboVigor/sentinel_ws/install/sentry_description:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a182e2-9ffc-7012-9d22-9e463e9441c8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ethan/RoboVigor/build/sentry_description'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bd7cc0131317e76e54f9627e6ae59191'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/ethan/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ethan/RoboVigor/sentinel_ws/install/rm_arena/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ethan/RoboVigor/sentinel_ws/install/sentry_bringup:/home/ethan/RoboVigor/sentinel_ws/install/sentry_sim:/home/ethan/RoboVigor/sentinel_ws/install/sentry_motion:/home/ethan/RoboVigor/sentinel_ws/install/sentry_description:/home/ethan/RoboVigor/sentinel_ws/install/rm_arena:/opt/ros/humble')]), 'shell': False}
+[90.076125] (sentry_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[90.076202] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/lib/sentry_description/description_publisher.py\n'}
+[90.076228] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf\n'}
+[90.076248] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/sentry_cad.json\n'}
+[90.076378] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/chassis.xacro\n'}
+[90.076398] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/sentry.urdf.xacro\n'}
+[90.076417] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/sensors.xacro\n'}
+[90.076434] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/sentry_original.urdf\n'}
+[90.076452] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/urdf/gimbal.xacro\n'}
+[90.076470] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes\n'}
+[90.076487] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_099_link.stl\n'}
+[90.076504] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_025_link.stl\n'}
+[90.076550] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_013_link.stl\n'}
+[90.076585] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_063_link.stl\n'}
+[90.076603] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_023_link.stl\n'}
+[90.076637] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_101_link.stl\n'}
+[90.076655] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_103_link.stl\n'}
+[90.076672] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_039_link.stl\n'}
+[90.076713] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_104_link.stl\n'}
+[90.076729] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_076_link.stl\n'}
+[90.076745] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_047_link.stl\n'}
+[90.076781] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_008_link.stl\n'}
+[90.076798] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_069_link.stl\n'}
+[90.076833] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_020_link.stl\n'}
+[90.076868] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_006_link.stl\n'}
+[90.076906] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_015_link.stl\n'}
+[90.076940] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_060_link.stl\n'}
+[90.076975] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_044_link.stl\n'}
+[90.077025] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_011_link.stl\n'}
+[90.077061] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/wheel_2_link.stl\n'}
+[90.077504] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_012_link.stl\n'}
+[90.077543] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/gimbal_low.stl\n'}
+[90.079140] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_086_link.stl\n'}
+[90.079254] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_093_link.stl\n'}
+[90.079285] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_024_link.stl\n'}
+[90.079303] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_084_link.stl\n'}
+[90.079341] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_017_link.stl\n'}
+[90.079364] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/wheel_1_link.stl\n'}
+[90.080051] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/chassis_low.stl\n'}
+[90.081279] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_018_link.stl\n'}
+[90.081358] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_112_link.stl\n'}
+[90.081382] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_009_link.stl\n'}
+[90.081458] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_016_link.stl\n'}
+[90.081480] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_082_link.stl\n'}
+[90.081497] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_004_link.stl\n'}
+[90.081514] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_067_link.stl\n'}
+[90.081573] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_019_link.stl\n'}
+[90.081621] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/wheel_4_link.stl\n'}
+[90.081983] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_033_link.stl\n'}
+[90.082047] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_035_link.stl\n'}
+[90.082109] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_028_link.stl\n'}
+[90.082152] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_032_link.stl\n'}
+[90.082171] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_098_link.stl\n'}
+[90.082206] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_062_link.stl\n'}
+[90.082242] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_065_link.stl\n'}
+[90.082277] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_073_link.stl\n'}
+[90.082310] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_061_link.stl\n'}
+[90.082346] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_030_link.stl\n'}
+[90.082379] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_003_link.stl\n'}
+[90.082416] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_058_link.stl\n'}
+[90.082454] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_079_link.stl\n'}
+[90.082494] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_029_link.stl\n'}
+[90.082535] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_106_link.stl\n'}
+[90.082575] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_034_link.stl\n'}
+[90.082615] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_055_link.stl\n'}
+[90.082657] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_085_link.stl\n'}
+[90.082698] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_064_link.stl\n'}
+[90.082737] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_074_link.stl\n'}
+[90.082779] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_105_link.stl\n'}
+[90.082817] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_097_link.stl\n'}
+[90.082856] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_056_link.stl\n'}
+[90.082899] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_077_link.stl\n'}
+[90.082938] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/chassis.stl\n'}
+[90.087950] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_087_link.stl\n'}
+[90.088025] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_088_link.stl\n'}
+[90.088048] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_038_link.stl\n'}
+[90.088266] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_100_link.stl\n'}
+[90.088313] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_075_link.stl\n'}
+[90.088335] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_090_link.stl\n'}
+[90.088352] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/gimbal.stl\n'}
+[90.094813] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_070_link.stl\n'}
+[90.094895] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_036_link.stl\n'}
+[90.094919] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_037_link.stl\n'}
+[90.094938] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_080_link.stl\n'}
+[90.094955] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_094_link.stl\n'}
+[90.094971] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_109_link.stl\n'}
+[90.095218] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_027_link.stl\n'}
+[90.095269] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_005_link.stl\n'}
+[90.095297] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_102_link.stl\n'}
+[90.095316] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_048_link.stl\n'}
+[90.095336] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_054_link.stl\n'}
+[90.095353] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_108_link.stl\n'}
+[90.095373] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_095_link.stl\n'}
+[90.095398] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_050_link.stl\n'}
+[90.095419] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_052_link.stl\n'}
+[90.095436] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_066_link.stl\n'}
+[90.095453] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_107_link.stl\n'}
+[90.095672] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_041_link.stl\n'}
+[90.095734] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_057_link.stl\n'}
+[90.095759] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_110_link.stl\n'}
+[90.095780] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_059_link.stl\n'}
+[90.095823] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_010_link.stl\n'}
+[90.095844] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_042_link.stl\n'}
+[90.095862] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_089_link.stl\n'}
+[90.095903] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_002_link.stl\n'}
+[90.095921] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_092_link.stl\n'}
+[90.095939] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_021_link.stl\n'}
+[90.095956] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_022_link.stl\n'}
+[90.095973] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_083_link.stl\n'}
+[90.095989] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_072_link.stl\n'}
+[90.096004] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_046_link.stl\n'}
+[90.096020] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_068_link.stl\n'}
+[90.096059] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_001_link.stl\n'}
+[90.096075] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_045_link.stl\n'}
+[90.096089] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_026_link.stl\n'}
+[90.096103] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_040_link.stl\n'}
+[90.096117] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_071_link.stl\n'}
+[90.096131] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/wheel_3_link.stl\n'}
+[90.096420] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_007_link.stl\n'}
+[90.096461] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_078_link.stl\n'}
+[90.096502] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_014_link.stl\n'}
+[90.096544] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_081_link.stl\n'}
+[90.096585] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_049_link.stl\n'}
+[90.096626] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_096_link.stl\n'}
+[90.096668] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_031_link.stl\n'}
+[90.096710] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_053_link.stl\n'}
+[90.096757] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_111_link.stl\n'}
+[90.096802] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_091_link.stl\n'}
+[90.096843] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_043_link.stl\n'}
+[90.096889] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/meshes/roller_051_link.stl\n'}
+[90.096936] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/launch\n'}
+[90.096979] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/launch/__pycache__\n'}
+[90.096995] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/launch/__pycache__/description.launch.cpython-310.pyc\n'}
+[90.097031] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/launch/description.launch.py\n'}
+[90.097049] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/config\n'}
+[90.097084] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/config/visual_simplification.json\n'}
+[90.097100] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/config/wheel_dimensions.json\n'}
+[90.097133] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/config/frames.yaml\n'}
+[90.097164] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/ament_index/resource_index/package_run_dependencies/sentry_description\n'}
+[90.097205] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/ament_index/resource_index/parent_prefix_path/sentry_description\n'}
+[90.097250] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/environment/ament_prefix_path.sh\n'}
+[90.097282] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/environment/ament_prefix_path.dsv\n'}
+[90.097314] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/environment/path.sh\n'}
+[90.097345] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/environment/path.dsv\n'}
+[90.097377] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/local_setup.bash\n'}
+[90.097409] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/local_setup.sh\n'}
+[90.097442] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/local_setup.zsh\n'}
+[90.097485] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/local_setup.dsv\n'}
+[90.097503] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.dsv\n'}
+[90.097548] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/ament_index/resource_index/packages/sentry_description\n'}
+[90.097585] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/cmake/sentry_descriptionConfig.cmake\n'}
+[90.097619] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/cmake/sentry_descriptionConfig-version.cmake\n'}
+[90.097653] (sentry_description) StdoutLine: {'line': b'-- Installing: /home/ethan/RoboVigor/install/sentry_description/share/sentry_description/package.xml\n'}
+[90.151795] (-) TimerEvent: {}
+[90.251967] (-) TimerEvent: {}
+[90.352158] (-) TimerEvent: {}
+[90.452270] (-) TimerEvent: {}
+[90.552356] (-) TimerEvent: {}
+[90.652445] (-) TimerEvent: {}
+[90.752614] (-) TimerEvent: {}
+[90.852903] (-) TimerEvent: {}
+[90.953084] (-) TimerEvent: {}
+[91.053187] (-) TimerEvent: {}
+[91.153272] (-) TimerEvent: {}
+[91.253359] (-) TimerEvent: {}
+[91.353449] (-) TimerEvent: {}
+[91.453629] (-) TimerEvent: {}
+[91.553838] (-) TimerEvent: {}
+[91.653895] (-) TimerEvent: {}
+[91.754105] (-) TimerEvent: {}
+[91.854222] (-) TimerEvent: {}
+[91.954305] (-) TimerEvent: {}
+[92.054387] (-) TimerEvent: {}
+[92.154468] (-) TimerEvent: {}
+[92.254551] (-) TimerEvent: {}
+[92.354634] (-) TimerEvent: {}
+[92.454717] (-) TimerEvent: {}
+[92.554806] (-) TimerEvent: {}
+[92.654890] (-) TimerEvent: {}
+[92.755078] (-) TimerEvent: {}
+[92.855164] (-) TimerEvent: {}
+[92.955255] (-) TimerEvent: {}
+[93.055345] (-) TimerEvent: {}
+[93.155664] (-) TimerEvent: {}
+[93.255817] (-) TimerEvent: {}
+[93.356093] (-) TimerEvent: {}
+[93.456201] (-) TimerEvent: {}
+[93.556285] (-) TimerEvent: {}
+[93.656377] (-) TimerEvent: {}
+[93.756466] (-) TimerEvent: {}
+[93.856770] (-) TimerEvent: {}
+[93.956997] (-) TimerEvent: {}
+[94.057110] (-) TimerEvent: {}
+[94.157201] (-) TimerEvent: {}
+[94.257288] (-) TimerEvent: {}
+[94.357374] (-) TimerEvent: {}
+[94.457458] (-) TimerEvent: {}
+[94.557601] (-) TimerEvent: {}
+[94.657792] (-) TimerEvent: {}
+[94.758041] (-) TimerEvent: {}
+[94.858149] (-) TimerEvent: {}
+[94.958234] (-) TimerEvent: {}
+[95.058319] (-) TimerEvent: {}
+[95.158403] (-) TimerEvent: {}
+[95.258488] (-) TimerEvent: {}
+[95.358647] (-) TimerEvent: {}
+[95.458814] (-) TimerEvent: {}
+[95.558998] (-) TimerEvent: {}
+[95.659099] (-) TimerEvent: {}
+[95.759185] (-) TimerEvent: {}
+[95.859271] (-) TimerEvent: {}
+[95.959357] (-) TimerEvent: {}
+[96.059441] (-) TimerEvent: {}
+[96.159708] (-) TimerEvent: {}
+[96.259864] (-) TimerEvent: {}
+[96.360080] (-) TimerEvent: {}
+[96.460170] (-) TimerEvent: {}
+[96.560256] (-) TimerEvent: {}
+[96.660346] (-) TimerEvent: {}
+[96.760435] (-) TimerEvent: {}
+[96.860517] (-) TimerEvent: {}
+[96.960598] (-) TimerEvent: {}
+[97.060678] (-) TimerEvent: {}
+[97.160758] (-) TimerEvent: {}
+[97.260838] (-) TimerEvent: {}
+[97.360888] (-) TimerEvent: {}
+[97.460999] (-) TimerEvent: {}
+[97.561182] (-) TimerEvent: {}
+[97.661292] (-) TimerEvent: {}
+[97.761376] (-) TimerEvent: {}
+[97.861458] (-) TimerEvent: {}
+[97.961540] (-) TimerEvent: {}
+[98.061843] (-) TimerEvent: {}
+[98.162193] (-) TimerEvent: {}
+[98.262308] (-) TimerEvent: {}
+[98.362394] (-) TimerEvent: {}
+[98.462657] (-) TimerEvent: {}
+[98.562929] (-) TimerEvent: {}
+[98.663097] (-) TimerEvent: {}
+[98.763185] (-) TimerEvent: {}
+[98.863271] (-) TimerEvent: {}
+[98.963356] (-) TimerEvent: {}
+[99.063631] (-) TimerEvent: {}
+[99.163900] (-) TimerEvent: {}
+[99.264115] (-) TimerEvent: {}
+[99.364214] (-) TimerEvent: {}
+[99.464301] (-) TimerEvent: {}
+[99.564387] (-) TimerEvent: {}
+[99.664483] (-) TimerEvent: {}
+[99.764632] (-) TimerEvent: {}
+[99.864916] (-) TimerEvent: {}
+[99.965104] (-) TimerEvent: {}
+[100.065189] (-) TimerEvent: {}
+[100.165271] (-) TimerEvent: {}
+[100.265352] (-) TimerEvent: {}
+[100.365434] (-) TimerEvent: {}
+[100.465516] (-) TimerEvent: {}
+[100.565597] (-) TimerEvent: {}
+[100.665759] (-) TimerEvent: {}
+[100.766070] (-) TimerEvent: {}
+[100.866389] (-) TimerEvent: {}
+[100.966471] (-) TimerEvent: {}
+[101.066761] (-) TimerEvent: {}
+[101.166846] (-) TimerEvent: {}
+[101.266890] (-) TimerEvent: {}
+[101.366971] (-) TimerEvent: {}
+[101.467088] (-) TimerEvent: {}
+[101.567171] (-) TimerEvent: {}
+[101.667261] (-) TimerEvent: {}
+[101.767350] (-) TimerEvent: {}
+[101.867435] (-) TimerEvent: {}
+[101.967519] (-) TimerEvent: {}
+[102.067805] (-) TimerEvent: {}
+[102.168070] (-) TimerEvent: {}
+[102.268195] (-) TimerEvent: {}
+[102.368281] (-) TimerEvent: {}
+[102.468368] (-) TimerEvent: {}
+[102.568455] (-) TimerEvent: {}
+[102.668721] (-) TimerEvent: {}
+[102.768867] (-) TimerEvent: {}
+[102.869039] (-) TimerEvent: {}
+[102.969114] (-) TimerEvent: {}
+[103.069236] (-) TimerEvent: {}
+[103.169322] (-) TimerEvent: {}
+[103.269407] (-) TimerEvent: {}
+[103.369491] (-) TimerEvent: {}
+[103.469759] (-) TimerEvent: {}
+[103.570028] (-) TimerEvent: {}
+[103.670146] (-) TimerEvent: {}
+[103.770238] (-) TimerEvent: {}
+[103.870323] (-) TimerEvent: {}
+[103.970408] (-) TimerEvent: {}
+[104.070640] (-) TimerEvent: {}
+[104.170786] (-) TimerEvent: {}
+[104.271033] (-) TimerEvent: {}
+[104.371135] (-) TimerEvent: {}
+[104.471223] (-) TimerEvent: {}
+[104.571309] (-) TimerEvent: {}
+[104.671455] (-) TimerEvent: {}
+[104.771641] (-) TimerEvent: {}
+[104.871959] (-) TimerEvent: {}
+[104.972057] (-) TimerEvent: {}
+[105.072171] (-) TimerEvent: {}
+[105.172256] (-) TimerEvent: {}
+[105.272580] (-) TimerEvent: {}
+[105.372825] (-) TimerEvent: {}
+[105.472889] (-) TimerEvent: {}
+[105.572971] (-) TimerEvent: {}
+[105.673057] (-) TimerEvent: {}
+[105.773146] (-) TimerEvent: {}
+[105.873377] (-) TimerEvent: {}
+[105.973704] (-) TimerEvent: {}
+[106.074055] (-) TimerEvent: {}
+[106.174182] (-) TimerEvent: {}
+[106.274268] (-) TimerEvent: {}
+[106.374352] (-) TimerEvent: {}
+[106.474437] (-) TimerEvent: {}
+[106.574621] (-) TimerEvent: {}
+[106.674956] (-) TimerEvent: {}
+[106.775057] (-) TimerEvent: {}
+[106.875173] (-) TimerEvent: {}
+[106.975289] (-) TimerEvent: {}
+[107.075375] (-) TimerEvent: {}
+[107.175462] (-) TimerEvent: {}
+[107.275793] (-) TimerEvent: {}
+[107.376144] (-) TimerEvent: {}
+[107.476239] (-) TimerEvent: {}
+[107.576327] (-) TimerEvent: {}
+[107.676411] (-) TimerEvent: {}
+[107.776494] (-) TimerEvent: {}
+[107.876576] (-) TimerEvent: {}
+[107.976657] (-) TimerEvent: {}
+[108.076891] (-) TimerEvent: {}
+[108.177005] (-) TimerEvent: {}
+[108.277095] (-) TimerEvent: {}
+[108.377264] (-) TimerEvent: {}
+[108.477461] (-) TimerEvent: {}
+[108.577790] (-) TimerEvent: {}
+[108.678116] (-) TimerEvent: {}
+[108.778212] (-) TimerEvent: {}
+[108.878302] (-) TimerEvent: {}
+[108.978384] (-) TimerEvent: {}
+[109.078466] (-) TimerEvent: {}
+[109.178550] (-) TimerEvent: {}
+[109.278676] (-) TimerEvent: {}
+[109.378958] (-) TimerEvent: {}
+[109.479075] (-) TimerEvent: {}
+[109.579159] (-) TimerEvent: {}
+[109.679248] (-) TimerEvent: {}
+[109.779337] (-) TimerEvent: {}
+[109.879625] (-) TimerEvent: {}
+[109.979896] (-) TimerEvent: {}
+[110.080111] (-) TimerEvent: {}
+[110.180226] (-) TimerEvent: {}
+[110.280311] (-) TimerEvent: {}
+[110.380396] (-) TimerEvent: {}
+[110.480481] (-) TimerEvent: {}
+[110.580566] (-) TimerEvent: {}
+[110.680892] (-) TimerEvent: {}
+[110.781018] (-) TimerEvent: {}
+[110.881135] (-) TimerEvent: {}
+[110.981223] (-) TimerEvent: {}
+[111.081309] (-) TimerEvent: {}
+[111.181395] (-) TimerEvent: {}
+[111.281480] (-) TimerEvent: {}
+[111.381693] (-) TimerEvent: {}
+[111.481986] (-) TimerEvent: {}
+[111.582073] (-) TimerEvent: {}
+[111.682164] (-) TimerEvent: {}
+[111.782253] (-) TimerEvent: {}
+[111.882336] (-) TimerEvent: {}
+[111.982625] (-) TimerEvent: {}
+[112.082712] (-) TimerEvent: {}
+[112.182981] (-) TimerEvent: {}
+[112.283071] (-) TimerEvent: {}
+[112.383160] (-) TimerEvent: {}
+[112.483246] (-) TimerEvent: {}
+[112.583347] (-) TimerEvent: {}
+[112.683570] (-) TimerEvent: {}
+[112.783861] (-) TimerEvent: {}
+[112.884231] (-) TimerEvent: {}
+[112.984565] (-) TimerEvent: {}
+[113.084755] (-) TimerEvent: {}
+[113.185022] (-) TimerEvent: {}
+[113.285106] (-) TimerEvent: {}
+[113.385188] (-) TimerEvent: {}
+[113.485281] (-) TimerEvent: {}
+[113.585629] (-) TimerEvent: {}
+[113.685910] (-) TimerEvent: {}
+[113.786134] (-) TimerEvent: {}
+[113.886530] (-) TimerEvent: {}
+[113.986851] (-) TimerEvent: {}
+[114.086996] (-) TimerEvent: {}
+[114.187249] (-) TimerEvent: {}
+[114.287438] (-) TimerEvent: {}
+[114.387690] (-) TimerEvent: {}
+[114.487977] (-) TimerEvent: {}
+[114.588075] (-) TimerEvent: {}
+[114.688165] (-) TimerEvent: {}
+[114.788252] (-) TimerEvent: {}
+[114.888339] (-) TimerEvent: {}
+[114.988685] (-) TimerEvent: {}
+[115.088987] (-) TimerEvent: {}
+[115.189087] (-) TimerEvent: {}
+[115.289171] (-) TimerEvent: {}
+[115.389253] (-) TimerEvent: {}
+[115.489336] (-) TimerEvent: {}
+[115.589436] (-) TimerEvent: {}
+[115.689614] (-) TimerEvent: {}
+[115.789799] (-) TimerEvent: {}
+[115.889960] (-) TimerEvent: {}
+[115.990129] (-) TimerEvent: {}
+[116.090218] (-) TimerEvent: {}
+[116.190301] (-) TimerEvent: {}
+[116.290555] (-) TimerEvent: {}
+[116.390825] (-) TimerEvent: {}
+[116.491092] (-) TimerEvent: {}
+[116.591295] (-) TimerEvent: {}
+[116.691495] (-) TimerEvent: {}
+[116.791714] (-) TimerEvent: {}
+[116.891815] (-) TimerEvent: {}
+[116.992078] (-) TimerEvent: {}
+[117.092161] (-) TimerEvent: {}
+[117.192245] (-) TimerEvent: {}
+[117.292330] (-) TimerEvent: {}
+[117.392413] (-) TimerEvent: {}
+[117.492498] (-) TimerEvent: {}
+[117.592581] (-) TimerEvent: {}
+[117.692671] (-) TimerEvent: {}
+[117.792762] (-) TimerEvent: {}
+[117.893085] (-) TimerEvent: {}
+[117.993179] (-) TimerEvent: {}
+[118.093261] (-) TimerEvent: {}
+[118.193346] (-) TimerEvent: {}
+[118.293432] (-) TimerEvent: {}
+[118.393802] (-) TimerEvent: {}
+[118.494113] (-) TimerEvent: {}
+[118.594217] (-) TimerEvent: {}
+[118.694305] (-) TimerEvent: {}
+[118.794400] (-) TimerEvent: {}
+[118.894486] (-) TimerEvent: {}
+[118.994751] (-) TimerEvent: {}
+[119.095043] (-) TimerEvent: {}
+[119.195094] (-) TimerEvent: {}
+[119.295198] (-) TimerEvent: {}
+[119.395283] (-) TimerEvent: {}
+[119.495366] (-) TimerEvent: {}
+[119.595448] (-) TimerEvent: {}
+[119.695532] (-) TimerEvent: {}
+[119.795667] (-) TimerEvent: {}
+[119.895821] (-) TimerEvent: {}
+[119.995993] (-) TimerEvent: {}
+[120.096079] (-) TimerEvent: {}
+[120.097606] (sentry_description) CommandEnded: {'returncode': 0}
+[120.103522] (sentry_description) JobEnded: {'identifier': 'sentry_description', 'rc': 0}
+[120.103660] (-) EventReactorShutdown: {}

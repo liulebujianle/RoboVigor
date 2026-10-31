@@ -1,11 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   <link name="gimbal_yaw_link">
+    <!-- 极简云台：转盘、立柱、上部支座；共用同一个云台关节。 -->
     <visual>
-      <geometry>
-        <mesh filename="package://sentry_description/meshes/gimbal.stl" />
-      </geometry>
-      <material name="cad_gray" />
+      <origin xyz="0 0 0.015"/>
+      <geometry><cylinder radius="0.105" length="0.03"/></geometry>
+      <material name="turret_gray"><color rgba="0.55 0.58 0.62 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0.10"/>
+      <geometry><box size="0.045 0.045 0.17"/></geometry>
+      <material name="turret_gray"/>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0.19"/>
+      <geometry><box size="0.16 0.12 0.08"/></geometry>
+      <material name="turret_gray"/>
     </visual>
     <inertial>
       <origin xyz="0.032500 -0.001500 0.132000" />

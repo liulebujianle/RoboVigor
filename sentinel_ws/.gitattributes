@@ -1,0 +1,2 @@
+# ROS executables must keep a Linux-compatible shebang on every checkout.
+src/**/*.py text eol=lf

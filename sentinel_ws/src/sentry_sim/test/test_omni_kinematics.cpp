@@ -1,6 +1,7 @@
 // Copyright 2026 RoboVigor contributors
 // SPDX-License-Identifier: Apache-2.0
 #include <cmath>
+#include <initializer_list>
 #include "sentry_sim/omni_kinematics.hpp"
 
 int main()
@@ -22,6 +23,17 @@ int main()
       if (std::abs(contact_x * ay - contact_y * ax) > 1e-12) {
         return 1;
       }
+    }
+  }
+  // Parallel conventional axles: same rates forward, opposite rates turning.
+  const double track_half = 0.195;
+  for (double side : {-track_half, track_half}) {
+    const double straight = sentry_sim::wheel_rate(0, 1, a, side, radius, 0.8, 0, 0);
+    const double turn = sentry_sim::wheel_rate(0, 1, a, side, radius, 0, 0, 1.5);
+    if (std::abs(straight - 0.8 / radius) > 1e-12 ||
+      std::abs(turn + 1.5 * side / radius) > 1e-12)
+    {
+      return 2;
     }
   }
   return 0;
