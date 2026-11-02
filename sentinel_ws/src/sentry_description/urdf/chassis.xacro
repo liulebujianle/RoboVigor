@@ -5,8 +5,6 @@
 
   <!-- ================= 常量区 ================= -->
   <xacro:property name="wheel_mass" value="0.25"/>
-  <xacro:property name="wheel_ixx" value="0.000251041666667"/>
-  <xacro:property name="wheel_izz" value="0.000189583333333"/>
   <!-- 碰撞圆柱用滚子外缘半径 0.0761，和 omni_drive 插件里的 <radius> 一致，否则实际速度会慢 34% -->
   <xacro:property name="wheel_radius" value="0.0761"/>
   <xacro:property name="wheel_length" value="0.03979804608234"/>

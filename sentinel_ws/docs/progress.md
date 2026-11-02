@@ -1,5 +1,11 @@
 # RoboVigor 导航开发记录
 
+> 2026-11-01 现状说明：下文保留历次开发记录，包含已被替换的“当前”描述。
+> 当前源码为四个轻量圆柱轮、五个活动关节、六个 ROS 包，已加入仿真雷达与点云转扫描。
+> 不再有 112 个独立滚子、wheels_link 或 UUID 键盘会话中转。
+> 现状以 [architecture.md](architecture.md) 为准；本次静态检查不替代 ROS/Gazebo 运行验收。
+> 本次修改与验证见 [code_review_2026-11-01.md](code_review_2026-11-01.md)。
+
 ## 当前轮子TF（用户最终要求）
 - 已删除wheel_visuals.py和底盘底部wheels_link。
 - 四个wheel_i_link在各自真实轮轴中心独立旋转；由原生RSP读取实际轮角。

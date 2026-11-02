@@ -94,11 +94,7 @@ class Monitor:
         if not self.enable_draw and not self.enable_web:
             return None
 
-        # 如果需要绘图，才拷贝
-        if self.enable_draw or self.enable_web:
-            annotated = frame.copy()
-        else:
-            annotated = frame
+        annotated = frame.copy()
 
         # 画框
         if boxes is not None:
@@ -111,77 +107,24 @@ class Monitor:
             px, py = pred_point
             cv2.circle(annotated, (int(px), int(py)), 6, (0, 0, 255), -1)
 
-        # 文本
-        y = 30
-        if best_target is not None:
-            cv2.putText(
-                annotated,
-                "Target locked",
-                (10, y),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 255, 0),
-                2
-            )
-            y += 30
-        else:
-            cv2.putText(
-                annotated,
-                "No target",
-                (10, y),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 255, 255),
-                2
-            )
-            y += 30
-
+        # None 表示不显示；0 和 False 仍然是有效显示值。
+        green = (0, 255, 0)
+        labels = [
+            ("Target locked" if best_target is not None else "No target",
+             green if best_target is not None else (0, 255, 255)),
+        ]
         if yaw_error is not None:
-            cv2.putText(
-                annotated,
-                f"Yaw_error: {yaw_error:.1f} deg",
-                (10, y),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 255, 0),
-                2
-            )
-            y += 30
-
+            labels.append((f"Yaw_error: {yaw_error:.1f} deg", green))
         if pitch_error is not None:
-            cv2.putText(
-                annotated,
-                f"Pitch_error: {pitch_error:.1f} deg",
-                (10, y),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 255, 0),
-                2
-            )
-            y += 30
-
+            labels.append((f"Pitch_error: {pitch_error:.1f} deg", green))
         if distance is not None:
-            cv2.putText(
-                annotated,
-                f"Distance: {distance:.0f} mm",
-                (10, y),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 255, 0),
-                2
-            )
-            y += 30
-
+            labels.append((f"Distance: {distance:.0f} mm", green))
         if fire_command is not None:
-            cv2.putText(
-                annotated,
-                f"Fire Command: {fire_command}",
-                (10, y),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 255, 0),
-                2
-            )
+            labels.append((f"Fire Command: {fire_command}", green))
+
+        for row, (text, color) in enumerate(labels, start=1):
+            cv2.putText(annotated, text, (10, row * 30),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2)
 
         if self.enable_web:
             self.update_frame(annotated)

@@ -44,18 +44,16 @@
       <ros>
         <namespace>/</namespace>
       </ros>
-      <wheel joint="wheel_1_joint">
-        <radius>0.07610000042846267</radius>
-      </wheel>
-      <wheel joint="wheel_2_joint">
-        <radius>0.07610000042846263</radius>
-      </wheel>
-      <wheel joint="wheel_3_joint">
-        <radius>0.07610000042846263</radius>
-      </wheel>
-      <wheel joint="wheel_4_joint">
-        <radius>0.07610000042845878</radius>
-      </wheel>
+      <!-- 与模型碰撞几何共用 wheel_radius，避免两处尺寸漂移。 -->
+      <xacro:macro name="drive_wheel" params="n">
+        <wheel joint="wheel_${n}_joint">
+          <radius>${wheel_radius}</radius>
+        </wheel>
+      </xacro:macro>
+      <xacro:drive_wheel n="1"/>
+      <xacro:drive_wheel n="2"/>
+      <xacro:drive_wheel n="3"/>
+      <xacro:drive_wheel n="4"/>
     </plugin>
   </gazebo>
 

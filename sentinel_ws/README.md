@@ -1,7 +1,7 @@
 # RoboVigor 哨兵工作空间
 
 当前已实现：RMUL 2027 场地、真实 CAD 哨兵、四个简单圆柱轮的轻量全向驱动、RViz、键盘控制与云台小陀螺。
-本次按桌面《算法导航提示词.md》的职责拆包。导航、建图、真机雷达、定位、通信及自瞄联动尚未实现；不将目录或启动成功视为具备这些功能。
+现有代码按场地、模型、仿真、遥控、组合与感知职责拆包。导航、建图、真机雷达、定位、通信及自瞄联动尚未实现；不将目录或启动成功视为具备这些功能。
 
 ```bash
 cd /home/ethan/RoboVigor/sentinel_ws
@@ -21,7 +21,7 @@ ros2 launch sentry_bringup sim_teleop.launch.py
 启动默认关闭小陀螺，按一次 X 开启，C/空格全停；点窗口外不再停车，关窗会全停。
 默认平移 0.8 m/s，小陀螺 3 rad/s。可追加 `linear_speed:=1.0`、`spin_speed:=3.5`。
 无界面回归可追加 `gui:=false rviz:=false keyboard:=false`；不要 Gazebo 只留 RViz 用 `gazebo:=false`。
-入口默认已经带上雷达与扫描（`/lidar/points` → `/scan`），不要这份数据就加 `perception:=false`；
+入口默认带上雷达与扫描（`/lidar/points` → `/scan`）；`perception:=false` 仅关闭转扫描节点，雷达点云仍会生成；
 扫描的高度带/角度在 `sentry_perception/config/pointcloud_to_scan.yaml` 里调。
 
 | 包 | 维护位置与职责 |
@@ -30,7 +30,8 @@ ros2 launch sentry_bringup sim_teleop.launch.py
 | sentry_description | CAD 网格、chassis/gimbal/sensors Xacro、robot_state_publisher |
 | sentry_sim | Gazebo 插件、仿真 Xacro、出生配置、模型生成 |
 | sentry_motion | 键盘源、速度限制、失联制动、小陀螺坐标转换 |
-| sentry_bringup | 已验证模块的组合、系统仿真默认参数和 RViz 配置 |
+| sentry_bringup | 模块组合、系统仿真默认参数和 RViz 配置 |
+| sentry_perception | 将三维点云转换成二维扫描，尚未实现车体过滤或地形分析 |
 
 场地单独启动：`ros2 launch rm_arena world.launch.py`；场地预览：
 `ros2 launch rm_arena arena_preview.launch.py`；车与场地不带键盘：
@@ -39,14 +40,14 @@ ros2 launch sentry_bringup sim_teleop.launch.py
 
 完整文件列表与迁移对应见 [docs/project_tree.md](docs/project_tree.md)，模块状态见
 [docs/architecture.md](docs/architecture.md)。旧包 sentry_simulation 已退出源码与安装索引，
-其旧启动命令应换为上述入口。Autoaim 保持独立，未改动。
+其旧启动命令应换为上述入口。Autoaim 保持独立；2026-11-01 仅精简网页监视的重复绘制代码。
 
 键盘窗口与速度看门狗已合并成 `keyboard_control.py` 一个进程一个节点，输入不再经
 `/teleop/<会话>/` 中转；点窗口外不会停车（松键或 C/空格才停），关窗会先发一帧全停。
 键盘节点由 launch 直接管理，关闭主启动后一起退出，不再留下 GNOME 终端孤儿进程。
 
 `src` 是维护的源码，`build/install/log` 是生成产物。运行资源全部从 ament 包安装目录读取。
-当前环境为 Ubuntu 22.04、ROS 2 Humble、Gazebo Classic 11；不需要下载新的外部算法仓库。
+目标运行环境为 Ubuntu 22.04、ROS 2 Humble、Gazebo Classic 11；不需要下载新的外部算法仓库。
 
 部件TF维护在 `src/sentry_description`。四个轮子各有独立的 wheel_1_link～wheel_4_link，
 直接跟随实际轮角；定义在 urdf/chassis.xacro。雷达/相机/枪管定义在 sensors.xacro 与 frames.yaml。
@@ -54,4 +55,6 @@ ros2 launch sentry_bringup sim_teleop.launch.py
 
 2026-10-31：按新装配体保留四轮45°安装位置/轴线；轮子改成普通圆柱几何，方向摩擦近似全向侧向自由度。
 活动关节仅4轮+云台共5个，原CAD车体/云台采用轻量显示网格。四轮均有独立旋转TF；默认RViz为场地总览。
-详细尺寸、性能与近似限制见 src/sentry_description/README.md 和 docs/validation/lightweight_omni/README.md。
+模型尺寸与近似限制见 src/sentry_description/README.md；当前仓库未包含 lightweight_omni 的验证记录。
+
+2026-11-01 代码审查与精简说明见 [docs/code_review_2026-11-01.md](docs/code_review_2026-11-01.md)。
