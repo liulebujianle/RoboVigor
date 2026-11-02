@@ -10,7 +10,7 @@ from rclpy.node import Node
 from rclpy.qos import DurabilityPolicy, ReliabilityPolicy, QoSProfile
 from visualization_msgs.msg import Marker
 
-MESH = Path('models/rmul_2027/meshes/step_textured.dae')
+MESH = Path('models/rmul_2027/meshes/field.dae')
 
 
 class ArenaMarker(Node):
@@ -20,7 +20,7 @@ class ArenaMarker(Node):
         super().__init__('arena_marker')
         mesh = Path(get_package_share_directory('rm_arena')) / MESH
         if not mesh.is_file():
-            raise FileNotFoundError(f'STEP DAE 文件不存在：{mesh}')
+            raise FileNotFoundError(f'场地 DAE 文件不存在：{mesh}')
         qos = QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE,
                          durability=DurabilityPolicy.TRANSIENT_LOCAL)
         self.publisher = self.create_publisher(Marker, '/arena_marker', qos)

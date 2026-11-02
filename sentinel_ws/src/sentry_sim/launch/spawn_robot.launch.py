@@ -47,7 +47,9 @@ def generate_launch_description():
         DeclareLaunchArgument('z', default_value=str(config['spawn']['z'])),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(str(description_share / 'launch/description.launch.py')),
-            launch_arguments={'robot_description': description, 'use_sim_time': 'true'}.items(),
+            # 场地和 RViz 由 sim 自己的入口负责，这里关掉避免 /arena_marker 重复发布
+            launch_arguments={'robot_description': description, 'use_sim_time': 'true',
+                              'arena': 'false', 'rviz': 'false'}.items(),
         ),
         # Torque drive publishes Gazebo world poses as odom coordinates.
         # Keep the two frames coincident; do not apply the spawn offset twice.

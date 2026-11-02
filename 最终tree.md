@@ -86,8 +86,10 @@ F:\RoboVigor\
         │   ├── launch/simulation.launch.py          81 行  场地总启动：gzserver/gzclient + marker + rviz2
         │   ├── launch/world.launch.py               13 行  只开 Gazebo
         │   ├── launch/arena_preview.launch.py       13 行  只开 RViz 预览
+        │   ├── launch/step_field.launch.py        106 行  STEP→场地→Gazebo/RViz（先转换后启动）
         │   ├── rm_arena/arena_marker.py             59 行  一条 latched MESH_RESOURCE → /arena_marker
-        │   ├── models/rmul_2027/                     ▢ model.sdf + 32 个 DAE + 1 张纹理（44 MB）
+        │   ├── rm_arena/step_to_field.py          399 行  STEP 三角化 + 碰撞盒 + model.sdf
+        │   ├── models/rmul_2027/                     ▢ field.dae（3811 面）+ 贴图 + 29 个碰撞盒
         │   ├── worlds/arena.world                   18 行  只 include model://
         │   ├── rviz/arena.rviz                     205 行  场地预览视角
         │   └── test/                                 ✓ 资源自包含 + launch 环境/退出联动
@@ -99,8 +101,9 @@ F:\RoboVigor\
         │   ├── urdf/gimbal.xacro                    24 行  chassis →(0,0,0.051)→ gimbal_yaw_link
         │   ├── urdf/sensors.xacro                   19 行  6 个纯坐标系，位姿全部来自 frames.yaml
         │   ├── config/frames.yaml                   46 行  ★ lidar_link / camera / gun / muzzle 的 xyz·rpy
+        │   ├── rviz/robot_field.rviz                ▢ 带场地的机器人预览（Fixed Frame world）
         │   ├── meshes/                               ▢ 118 个 STL / 44 MB
-        │   ├── launch/description.launch.py         96 行  显示模型（无滚子）+ 物理模型（latched）
+        │   ├── launch/description.launch.py         150 行  显示模型 + 物理模型 + 场地/RViz 预览开关
         │   ├── scripts/description_publisher.py     37 行  发 /sentry_description/robot_description_physics
         │   └── test/                                 ✓ 网格与地面间隙、坐标系正交性、显示模型折叠
         │

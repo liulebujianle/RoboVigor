@@ -68,13 +68,42 @@ def display_description(description):
     return ET.tostring(robot, encoding='unicode')
 
 
+def enabled(context, name):
+    """launch 参数按字符串比较，避免 bool 转换在 OpaqueFunction 里踩坑。"""
+    return LaunchConfiguration(name).perform(context).strip().lower() in ('true', '1', 'yes')
+
+
+def preview(context, sim_time):
+    """场地 Marker + RViz 预览；仿真链路把 arena/rviz 都关掉，各管各的显示。"""
+    actions = []
+    if enabled(context, 'arena'):
+        # 只有一条 latched Marker，不改 robot_description
+        actions.append(Node(package='rm_arena', executable='arena_marker', output='screen'))
+        # RViz 的 Fixed Frame 是 world：给机器人一个出生点位姿，等同仿真里的初始位置
+        actions.append(Node(
+            package='tf2_ros', executable='static_transform_publisher',
+            arguments=[
+                '--frame-id', 'world', '--child-frame-id', 'base_link',
+                '--x', LaunchConfiguration('spawn_x').perform(context),
+                '--y', LaunchConfiguration('spawn_y').perform(context),
+                '--z', LaunchConfiguration('spawn_z').perform(context),
+            ],
+            parameters=[{'use_sim_time': sim_time}], output='screen'))
+    if enabled(context, 'rviz'):
+        actions.append(Node(
+            package='rviz2', executable='rviz2', output='screen',
+            parameters=[{'use_sim_time': sim_time}],
+            arguments=['-d', LaunchConfiguration('rviz_config').perform(context)]))
+    return actions
+
+
 def publish(context):
     """Use actual main wheel joint states with the native public RSP tree."""
     physics = LaunchConfiguration('robot_description').perform(context)
     if not physics:
         physics = xacro.process_file(LaunchConfiguration('model').perform(context)).toxml()
     sim_time = ParameterValue(LaunchConfiguration('use_sim_time'), value_type=bool)
-    return [
+    nodes = [
         Node(package='robot_state_publisher', executable='robot_state_publisher',
              parameters=[{'robot_description': ParameterValue(
                  display_description(physics), value_type=str), 'use_sim_time': sim_time}],
@@ -83,6 +112,7 @@ def publish(context):
              parameters=[{'robot_description': ParameterValue(physics, value_type=str)}],
              output='screen'),
     ]
+    return nodes + preview(context, sim_time)
 
 
 def generate_launch_description():
@@ -92,5 +122,15 @@ def generate_launch_description():
         DeclareLaunchArgument('model', default_value=str(share / 'urdf/sentry.urdf.xacro')),
         DeclareLaunchArgument('robot_description', default_value=''),
         DeclareLaunchArgument('use_sim_time', default_value='false'),
+        # 默认带场地和 RViz：只启动这个 launch 就能看到“车 + 场地”
+        DeclareLaunchArgument('arena', default_value='true',
+                              description='Publish the rm_arena field marker'),
+        DeclareLaunchArgument('rviz', default_value='true',
+                              description='Open RViz with the field and the robot'),
+        DeclareLaunchArgument('rviz_config',
+                              default_value=str(share / 'rviz/robot_field.rviz')),
+        DeclareLaunchArgument('spawn_x', default_value='1.25'),
+        DeclareLaunchArgument('spawn_y', default_value='6.75'),
+        DeclareLaunchArgument('spawn_z', default_value='0.118'),
         OpaqueFunction(function=publish),
     ])

@@ -1,6 +1,17 @@
-RMUL 2027 field reconstruction for the user's local simulation.
-Source: RoboMaster 2027 RMUL Rules V1.0.0 (20261015), section 3.2.
-The official_top.png atlas is cropped from the user-supplied PDF Fig 3-1.
-DJI/RoboMaster imagery and marks remain copyrighted by their owners; no new license is implied.
-The user-supplied official field STEP is included for geometry audit; no full rules PDF, robot CAD, credentials, datasets or model weights.
-Official field geometry now comes from STEP; materials/dynamics assumptions remain documented.
+RMUL 2027 场地几何与标识来源
+============================
+
+本包 models/rmul_2027 下的场地资产由官方 STEP 文件转换而来：
+
+    源文件：RMUL2027_3V3_V1.0.0.stp
+    STEP 头部：00_RMUL_2027_3V3_STU_V100，2026-09-22，
+               CREO PARAMETRIC BY PTC INC，AP214 (AUTOMOTIVE_DESIGN)
+    转换脚本：rm_arena.step_to_field（ros2 run rm_arena step_to_field）
+
+转换只做几何坐标变换（STEP 的 +Y 朝下 → 场地的 Z 向上）、三角化与材质分配，
+不改变场地几何。meshes/field_stats.json 记录了三角面数、材质面数与碰撞盒清单。
+
+materials/textures/official_top.png 为场地俯视贴图，沿用改造前的资源。
+
+官方场地几何、纹理、队标与赛事标识的权利归原权利人（RoboMaster 赛事组委会），
+不因本包代码的 Apache-2.0 许可证而重新授权。

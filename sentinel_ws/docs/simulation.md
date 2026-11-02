@@ -10,8 +10,8 @@ spawn 在安装目录展开 Xacro，解析网格为安装资源 file URI、插�
 再把同一字符串交给 description.launch.py 发布及 spawn_entity 使用。
 
 质量、摩擦和电机参数尚未按实车标定；当前轮子为圆柱，低轴向摩擦近似全向侧向自由度。历史完整滚子验证见 validation/wheel_physics，当前见 validation/lightweight_omni。
-场地是现有带材质的 STEP/DAE，保留 rm_arena/models/rmul_2027 完整模型和纹理。
-目标树里的旧 rmul_2027.stl 不是当前显示模型，不用它替换已经验证的资源。
+场地由官方 STEP（RMUL2027_3V3_V1.0.0.stp）转出：`rm_arena/models/rmul_2027/meshes/field.dae` 负责显示（俯视贴图 `official_top.png` + 改造前配色），`model.sdf` 用按实测高度生成的封闭盒做碰撞（地台 1 块 + 围挡 4 条 + 平台若干，共 29 个 collision）。
+重建直接走 launch：`ros2 launch rm_arena step_field.launch.py step:=<STEP>`（先转换、成功后才起 Gazebo）；只转换不启动用 `ros2 run rm_arena step_to_field --step <STEP> --out src/rm_arena/models/rmul_2027`。转换需要 `python3 -m pip install --user cascadio trimesh`，产物清单见 `meshes/field_stats.json`。
 
 重新提取真实 CAD，在工作空间根目录：
 `python3 tools/import_sentry_cad.py /path/to/大小yaw哨兵`。
