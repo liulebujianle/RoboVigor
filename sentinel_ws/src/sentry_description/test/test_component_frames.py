@@ -24,7 +24,7 @@ def rotation(text):
 
 
 def test_reference_frames_are_fixed_connected_and_nominal():
-    """Keep added aliases massless and separate from physical wheel joints."""
+    """Keep CAD aliases nominal at zero, with gun on the added physical pitch axis."""
     data = yaml.safe_load((PACKAGE / 'config/frames.yaml').read_text())
     assert 'CAD' in data['status'] and 'calibrate' in data['status']
     assert set(data['frames']) == REFERENCES
@@ -34,7 +34,21 @@ def test_reference_frames_are_fixed_connected_and_nominal():
         joint = model.find(f"joint[@name='{name}_fixed']")
         assert joint is not None and joint.get('type') == 'fixed'
         assert joint.find('child').get('link') == name
-        assert joint.find('parent').get('link') == frame['parent'] in links
+        if name == 'gun_link':
+            assert joint.find('parent').get('link') == 'gimbal_pitch_link' in links
+            pitch = model.find("joint[@name='gimbal_pitch_joint']")
+            assert pitch.get('type') == 'revolute'
+            assert pitch.find('parent').get('link') == frame['parent']
+            assert np.allclose(list(map(float, pitch.find('origin').get('xyz').split())),
+                               list(map(float, frame['xyz'].split())))
+            assert np.allclose(rotation(pitch.find('origin').get('rpy')), rotation(frame['rpy']))
+            assert np.allclose(list(map(float, joint.find('origin').get('xyz').split())), 0)
+            assert np.allclose(rotation(joint.find('origin').get('rpy')), np.eye(3))
+        else:
+            assert joint.find('parent').get('link') == frame['parent'] in links
+            assert np.allclose(list(map(float, joint.find('origin').get('xyz').split())),
+                               list(map(float, frame['xyz'].split())))
+            assert np.allclose(rotation(joint.find('origin').get('rpy')), rotation(frame['rpy']))
         assert np.isfinite(list(map(float, frame['xyz'].split()))).all()
         assert np.linalg.norm(list(map(float, frame['xyz'].split()))) < .5
         matrix = rotation(frame['rpy'])
@@ -56,3 +70,34 @@ def test_camera_optical_axes_and_muzzle_direction():
     assert 0 < x < .3 and y == z == 0
     assert np.dot(rotation(frames['gun_link']['rpy'])[:, 0],
                   rotation(frames['camera_link']['rpy'])[:, 0]) > .99
+
+
+def test_fps_camera_tracks_pitch_and_keeps_optical_forward_on_the_barrel():
+    """Exercise the expanded moving tree rather than a target-angle camera shortcut."""
+    model = ET.fromstring(xacro.process_file(str(PACKAGE / 'urdf/sentry.urdf.xacro')).toxml())
+    joints = {j.find('child').get('link'): j for j in model.findall('joint')}
+
+    def pose(link, pitch_angle):
+        if link == 'gimbal_yaw_link':
+            return np.eye(4)
+        joint = joints[link]
+        origin = joint.find('origin')
+        transform = np.eye(4)
+        transform[:3, :3] = rotation(origin.get('rpy', '0 0 0'))
+        transform[:3, 3] = list(map(float, origin.get('xyz', '0 0 0').split()))
+        if joint.get('name') == 'gimbal_pitch_joint':
+            motion = np.eye(4)
+            motion[:3, :3] = rotation(f'0 {pitch_angle} 0')
+            transform = transform @ motion
+        return pose(joint.find('parent').get('link'), pitch_angle) @ transform
+
+    for angle in (-.8, 0., .8):
+        gun = pose('gun_link', angle)
+        camera = pose('fps_camera_link', angle)
+        optical = pose('fps_camera_optical_frame', angle)
+        muzzle = pose('muzzle_link', angle)
+        assert np.allclose(camera[:3, 0], gun[:3, 0])
+        assert np.allclose(optical[:3, 2], gun[:3, 0])
+        assert np.allclose(optical[:3, 0], -camera[:3, 1])
+        assert np.allclose(optical[:3, 1], -camera[:3, 2])
+        assert np.allclose(camera[:3, 3] - muzzle[:3, 3], .02 * gun[:3, 0])

@@ -19,7 +19,10 @@ def test_gimbal_is_a_separate_articulated_visual():
     assert robot.find("joint[@name='gimbal_yaw_joint']").get('type') == 'continuous'
     assert len(robot.find("link[@name='gimbal_yaw_link']").findall('visual')) == 3
     assert not robot.findall('.//mesh')
-    assert len(robot.findall('.//visual')) == 13
+    assert len(robot.findall('.//visual')) == 12
+    # Odin1 Lite replaces the primary housing; the old auxiliary is TF-only.
+    assert robot.find("link[@name='lidar_link']/visual/geometry/box").get('size') == '0.058 0.069 0.069'
+    assert robot.find("link[@name='lidar_aux_link']/visual") is None
     assert not (PACKAGE / 'urdf/sentry_simple.urdf').exists()
 
 
@@ -37,9 +40,11 @@ def test_initial_ground_clearance():
 
 
 def test_physical_wheel_tree_and_inertias():
-    """Only four driven wheel joints and one gimbal remain; no passive rollers."""
+    """Four driven wheels and yaw/pitch gimbal axes remain; no passive rollers."""
     robot = model()
     assert len(robot.findall("joint[@type='continuous']")) == 5
+    assert len(robot.findall("joint[@type='revolute']")) == 1
+    assert len([j for j in robot.findall('joint') if j.get('type') != 'fixed']) == 6
     assert not any(e.get('name', '').startswith('roller_') for e in robot)
     assert len(robot.findall('.//collision/geometry/cylinder')) == 4
     assert not robot.findall('gazebo')

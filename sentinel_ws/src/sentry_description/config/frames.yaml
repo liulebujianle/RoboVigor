@@ -2,6 +2,8 @@ units: metres/radians
 status: CAD nominal mechanical frames; calibrate before hardware use
 frames:
   lidar_link:
+    model: Manifold Odin1 Lite
+    mounting_status: simulation placeholder at former CAD mount; calibrate before hardware use
     parent: gimbal_yaw_link
     xyz: 0.183570132434 0.0406768784564 0.221961784851
     rpy: 0 0 0
@@ -9,6 +11,7 @@ frames:
     convention: CAD origin; x=CAD X, y=-CAD Z, z=CAD Y (hardware-up); driver extrinsics
       uncalibrated
   lidar_aux_link:
+    status: legacy TF alias only; no sensor or visual instantiated
     parent: gimbal_yaw_link
     xyz: -0.119397350363 0.0461460350416 0.178881454163
     rpy: -0.610865238198 -9.88529642118e-16 1.19378644197

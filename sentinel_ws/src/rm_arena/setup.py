@@ -34,6 +34,7 @@ setup(
     tests_require=['pytest'],
     entry_points={'console_scripts': [
         'arena_marker = rm_arena.arena_marker:main',
+        'stl_to_field = rm_arena.stl_to_field:main',
         # launch 里调它：STEP → DAE + 碰撞盒 + model.sdf
         'step_to_field = rm_arena.step_to_field:main',
     ]},

@@ -25,6 +25,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument('gazebo', default_value='true'),
         DeclareLaunchArgument('perception', default_value='true'),
+        DeclareLaunchArgument('fps', default_value='true'),
         *[DeclareLaunchArgument(key, default_value=str(value).lower())
           for key, value in defaults.items()],
         IncludeLaunchDescription(
@@ -43,5 +44,5 @@ def generate_launch_description():
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(str(motion / 'launch/motion.launch.py')),
             launch_arguments={key: LaunchConfiguration(key) for key in (
-                'keyboard', 'linear_speed', 'angular_speed', 'spin_speed')}.items()),
+                'keyboard', 'fps', 'linear_speed', 'angular_speed', 'spin_speed')}.items()),
     ])

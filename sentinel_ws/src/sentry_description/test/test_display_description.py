@@ -41,6 +41,8 @@ def test_display_keeps_all_geometry_on_four_main_wheels():
         assert joint.find('axis').attrib == original.find('axis').attrib
     assert len(display.findall("joint[@type='continuous']")) == 5
     assert len(raw.findall("joint[@type='continuous']")) == 5
+    assert display.find("joint[@name='gimbal_pitch_joint']").get('type') == 'revolute'
+    assert len([j for j in display.findall('joint') if j.get('type') != 'fixed']) == 6
 
 
 def test_roller_visual_origin_is_composed_in_parent_wheel():

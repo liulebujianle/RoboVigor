@@ -13,6 +13,9 @@
   <exec_depend>ament_index_python</exec_depend>
   <exec_depend>pointcloud_to_laserscan</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <!-- odin_ros_driver_rev1 is optional/proprietary: required only for hardware launch. -->
+  <test_depend>ament_cmake_pytest</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

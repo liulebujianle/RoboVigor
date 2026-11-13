@@ -1,0 +1,2 @@
+# Local verification dependencies, never part of the robot source distribution.
+/.tmp-verify-odin/

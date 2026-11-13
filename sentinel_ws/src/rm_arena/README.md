@@ -1,84 +1,52 @@
-# rm_arena
+# rm_arena：RMUL 2027 场地
 
-ROS 2 Humble / Gazebo Classic 11 的 RMUL 2027 场地包。场地以官方 STEP
-（`RMUL2027_3V3_V1.0.0.stp`）为唯一源，启动时由 launch 现场生成，world、网格、
-贴图和 RViz 配置随包安装，不需要 `gazebo_arena`，也不需要设置 `ROBOVIGOR_ROOT`。
+默认场地以 https://github.com/liulebujianle/RoboVigor 提交 `e2ddcdb1ebbef47eaeae3490fe0c897d69083659` 为准。
+按用户确认恢复完整原材质：灰色底图、深灰围挡、白色压顶、红蓝标记、浅蓝侧面与绿色平台。
+配色来源是该提交的 `rm_arena/step_to_field.py` 中 PALETTE、materials_for，
+实际场地 DAE 的材质/UV 与 official_top.png 贴图；不使用上一版自选的绿灰配色。
 
-## 场地坐标与尺寸
+## 碰撞与外观
 
-- 内场 **12 × 8 m**，西南角为原点，X 向东、Y 向北、Z 向上，单位米。
-- 围挡外扩 **0.3 m**（外轮廓 12.6 × 8.6 m），围挡顶高 **0.42 m**。
-- 地台底面在 **z = -0.1 m**，比赛地面正好 **z = 0**。
-- 场内凸起按 STEP 实测：两块 0.40 m 高地、0.27 m 台阶、0.20 m 平台。
+- model.sdf 恢复该 GitHub 提交的原文件：29个封闭 box 碰撞体，static=true。
+- 两处窄挡板 c10_h0.40 / c11_h0.40 使用0.2×1.95×0.4米封闭碰撞盒。
+- 碰撞盒是 GitHub 版本的几何近似，不代表精确 STL 表面；部分区域被当成实心区域。
+- 外观恢复 GitHub 的 field.dae 与贴图，保留顶点和UV坐标及所有材质值。
+- 为 Gazebo Classic 修复交错索引、材质/UV绑定和重复节点ID。
+- 只对已确认向内的155面白色围挡压顶修正绕序与法线，使顶盖朝上。
+- 场地恢复工具只处理场地资源；机器人、雷达和控制逻辑分别由其他包维护。
 
-## 用 launch 启动（STEP 自动转换）
+## Ubuntu 更新
 
-```bash
-ros2 launch rm_arena step_field.launch.py step:=/path/RMUL2027_3V3_V1.0.0.stp
-```
-
-流程是两段式的：先跑 `step_to_field` 把 STEP 转成 DAE + 碰撞盒 + `model.sdf`，
-**转换成功才**拉起 gzserver/gzclient 和 RViz；失败会说明缺什么依赖并结束 launch。
-
-| 参数 | 默认 | 说明 |
-|---|---|---|
-| `step` | 空 | 官方 STEP 路径；留空则直接用包里已有场地 |
-| `convert` | `true` | 每次启动都重新生成 |
-| `out` | 安装目录的 `models/rmul_2027` | 生成到别处就改这里（只影响 Gazebo 里的场地） |
-| `tol` | `1.0` | 三角化弦差，mm |
-| `gazebo` / `gui` / `rviz` | `true` | 三个开关，与 `simulation.launch.py` 一致 |
-
-整个转换需要 `cascadio`（自带 OpenCASCADE）和 `trimesh`：
+先关闭旧仿真，在 `sentinel_ws` 工作区执行完整更新构建：
 
 ```bash
-python3 -m pip install --user cascadio trimesh
-```
-
-只想重新生成资产、不启动 Gazebo：
-
-```bash
-ros2 run rm_arena step_to_field --step /path/RMUL2027_3V3_V1.0.0.stp \
-    --out ~/sentinel_ws/src/rm_arena/models/rmul_2027
-```
-
-## 不用转换，直接看场地
-
-```bash
-ros2 launch rm_arena simulation.launch.py                  # Gazebo + RViz
-ros2 launch rm_arena simulation.launch.py rviz:=false      # 只开 Gazebo
-ros2 launch rm_arena simulation.launch.py gazebo:=false    # 只开 RViz
-```
-
-只用包里已装好的资产。整机仿真在 `sentry_sim` / `sentry_bringup` 里组合：
-
-```bash
+source /opt/ros/humble/setup.bash
+colcon build --base-paths src --packages-up-to sentry_bringup
+source install/setup.bash
 ros2 launch sentry_bringup sim_teleop.launch.py
 ```
 
-## 资产
+如果只改场地资源，可改用 `colcon build --base-paths src --packages-select rm_arena`；
+本次同时更新了FPS、机器人描述和Odin1 Lite接入，完整更新时应构建组合入口的依赖包。
+在 Gazebo 的 View → Collisions 中检查挡板碰撞，低速接近挡板验收实际接触效果。
+如果窗口仍显示旧地图，先完全退出旧仿真，再确认 source 的是这次工作区的 install/setup.bash。
 
-| 文件 | 说明 |
-|---|---|
-| `models/rmul_2027/meshes/field.dae` | 视觉网格，3811 个三角面，材质沿用改造前的配色 |
-| `models/rmul_2027/materials/textures/official_top.png` | 场地俯视贴图，UV = (x/12, y/8) |
-| `models/rmul_2027/model.sdf` | `<static>` 模型：1 个 visual + 29 个封闭碰撞盒 |
-| `models/rmul_2027/meshes/field_stats.json` | 生成器产出的尺寸/碰撞清单，可追溯 |
-| `rm_arena/step_to_field.py` | STEP → 上面三样的转换器 |
+## 复现和验证
 
-碰撞体是**按实测高度生成的封闭盒**（地台 1 块、围挡 4 条 + 压边、场内凸起若干），
-不是把三角面当碰撞体，ODE 下更稳，也不会被车体穿过。
-
-## 验证
+固定参考文件保存于 models/rmul_2027/source/github_*，包括配色原代码。
+正常启动不下载、不转换地图。如需从归档重新生成默认场地：
 
 ```bash
-colcon test --packages-select rm_arena --event-handlers console_direct+
-colcon test-result --verbose
+python3 src/rm_arena/rm_arena/restore_github_field.py --out src/rm_arena/models/rmul_2027
+colcon build --base-paths src --packages-select rm_arena
 ```
 
-资源测试会把 setuptools 的真实数据文件清单复制到临时安装目录，检查
-world → model → mesh → texture 引用是否完整；`test_field_model.py` 再核对
-场地范围、地面高度、围挡 0.42 m 与碰撞盒数量。图形界面外观、机器人全地形运动
-和导航效果仍需在实际运行环境验收。
+旧 stl_to_field、step_to_field 和 step_field.launch.py 作为显式历史工具保留，运行它们重新转换会覆盖当前默认地图。
+离线配置/材质/资源检查位于 `test/`；真实 Gazebo 物理接触与GPU雷达需要目标Ubuntu验收。
 
-本包代码声明 Apache-2.0；官方场地几何、纹理和标识的权利归原权利人，
-不因代码许可证而重新授权，见 [来源说明](docs/SOURCE_NOTICE.txt)。
+## 截图中的上部重叠限制
+
+`sentry_description/urdf/gimbal.xacro` 的云台没有 collision 元素；相机和枪管参考模型
+也没有碰撞体。这些外观与障碍物重叠，不能只归因于场地。当前机器人仍使用
+底盘/车轮碰撞与上部简化显示，不能保证云台、相机或枪管不会出现视觉穿模。
+机器人模型限制见 [sentry_description](../sentry_description/README.md)。

@@ -35,8 +35,8 @@ def test_preserved_robot_and_gazebo_composition():
     simulation = ET.fromstring(xacro.process_file(str(WS / 'src/sentry_sim/urdf/sentry_sim.urdf.xacro')).toxml())
     assert not description.findall('gazebo')
     assert signature(description) == signature(simulation)
-    # 两个自写插件（云台稳定、四轮驱动）+ 可选件里的仿真雷达
-    assert len(simulation.findall('.//plugin')) == 3
+    # 两个自写插件（云台稳定、四轮驱动）+ 仿真雷达和枪口相机
+    assert len(simulation.findall('.//plugin')) == 4
     assert len(simulation.findall("joint[@type='continuous']")) == 5
     for mesh in description.findall('.//mesh'):
         assert mesh.get('filename').startswith('package://sentry_description/meshes/')
@@ -60,7 +60,7 @@ def test_cad_exporter_recreates_the_split_model(tmp_path):
     restored = ET.fromstring(xacro.process_file(str(description / 'urdf/sentry.urdf.xacro')).toxml())
     assert signature(restored) == signature(robot)
     assert len(restored.findall('.//visual/geometry/mesh')) == 0
-    assert len(ET.parse(simulation / 'urdf/sentry_sim.urdf.xacro').findall('.//plugin')) == 3
+    assert len(ET.parse(simulation / 'urdf/sentry_sim.urdf.xacro').findall('.//plugin')) == 4
     assert not restored.findall('gazebo')
 
 
@@ -76,6 +76,6 @@ def test_motion_launch_starts_a_single_keyboard_node(tmp_path, monkeypatch):
     description = module.generate_launch_description()
     names = {a.name for a in description.entities
              if isinstance(a, DeclareLaunchArgument)}
-    assert names == {'keyboard', 'linear_speed', 'angular_speed', 'spin_speed'}
+    assert names == {'keyboard', 'fps', 'linear_speed', 'angular_speed', 'spin_speed'}
     nodes = [e for e in description.entities if type(e).__name__ == 'Node']
     assert len(nodes) == 1

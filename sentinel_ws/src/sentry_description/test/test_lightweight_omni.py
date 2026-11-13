@@ -15,6 +15,7 @@ def test_four_cad_axles_and_matching_cylinder_geometry():
     robot = ET.fromstring(xacro.process_file(str(PACKAGE / 'urdf/sentry.urdf.xacro')).toxml())
     assert not any(e.get('name', '').startswith('roller_') for e in robot)
     assert len(robot.findall("joint[@type='continuous']")) == 5
+    assert len(robot.findall("joint[@type='revolute']")) == 1
     measured = json.loads((PACKAGE / 'config/wheel_dimensions.json').read_text())['wheels']
     for i in range(1, 5):
         actual = measured[f'wheel_{i}_link']
@@ -42,5 +43,7 @@ def test_body_visuals_are_lightweight_without_changing_physics():
     assert not robot.findall('.//mesh')
     assert len(robot.findall('.//visual')) <= 15
     assert not robot.findall('.//collision/geometry/mesh')
-    for name in ('lidar_link', 'lidar_aux_link', 'camera_link', 'gun_link'):
+    for name in ('lidar_link', 'camera_link', 'gun_link'):
         assert robot.find(f"link[@name='{name}']/visual") is not None
+    assert robot.find("link[@name='lidar_aux_link']") is not None
+    assert robot.find("link[@name='lidar_aux_link']/visual") is None

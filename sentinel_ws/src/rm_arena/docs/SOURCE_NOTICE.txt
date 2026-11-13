@@ -1,17 +1,7 @@
-RMUL 2027 场地几何与标识来源
-============================
-
-本包 models/rmul_2027 下的场地资产由官方 STEP 文件转换而来：
-
-    源文件：RMUL2027_3V3_V1.0.0.stp
-    STEP 头部：00_RMUL_2027_3V3_STU_V100，2026-09-22，
-               CREO PARAMETRIC BY PTC INC，AP214 (AUTOMOTIVE_DESIGN)
-    转换脚本：rm_arena.step_to_field（ros2 run rm_arena step_to_field）
-
-转换只做几何坐标变换（STEP 的 +Y 朝下 → 场地的 Z 向上）、三角化与材质分配，
-不改变场地几何。meshes/field_stats.json 记录了三角面数、材质面数与碰撞盒清单。
-
-materials/textures/official_top.png 为场地俯视贴图，沿用改造前的资源。
-
-官方场地几何、纹理、队标与赛事标识的权利归原权利人（RoboMaster 赛事组委会），
-不因本包代码的 Apache-2.0 许可证而重新授权。
+场地当前来源：liulebujianle/RoboVigor，提交 e2ddcdb1ebbef47eaeae3490fe0c897d69083659。
+目录：sentinel_ws/src/rm_arena/models/rmul_2027。
+配色源码：sentinel_ws/src/rm_arena/rm_arena/step_to_field.py。
+field.dae 材质、UV、顶点与 official_top.png 取自该提交；仅修正加载兼容性及向内白色压顶法线。
+model.sdf 的29个封闭碰撞盒与上游原文件一致。
+source/github_* 归档原文件，保留来源。旧STL转换资产仍保留，但当前model.sdf不再引用碰撞STL。
+代码、几何、纹理和赛事标识的权利仍归各自权利人，不因本次修改而重新授权。

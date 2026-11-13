@@ -5,8 +5,9 @@
 -->
 <robot name="robovigor_sentry" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:include filename="$(find sentry_description)/urdf/sentry.urdf.xacro"/>
-  <!-- 可选件：仿真雷达（Odin1 替身）。不要就注释掉这一行，其余文件不用动。 -->
+  <!-- Odin1 Lite激光仿真；实际驱动使用sentry_perception/odin1_lite.launch.py。 -->
   <xacro:include filename="$(find sentry_sim)/urdf/gazebo/lidar.xacro"/>
+  <xacro:include filename="$(find sentry_sim)/urdf/gazebo/fps_camera.xacro"/>
 
   <!-- 所有零件统一灰色，避免 Gazebo 给每个网格随机配色 -->
   <xacro:macro name="gazebo_grey" params="link">
@@ -36,6 +37,7 @@
        云台力矩稳定（收 /spin_mode，发 /gimbal_pose）+ 四轮力矩驱动（/odom、/joint_states）。 -->
   <gazebo>
     <plugin name="sentry_gimbal_stabilizer" filename="libsentry_gimbal_stabilizer.so">
+      <fps_camera_offset>${fps_camera_x} 0 0</fps_camera_offset>
       <ros>
         <namespace>/</namespace>
       </ros>

@@ -32,6 +32,7 @@ ament_target_dependencies(sentry_omni_drive nav_msgs tf2_ros)
 
 if(BUILD_TESTING)
   add_executable(test_gimbal_math test/test_gimbal_math.cpp)
+  target_compile_features(test_gimbal_math PRIVATE cxx_std_17)
   target_include_directories(test_gimbal_math PRIVATE include)
   add_test(NAME gimbal_heading_math COMMAND test_gimbal_math)
   add_executable(test_omni_kinematics test/test_omni_kinematics.cpp)

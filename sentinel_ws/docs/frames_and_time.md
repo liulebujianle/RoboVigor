@@ -1,59 +1,71 @@
-# TF 与时间：四个独立轮轴
+# TF与时间：四轮、云台yaw/pitch与传感器
 
-当前按用户明确要求：每个轮子在实际轮轴中心有一个独立 TF，跟随该轮子旋转；
-没有底盘底部的 wheels_link 聚合坐标，没有每个滚子的独立 TF。
+默认模型每个轮子在实际轮轴中心有一个独立TF，随该轮旋转；没有 `wheels_link`
+聚合坐标或独立滚子TF。当前仿真主树如下：
 
 ```text
 world
 └── odom
     └── base_link
         └── chassis_link
-            ├── wheel_1_link    # 真实 wheel_1_joint 角度
-            ├── wheel_2_link    # 真实 wheel_2_joint 角度
-            ├── wheel_3_link    # 真实 wheel_3_joint 角度
-            ├── wheel_4_link    # 真实 wheel_4_joint 角度
+            ├── wheel_1_link
+            ├── wheel_2_link
+            ├── wheel_3_link
+            ├── wheel_4_link
             └── gimbal_yaw_link
-                ├── lidar_link
-                ├── lidar_aux_link
+                ├── lidar_link              # Odin1 Lite仿真占位
+                ├── lidar_aux_link          # 旧兼容别名，无外形/扫描
                 ├── camera_link
                 │   └── camera_optical_frame
-                └── gun_link
-                    └── muzzle_link
+                └── gimbal_pitch_link       # 新增俯仰自由度
+                    └── gun_link
+                        └── muzzle_link
+                            └── fps_camera_link
+                                └── fps_camera_optical_frame
 ```
 
-## 文件归属
+## 文件归属与发布者
 
-所有机器人描述维护在 `sentry_description` 包：
-- `urdf/chassis.xacro`：四个实际轮轴的 link、joint、origin、axis。
-- `urdf/gimbal.xacro`：实际主云台关节。
-- `urdf/sensors.xacro`、`config/frames.yaml`：雷达、相机、枪管和枪口的CAD名义参考。
-- `launch/description.launch.py`：标准可视/TF描述生成及唯一 robot_state_publisher 启动。
-- `scripts/description_publisher.py`：向 Gazebo 保留完整物理描述。
+- `sentry_description/urdf/chassis.xacro`：四轮link/joint/origin/axis及底盘。
+- `urdf/gimbal.xacro`：主yaw云台；`urdf/sensors.xacro`：pitch、传感器/枪管/枪口与FPS相机参考。
+- `config/frames.yaml`：原CAD名义参考，主雷达安装占位及辅助别名状态。
+- `launch/description.launch.py`：可视/TF描述生成、唯一robot_state_publisher。
+- `scripts/description_publisher.py`：Gazebo完整物理描述发布。
 
-## 单一公开 TF 与模型
+`world → odom`由 `spawn_robot.launch.py` 的静态发布者提供，二者在仿真中重合。
+`odom → base_link`由底盘插件以Gazebo实际姿态发布；车体内部TF由robot_state_publisher
+读取 `/joint_states` 发布。底盘插件提供四轮状态，云台插件提供yaw/pitch状态，二者覆盖不同关节。
 
-world→odom：spawn_robot.launch.py 的唯一静态发布者。
-odom→base_link：Gazebo 轮地动力学插件的实际姿态。
-车体内部与四个轮轴：唯一原生 robot_state_publisher，使用实际 /joint_states。
-只有 wheel_1_link～wheel_4_link 作为车轮 TF；其中心、轴线、关节角与物理模型一致。
-不使用私有TF转发、不使用MarkerArray动画、不使用wheel_visuals.py。
+模型有两个话题：`/robot_description`供RViz与原生TF，
+`/sentry_description/robot_description_physics`供Gazebo生成。两者均有六个活动关节，
+使用轻量基础几何，四轮接触采用方向摩擦近似，不创建112个滚子刚体。
+RViz采用标准RobotModel与 `/tf`、`/tf_static`，不依赖私有TF或MarkerArray轮子动画。
 
-模型分为两个明确话题：
-- `/robot_description`：RViz 和原生 TF 使用的描述，5个活动关节（4轮+主云台）。
-  每个轮子仅一个圆柱，车体与云台使用两个轻量CAD网格。
-- `/sentry_description/robot_description_physics`：Gazebo生成使用的5活动关节描述，
-  使用圆柱接触和方向摩擦近似全向自由度，不再创建112个滚子刚体。
+## 安装和坐标约定
 
-RViz用标准RobotModel和普通 `/tf`、`/tf_static`，四轮随实测轮角旋转。
-默认TF显示显式选中四个轮轴、雷达、相机和枪管；不显示根坐标的底盘底部轴标志。
-手动增加TF显示也只会取得这棵精简原生树，不会出现112个滚子帧。
+四轮中心相对chassis_link为(±0.167317,±0.167317,-0.036283)m，轴线保留CAD的45°布局，
+圆柱半径76.1mm、轴向宽39.798mm。CAD参考的单位为米/弧度。
 
-## 安装位姿与限制
+新增pitch关节零角复用原gun_link的安装变换，枪管与枪口随pitch运动。
+原 `camera_link` 与雷达直接挂在yaw部分，不随新增pitch关节运动。
+`camera_optical_frame`为x右/y下/z前，仍是名义CAD相机参考，未经真实光心标定。
+枪口为发射轴与测速模块前机械平面的名义交点。
 
-四个轮轴中心相对chassis_link为 (±0.167317,±0.167317,-0.036283)m，轴线保持新装配体的45°定义；圆柱半径76.1 mm、轴向宽39.798 mm。
-雷达、相机和枪管从当前保存的原生CAD实例矩阵恢复，单位米/弧度。
-camera_optical_frame使用x右/y下/z前，原点仍为名义CAD相机原点，尚未标定真实光心。
-枪口是发射轴与测速模块前机械平面的名义交点。小yaw/pitch当前固定在CAD保存姿态。
-这些不是实车标定外参，也没有生成实际传感器数据。CAD重新提取会刷新名义安装配置。
+FPS相机在枪口前2cm，`fps_camera_link`机械轴为x前/y左/z上；其光学帧为x右/y下/z前。
+`/fps/view_pose`报告实际物理pitch部件导出的相机姿态，不是鼠标目标角。
+`/fps/look`要求world帧，x=世界yaw、y=ROS pitch（负数向上），单位弧度。
 
-RSP与RViz使用仿真时间；键盘超时使用单调墙钟。map→odom和Nav2定位尚未接入。
+实体Odin1 Lite由独立厂家驱动输出，默认原始点云frame_id为 `lidar`。
+它与仿真 `lidar_link`不是自动等价关系；不能只改消息标签来冒充安装变换。
+必须使用实测标定连接机器人与厂家TF，检查单一父节点，并提供可转云台的真实关节状态。
+内置相机/Body外参从设备标定读取，不复制手册示例到任意设备。
+
+## 时间与验收边界
+
+仿真状态、图像及RSP/RViz使用仿真时钟 `/clock`；FPS/键盘失联和插件命令保持
+使用接收端单调墙钟，暂停/回退仿真不会无限延长命令有效期。
+实体雷达转换启动显式使用 `use_sim_time:=false`。
+
+本项目尚未接入机器人定位融合或Nav2的 `map → odom`。厂家地图帧与当前机器人TF之间
+需按实际定位方案集成，不能把Gazebo真值里程计当作实车定位结果。
+详见 [接口](interfaces.md)及[雷达说明](../src/sentry_perception/README.md)。

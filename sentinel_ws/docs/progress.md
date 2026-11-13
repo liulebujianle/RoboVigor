@@ -1,10 +1,11 @@
 # RoboVigor 导航开发记录
 
-> 2026-11-01 现状说明：下文保留历次开发记录，包含已被替换的“当前”描述。
-> 当前源码为四个轻量圆柱轮、五个活动关节、六个 ROS 包，已加入仿真雷达与点云转扫描。
-> 不再有 112 个独立滚子、wheels_link 或 UUID 键盘会话中转。
-> 现状以 [architecture.md](architecture.md) 为准；本次静态检查不替代 ROS/Gazebo 运行验收。
-> 本次修改与验证见 [code_review_2026-11-01.md](code_review_2026-11-01.md)。
+> 2026-11-14 现状说明：下文原样保留历次开发记录，包含已被替换的“当前”描述；它们不是现版本操作说明。
+> 当前源码为四个轻量圆柱轮、六个活动关节（4轮+云台yaw/pitch）、六个ROS包，默认FPS鼠标视角与WASD控制，支持 `fps:=false`旧键盘模式。
+> 主雷达已更新为Odin1 Lite仿真：10Hz、240×180、120°×90°、0.15–25m；辅助雷达只保留TF别名。
+> 实体雷达启动与建图/地图服务客户端已写入，仍需厂家驱动、算法SDK、安装标定及实机验收；尚未集成Nav2或机器人定位融合。
+> 没有112个独立滚子、wheels_link或UUID键盘会话中转；旧CAD和旧验证目录仅作来源及历史证据。
+> 现状以 [architecture.md](architecture.md)、[工作空间README](../README.md)及[雷达接入](../src/sentry_perception/README.md)为准，离线检查不替代ROS/Gazebo与实体运行验收。
 
 ## 当前轮子TF（用户最终要求）
 - 已删除wheel_visuals.py和底盘底部wheels_link。

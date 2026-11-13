@@ -1,50 +1,61 @@
 # 当前结构与后续目标
 
-本页描述源码现状（2026-11-01 静态核对），运行效果仍需在 Ubuntu / ROS 2 环境验收。
-顶层 `最终tree.md` 同时包含旧版本快照和未来规划，不能直接当作当前功能清单。
+本页描述源码现状（2026-11-14 核对）。FPS、Odin1 Lite接入及场地更新已写入源码；
+离线检查不等于Ubuntu/ROS2/Gazebo或实体设备验收。顶层旧tree与历史记录不能直接作为功能清单。
 
 ## 启动链与职责
 
-系统入口是 `sentry_bringup/sim_teleop.launch.py`：
+仿真系统入口为 `sentry_bringup/sim_teleop.launch.py`：
 
 - `sentry_sim/simulation.launch.py` 组合场地和机器人。
-- `rm_arena/simulation.launch.py` 启动 Gazebo、场地 Marker 和 RViz。
-- `sentry_sim/spawn_robot.launch.py` 展开仿真 Xacro、检查资源并生成机器人。
-- `sentry_description/description.launch.py` 启动原生 robot_state_publisher，发布显示模型的 TF。
-- `description_publisher.py` 单独发布完整物理描述到
-  `/sentry_description/robot_description_physics`，供 Gazebo 的 spawn_entity 读取。
-- `sentry_motion/motion.launch.py` 启动一个 Qt 键盘与速度看门狗进程，发布 `/cmd_vel` 和 `/spin_mode`。
-- `sentry_perception/pointcloud_to_scan.launch.py` 将 `/lidar/points` 转换为 `/scan`。
+- `rm_arena/simulation.launch.py` 启动Gazebo、场地Marker和RViz。
+- `sentry_sim/spawn_robot.launch.py` 展开仿真Xacro、检查资源与自写插件，再生成机器人。
+- `sentry_description/description.launch.py` 启动唯一原生robot_state_publisher，发布显示模型TF。
+- `description_publisher.py` 发布完整物理描述到 `/sentry_description/robot_description_physics`，供spawn_entity读取。
+- `sentry_motion/motion.launch.py` 默认启动 `fps_control.py`：Qt第一视角窗口与同进程速度看门狗。
+  `fps:=false`切换 `keyboard_control.py`，`keyboard:=false`关闭输入节点。
+- `sentry_perception/pointcloud_to_scan.launch.py` 默认把 `/lidar/points` 转换为 `/scan`。
 
-模型层负责几何、惯量、关节和部件坐标系；仿真层追加材质、方向摩擦、驱动插件及模拟雷达。
-组合层只负责装配参数和启动文件。Autoaim 为独立 Python 工程，不参与 colcon。
+实体雷达独立入口为 `sentry_perception/odin1_lite.launch.py`，调用单独安装的厂家
+`odin_ros_driver_rev1/odin1Lite.launch.py`。它不启动Gazebo或机器人运动控制，默认关闭未标定的 `/scan`。
+`odin_control.py`提供厂家建图、保存、重定位、ReMap及导出服务客户端，不实现或模拟厂家算法。
 
-## 当前模型与 TF
+模型层负责几何、惯量、关节和参考系；仿真层追加接触、驱动与传感器；组合层负责启动装配。
+Autoaim仍为独立Python工程，不参与colcon，也未连接FPS开火或自动瞄准。
 
-当前四轮使用轻量圆柱几何和方向摩擦近似全向运动；没有 112 个独立滚子刚体。
-活动关节为四个轮轴和一个云台轴，共五个。Gazebo 采用有限力矩驱动。
-四个轮轴 TF 跟随实际 JointState；不存在底部 wheels_link、私有 TF 转发或独立车轮 Marker。
-显示模型转换函数仍保留对旧滚子模型的兼容处理，已有测试覆盖该路径。
+## 当前模型与TF
 
-底盘插件发布 `odom → base_link`；仿真启动发布重合的 `world → odom`。
-里程计使用 Gazebo 世界真值，不代表真实编码器或定位精度。
-六个传感器/部件参考系由 `frames.yaml` 配置；CAD 名义坐标不能代替设备标定。
+四个轮子使用轻量圆柱几何和方向摩擦近似全向运动，没有112个独立滚子刚体。
+车体与云台默认使用盒体/圆柱；原始CAD资源保留。活动关节共六个：四轮轴、云台yaw与新增pitch。
+Gazebo用有限力矩驱动，四轮及云台轴TF读取实际JointState；没有底部 `wheels_link`、私有TF转发或车轮Marker。
+显示转换函数仍兼容旧滚子模型，但默认模型不再实例化滚子。
 
-## 开关与进程行为
+底盘插件发布 `odom → base_link`；仿真发布重合的 `world → odom`。
+里程计采用Gazebo世界真值，不代表实车编码器或定位精度。FPS相机在枪口前2cm，随pitch运动。
+主 `lidar_link` 配置一个Odin1 Lite仿真扫描，旧 `lidar_aux_link`只保留兼容TF，无外形或扫描传感器。
+`frames.yaml`保留旧CAD来源，Odin1 Lite沿用主安装位置作为仿真占位，实车需重新标定。
 
-`gazebo/gui/rviz/keyboard` 控制对应启动部分。`perception:=false` 仅停用点云转扫描节点，
-不关闭已包含在仿真 Xacro 中的雷达，`/lidar/points` 仍可能生成。
+## 开关与保护行为
 
-键盘与看门狗同进程，无 UUID 会话话题中转。松开移动键停止对应移动，C/空格全停；
-窗口失去焦点不会主动停车，关窗先发送全停。底盘插件另有指令超时制动。
-关闭 Gazebo 窗口会结束整套 launch；服务端异常退出仅记录错误，其他窗口继续保留。
+`gazebo/gui/rviz/keyboard`控制对应启动部分，`fps`选择输入模式。
+`perception:=false`仅关闭点云转扫描，不关闭Xacro中已有的激光传感器。
+`fps:=false`或`keyboard:=false`也不会移除30Hz枪口相机，仍保留渲染开销。
 
-## 后续模块
+FPS点击画面捕获鼠标，WASD沿实际画面的水平朝向运动，X开启小陀螺，C/空格全停。
+Esc、失焦、最小化、关窗或图像/位姿超时会停车。旧键盘模式失焦不主动停车，关窗发送全停。
+输入和看门狗同进程，无UUID会话中转；超时使用单调墙钟。底盘插件另有指令超时制动。
+关闭Gazebo窗口会结束整套launch；服务端异常退出的行为以启动文件与目标环境实际验收为准。
 
-当前源码包含 rm_arena、sentry_description、sentry_sim、sentry_motion、sentry_bringup、
-sentry_perception 六个包。感知层目前只有点云转扫描，未见车体点过滤或地形分析实现。
-定位、地图资产包、Nav2 导航、真机 Odin 驱动装配、底盘通信和比赛任务模块尚未落地。
-`dependencies.repos` 当前为空，不能据此认为已固定厂商驱动版本。
+## 模块边界与后续工作
 
-历史验证保留在 `docs/validation/`；旧版本的测试数量和截图不证明当前版本已通过运行验收。
-本次精简、检查结果和待验收事项见 `code_review_2026-11-01.md`。
+当前包含 `rm_arena`、`sentry_description`、`sentry_sim`、`sentry_motion`、`sentry_bringup`、
+`sentry_perception` 六个ROS包。感知包已有点云转扫描及Odin1 Lite硬件/地图服务接入代码，
+没有车体点云过滤、地形分析、Nav2或完整实车系统集成。厂家驱动和 `manifold-lc-sdk`
+需要另外获取安装，`dependencies.repos`为空，不能宣称已固定或附带这些依赖。
+
+场地保留29个近似碰撞盒；机器人云台/相机/枪管没有对应碰撞体，不能保证上部不视觉穿模。
+地图资产、机器人定位融合、底盘通信、导航和比赛任务模块仍待实现。
+历史验证保留在 `validation/`，旧测试数量或截图不能证明当前版本运行已验收。
+
+使用入口见 [工作空间README](../README.md)、[仿真说明](simulation.md)、
+[雷达接入](../src/sentry_perception/README.md)与[建图状态](mapping_and_localization.md)。

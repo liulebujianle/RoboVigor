@@ -2,29 +2,30 @@
 <!--
   可选件：仿真雷达（Gazebo Classic）。不 include 就不存在，纯 RViz 看模型时不要用。
 
-  雷达的“性能参数”全在这个文件里，一共 8 个值，都在下面的常量区：
-    出帧率 / 水平点数 / 垂直线数 / 水平半视场 / 垂直上下沿 / 最近与最远测距
-  数值严格按 Manifold Odin1 规格：FOV 120°×90°、0.5°×0.5°、15 FPS 上限、0.2–30 m。
-
-  注意：这是仿真替身，不是真机驱动。真机的 30 m@10%、±3 cm、940 nm 在这里都没有对应项。
+  Manifold Odin1 Lite 仿真替身：240×180、120°×90°、最高10 FPS、最小0.15 m。
+  默认最大25 m（官方10%反射率、光照小于50 klux条件）；50 m仅对应
+  90%反射率、光照小于500 lux。gpu_ray不模拟这些光学条件。
+  不模拟940 nm、置信度、RGB、IMU或厂家SLAM；距离分辨率不是测距精度。
+  官方第12章为240×180，第5章原始输出为256×192；此处采用名义深度分辨率，
+  不宣称逐点兼容真实原始点云格式。详见 sentry_perception/README.md。
+  https://manifoldtechltd.github.io/wiki/odin_series/odin1lite/12.%20Technical%20Specifications_.html
 -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- ================= 性能常量区：严格按 Odin1 规格 ================= -->
-  <!-- 规格：FOV 120°×90°、角分辨率 0.5°×0.5°、15 FPS 上限、0.2–30 m(@10%)、70 万点/s -->
-  <xacro:property name="lidar_rate" value="10"/>              <!-- Hz；Odin1 上限 15，仿真取 10 省算力 -->
+  <!-- Odin1 Lite 名义参数；均匀射线为仿真近似，不复现固件采样模式。 -->
+  <xacro:property name="lidar_rate" value="10"/>              <!-- Hz；Lite最高10 FPS -->
   <xacro:property name="lidar_h_samples" value="240"/>        <!-- 120°/0.5° = 240 段 -->
   <xacro:property name="lidar_v_samples" value="180"/>        <!-- 90°/0.5° = 180 段 -->
   <xacro:property name="lidar_h_fov" value="1.0471975512"/>   <!-- 60° = π/3，水平半视场 -->
   <xacro:property name="lidar_v_min" value="-0.7853981634"/>  <!-- -45° = -π/4，垂直下沿 -->
   <xacro:property name="lidar_v_max" value="0.7853981634"/>   <!-- +45° = +π/4，垂直上沿 -->
-  <xacro:property name="lidar_range_min" value="0.2"/>        <!-- Odin1 最小测距 -->
-  <xacro:property name="lidar_range_max" value="30.0"/>       <!-- 30 m @10% 反射率（70 m @90% 不取） -->
-  <!-- 每帧射线 = 240×180 = 43200；10 Hz → 43.2 万/秒，与 Odin1 的 70 万点/秒同量级 -->
+  <xacro:property name="lidar_range_min" value="0.15"/>
+  <xacro:property name="lidar_range_max" value="25.0"/>
+  <!-- 43200射线/帧、432000采样/秒；官方点频约43万点/秒，不保证全部有效返回。 -->
   <!-- ================================================================ -->
 
   <gazebo reference="lidar_link">
-    <sensor type="gpu_ray" name="odin1">
+    <sensor type="gpu_ray" name="odin1_lite">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
       <update_rate>${lidar_rate}</update_rate>

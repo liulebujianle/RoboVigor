@@ -1,46 +1,51 @@
 # 仿真维护
 
-入口见工作空间 README。配置选择是显式的：bringup/config/sim.yaml → 系统默认开关和键盘速度；
-sentry_sim/config/simulation.yaml → 出生 xyz 与模型名；motion/config/velocity_mux.yaml → 当前速度保护参数。
-launch 参数可覆盖公开的默认值；配置文件不会仅凭文件名自动覆盖其他配置。
+## 模型、配置和资源
 
-机器人平台：description/urdf/sentry.urdf.xacro 引用 chassis、gimbal、sensors。
-仿真：sim/urdf/sentry_sim.urdf.xacro 引用平台并添加实际 Gazebo 插件及接触参数。
-spawn 在安装目录展开 Xacro，解析网格为安装资源 file URI、插件为安装 lib 绝对路径，
-再把同一字符串交给 description.launch.py 发布及 spawn_entity 使用。
+系统入口和操作见 [工作空间README](../README.md)。默认参数分别来自
+sentry_bringup/config/sim.yaml（开关与速度）、sentry_sim/config/simulation.yaml（出生位置）、
+sentry_motion/config/velocity_mux.yaml（超时和速度限制）。launch 参数覆盖已公开的默认值。
 
-质量、摩擦和电机参数尚未按实车标定；当前轮子为圆柱，低轴向摩擦近似全向侧向自由度。历史完整滚子验证见 validation/wheel_physics，当前见 validation/lightweight_omni。
-场地由官方 STEP（RMUL2027_3V3_V1.0.0.stp）转出：`rm_arena/models/rmul_2027/meshes/field.dae` 负责显示（俯视贴图 `official_top.png` + 改造前配色），`model.sdf` 用按实测高度生成的封闭盒做碰撞（地台 1 块 + 围挡 4 条 + 平台若干，共 29 个 collision）。
-重建直接走 launch：`ros2 launch rm_arena step_field.launch.py step:=<STEP>`（先转换、成功后才起 Gazebo）；只转换不启动用 `ros2 run rm_arena step_to_field --step <STEP> --out src/rm_arena/models/rmul_2027`。转换需要 `python3 -m pip install --user cascadio trimesh`，产物清单见 `meshes/field_stats.json`。
+sentry_description/urdf/sentry.urdf.xacro 引用 chassis、gimbal、sensors，当前默认模型使用基础几何，
+四轮使用圆柱及方向摩擦近似全向运动。活动关节为4轮、yaw和pitch共6个；没有112个被动滚子。
+sentry_sim/urdf/sentry_sim.urdf.xacro 追加Gazebo接触、驱动、雷达和枪口相机配置。
+spawn_robot.launch.py 在安装目录展开Xacro，将资源转换为安装目录绝对路径，发布物理描述供spawn_entity生成。
 
-重新提取真实 CAD，在工作空间根目录：
-`python3 tools/import_sentry_cad.py /path/to/大小yaw哨兵`。
-工具同时更新 description 网格、Xacro/元数据以及 sim 的 Gazebo 扩展，再重新构建。
+所有构建和运行资源从ament安装目录读取，修改后重新构建并source。旧CAD提取/模型生成工具面向原始模型，
+不能保证重建当前FPS、Odin1 Lite与轻量几何；重新提取后需审查差异并运行回归，不能直接覆盖发布。
 
-## 键盘和启动故障
+## 场地
 
-默认使用 RoboVigor 键盘控制窗口，不依赖终端自动重复。按住移动键连续运动，松开停止；
-启动时小陀螺关闭，X 开启，C/空格全停。小陀螺中的平移按锁定的云台世界方向转换。
-Qt 窗口与速度看门狗是同一进程同一节点，输入不经话题中转；点窗口外不会停车，
-要停请松键或按 C/空格。关窗会先发一帧全停。
+当前场地显示为RMUL2027 DAE，已从固定GitHub提交恢复原始材质和贴图，并修复Classic索引/绕序兼容性。
+model.sdf 仍使用29个封闭盒体碰撞，包含地台、围挡与平台。保留的field_collision.stl并未被当前SDF引用。
+恢复工具、STEP/STL转换和来源见 [rm_arena说明](../src/rm_arena/README.md)。
+场地碰撞是近似；机器人上部云台、雷达、相机、枪管没有对应碰撞体，不能保证上部不会视觉穿模。
 
-若已有旧 gzserver 占端口，新服务会报告 Address already in use 并退出；2026-10-30 起只在终端打一条
-警告，不再中止整套 launch（窗口和 RViz 会继续留着，但物理与机器人 TF 已经没了）。
-要恢复仿真，先关掉旧 gzserver 再重跑 scripts/sim.sh。
-不要绕过 rm_arena 的 launch 手工裸跑 gzserver，否则不会得到该包的场地模型搜索路径。
+## FPS与旧键盘
 
-小陀螺直线控制以实际 odom 位置锁定本次平移的世界参考线，100 Hz 重算车体方向，
-横向纠偏增益 6 s⁻¹、附加横向速度限 0.25 m/s；总输出仍受 max_linear 限制。
-松开移动键后仍在小陀螺中维持横向制动纠偏，C/空格/失联时全部输出停止。
-车辆仍靠轮地摩擦和有限力矩驱动，存在真实制动距离和小量滑移。
-关闭 Gazebo 窗口会退出整套启动，清理后台服务与键盘子进程。
+默认 fps:=true，点击就绪画面捕获鼠标；WASD按实际相机水平朝向移动，X小陀螺，C/空格停车，Esc释放并停车。
+失焦、窗口停用和图像/位姿失联会停止FPS输出。旧模式 fps:=false 使用原Qt键盘窗口，
+支持Q/E旋转，且旧模式失焦不主动停车。keyboard:=false 关闭输入窗口；底盘另有指令超时制动。
+FPS相机和雷达仍可能运行，关闭窗口不会关闭渲染传感器。
 
+/fps/look 使用world坐标，x为yaw，y为ROS pitch，单位rad。命令pitch限制约±60°；
+物理pitch关节范围±90°用于容纳原CAD名义姿态。相机位于枪口前2cm，挂载物理pitch link。
+/fps/view_pose 为实测物理相机姿态，不是目标视角；动力学仍使用有限力矩，不直接设置底盘姿态。
+惯量与控制参数为仿真假设，实际画面、鼠标捕获、制动距离、接触行为需Ubuntu验收。
 
-当前轮子与相机/雷达一样是原生TF中的独立部件，四个wheel_i_link位于真实轮轴中心并随角度旋转。
-RViz直接订阅 /robot_description 和公开TF。Gazebo生成订阅完整的
-/sentry_description/robot_description_physics，使用4个圆柱轮和1个云台的轻量物理。
-没有 wheels_link 聚合底部轴，也没有 MarkerArray 车轮动画。详见 frames_and_time.md。
+## Odin1 Lite
 
-当前入口仍使用 `ros2 launch sentry_bringup sim_teleop.launch.py`。
-RViz场地Marker使用Transient Local，以接收启动前已发布的场地；默认视角为Field Overview。
-CAD提取工具生成完整结构；若重新提取，需重新应用轻量轮模型，不应把112个滚子重新引入当前默认仿真。
+主雷达lidar_link为10Hz、240×180、120°×90°、0.15–25m的gpu_ray仿真，/lidar/points输出PointCloud2。
+辅助lidar_aux_link仅为无外形TF别名。perception:=false只关闭点云转/scan，不能关闭激光传感器。
+range_min/max在lidar.xacro和pointcloud_to_scan.yaml中保持一致；25m是仿真默认，
+不复现真实反射率、光照、置信度或厂家RGB/IMU/SLAM。
+实体设备使用独立入口，见 [Odin1 Lite说明](../src/sentry_perception/README.md)。
+
+## 启动故障与验收
+
+先关闭旧gzserver再启动，否则会因端口占用退出。当前场地launch在gzserver异常退出时记录警告，
+不保证其他窗口同时退出；关闭Gazebo客户端窗口会结束组合launch。不要裸跑gzserver绕过资源路径设置。
+无界面运行仍可能需要GPU/显示渲染配置；gui:=false不保证gpu_ray或相机可在任意机器运行。
+
+当前验证结果和无法在Windows执行的项目见 [2026-11-14记录](validation/update_2026-11-14.md)。
+目标环境需要执行colcon build、colcon test及test-result，并实际检查TF、点云、相机、轮地接触和停车。
