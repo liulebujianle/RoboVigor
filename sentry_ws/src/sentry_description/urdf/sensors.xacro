@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="mounts" value="${xacro.load_yaml('$(find sentry_description)/config/frames.yaml')['frames']}"/>
+
+  <!-- 坐标采用 X 前、Y 左、Z 上，位姿相对各自的父坐标系。 -->
+  <xacro:macro name="lidar_mount" params="name parent:=gimbal_yaw_link">
+    <joint name="${name}_fixed" type="fixed">
+      <parent link="${parent}"/><child link="${name}"/>
+      <origin xyz="${mounts[name]['xyz']}" rpy="${mounts[name]['rpy']}"/>
+    </joint>
+  </xacro:macro>
+  <material name="lidar_housing"><color rgba="0.16 0.18 0.20 1"/></material>
+
+  <link name="odin1_lite_mount_link">
+    <visual>
+      <geometry><mesh filename="package://sentry_description/meshes/navigation/sentry_odin1_lite.dae"/></geometry>
+      <material name="lidar_housing"/>
+    </visual>
+  </link>
+  <xacro:lidar_mount name="odin1_lite_mount_link"/>
+
+  <link name="odin1_lite_link"/>
+  <xacro:lidar_mount name="odin1_lite_link" parent="odin1_lite_mount_link"/>
+
+  <!-- S 型圆角外壳的显示中心相对安装参考点向上 4.2 mm。 -->
+  <link name="mid360s_link">
+    <visual>
+      <origin xyz="0 0 0.0042"/>
+      <geometry><mesh filename="package://sentry_description/meshes/navigation/sentry_mid360s.dae"/></geometry>
+      <material name="lidar_housing"/>
+    </visual>
+  </link>
+  <xacro:lidar_mount name="mid360s_link"/>
+
+  <!-- 感知相机-2 直接安装在 0云台总装。原点取 CAD 镜头前端圆面中心。
+       默认 CAD 配置隐藏该参考件，以下位姿用于仿真，实车需重新标定。 -->
+  <link name="navigation_camera_link"/>
+  <joint name="navigation_camera_fixed" type="fixed">
+    <parent link="gimbal_yaw_link"/><child link="navigation_camera_link"/>
+    <origin xyz="-0.002619990 0.215684087 0.231000000" rpy="0 0 1.582943081"/>
+  </joint>
+
+  <!-- 光学坐标采用 X 向图像右方、Y 向下、Z 向前。 -->
+  <link name="navigation_camera_optical_frame"/>
+  <joint name="navigation_camera_optical_fixed" type="fixed">
+    <parent link="navigation_camera_link"/><child link="navigation_camera_optical_frame"/>
+    <origin xyz="0 0 0" rpy="${-pi / 2} 0 ${-pi / 2}"/>
+  </joint>
+
+  <!-- 兼容使用 Odin 旧坐标名的点云工具。 -->
+  <link name="lidar_link"/>
+  <joint name="lidar_alias_fixed" type="fixed">
+    <parent link="odin1_lite_link"/><child link="lidar_link"/>
+  </joint>
+</robot>

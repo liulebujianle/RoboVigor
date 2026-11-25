@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- 上装外观在转台坐标系导出，两台导航雷达随此关节转动。 -->
+  <link name="gimbal_yaw_link">
+    <visual>
+      <geometry><mesh filename="package://sentry_description/meshes/navigation/sentry_turntable.dae"/></geometry>
+      <material name="turntable_gray"><color rgba="0.55 0.58 0.62 1"/></material>
+    </visual>
+    <!-- 保留上装的仿真质量、质心和惯量估值。 -->
+    <inertial>
+      <origin xyz="0.0325 -0.0015 0.132"/>
+      <mass value="2.0"/>
+      <inertia ixx="0.0462795" iyy="0.040310167" izz="0.055377667" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <joint name="gimbal_yaw_joint" type="continuous">
+    <parent link="chassis_link"/><child link="gimbal_yaw_link"/>
+    <origin xyz="0 0 0.051"/><axis xyz="0 0 1"/>
+    <limit effort="200" velocity="20"/>
+    <dynamics damping="0" friction="0"/>
+  </joint>
+
+  <!-- 空载小 yaw 只表示相对转角，示意原点取在大 yaw 原点。 -->
+  <link name="small_yaw_link">
+    <!-- 给 Gazebo 被动转动体一个小的正惯量，数值仅用于仿真。 -->
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="0.0000082" iyy="0.0000082" izz="0.000016" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <joint name="small_yaw_joint" type="continuous">
+    <parent link="gimbal_yaw_link"/><child link="small_yaw_link"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+</robot>

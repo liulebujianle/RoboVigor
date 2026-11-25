@@ -1,0 +1,44 @@
+"""启动 RMUL 场地、机器人和 RViz。"""
+
+import yaml
+from pathlib import Path
+
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.conditions import IfCondition
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
+
+
+def generate_launch_description():
+    """组合场地与机器人启动，键盘控制由 sentry_bringup 启动。"""
+    sim = Path(get_package_share_directory('sentry_sim'))
+    arena = Path(get_package_share_directory('sentry_map'))
+    config = yaml.safe_load((sim / 'config/sentry_simulation.yaml').read_text())
+    return LaunchDescription([
+        DeclareLaunchArgument('gazebo', default_value='true'),
+        DeclareLaunchArgument('rviz_config', default_value=str(arena / 'rviz/sentry_map.rviz')),
+        DeclareLaunchArgument('gui', default_value='true'),
+        DeclareLaunchArgument('rviz', default_value='true'),
+        DeclareLaunchArgument('x', default_value=str(config['spawn']['x'])),
+        DeclareLaunchArgument('y', default_value=str(config['spawn']['y'])),
+        DeclareLaunchArgument('z', default_value=str(config['spawn']['z'])),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(str(arena / 'launch/sentry_map.launch.py')),
+            launch_arguments={
+                'gazebo': LaunchConfiguration('gazebo'),
+                'gui': LaunchConfiguration('gui'),
+                'rviz': LaunchConfiguration('rviz'),
+                'rviz_config': LaunchConfiguration('rviz_config'),
+                'tf_topic': '/tf',
+                'tf_static_topic': '/tf_static',
+            }.items(),
+        ),
+        # 没有 Gazebo 就没有 spawn 服务，gazebo:=false 时跳过生成
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(str(sim / 'launch/sentry_spawn_robot.launch.py')),
+            launch_arguments={axis: LaunchConfiguration(axis) for axis in ('x', 'y', 'z')}.items(),
+            condition=IfCondition(LaunchConfiguration('gazebo')),
+        ),
+    ])

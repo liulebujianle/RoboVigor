@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot name="robovigor_sentry" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- 车体和转台使用总装网格；只在仿真入口加载激光插件。 -->
+  <xacro:include filename="chassis.xacro"/>
+  <xacro:include filename="gimbal.xacro"/>
+  <xacro:include filename="sensors.xacro"/>
+</robot>

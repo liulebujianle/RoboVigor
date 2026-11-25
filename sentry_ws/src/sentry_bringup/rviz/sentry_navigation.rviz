@@ -1,0 +1,151 @@
+Panels:
+- Class: rviz_common/Displays
+  Name: Displays
+  Property Tree Widget:
+    Expanded: []
+    Splitter Ratio: 0.53
+Visualization Manager:
+  Class: ''
+  Displays:
+  - Class: rviz_default_plugins/RobotModel
+    Enabled: true
+    Name: 车体模型
+    Alpha: 1.0
+    Visual Enabled: true
+    Collision Enabled: false
+    Description Source: Topic
+    Description Topic:
+      Value: /robot_description
+      Depth: 1
+      Durability Policy: Transient Local
+      History Policy: Keep Last
+      Reliability Policy: Reliable
+    TF Prefix: ''
+    Update Interval: 0
+    Value: true
+  - Class: rviz_default_plugins/Marker
+    Enabled: true
+    Name: 场地
+    Namespaces:
+      rmul_2027: true
+    Topic:
+      Depth: 5
+      Durability Policy: Transient Local
+      Filter size: 10
+      History Policy: Keep Last
+      Reliability Policy: Reliable
+      Value: /arena_marker
+    Value: true
+  - Class: rviz_default_plugins/PointCloud2
+    Name: Odin1 Lite 点云
+    Enabled: true
+    Color Transformer: FlatColor
+    Color: 0; 220; 255
+    Position Transformer: XYZ
+    Style: Points
+    Size (Pixels): 2
+    Topic:
+      Value: /lidar/points
+      Reliability Policy: Best Effort
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 5
+    Value: true
+  - Class: rviz_default_plugins/PointCloud2
+    Name: Mid-360S 点云
+    Enabled: true
+    Color Transformer: FlatColor
+    Color: 255; 180; 45
+    Position Transformer: XYZ
+    Style: Points
+    Size (Pixels): 2
+    Topic:
+      Value: /mid360s/points
+      Reliability Policy: Best Effort
+      Durability Policy: Volatile
+      History Policy: Keep Last
+      Depth: 5
+    Value: true
+  - Class: rviz_default_plugins/TF
+    Name: 坐标系 TF
+    Enabled: true
+    Show Axes: true
+    Show Names: false
+    Show Arrows: false
+    Marker Scale: 0.6
+    Frame Timeout: 15
+    Update Interval: 0
+    Frames:
+      All Enabled: false
+      world:
+        Value: false
+      odom:
+        Value: false
+      base_link:
+        Value: true
+      chassis_link:
+        Value: false
+      gimbal_yaw_link:
+        Value: true
+      small_yaw_link:
+        Value: true
+      wheel_1_link:
+        Value: true
+      wheel_2_link:
+        Value: true
+      wheel_3_link:
+        Value: true
+      wheel_4_link:
+        Value: true
+      mid360s_link:
+        Value: true
+      odin1_lite_mount_link:
+        Value: false
+      odin1_lite_link:
+        Value: true
+      lidar_link:
+        Value: false
+      barrel_mesh_frame:
+        Value: true
+      front_camera_link:
+        Value: false
+      front_camera_optical_frame:
+        Value: false
+      navigation_camera_link:
+        Value: false
+      navigation_camera_optical_frame:
+        Value: true
+    Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+  - Class: rviz_default_plugins/MoveCamera
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 3.8
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0.2
+      Target Frame: base_link
+      Near Clip Distance: 0.01
+      Pitch: 0.56
+      Yaw: 0.78
+      Name: Current View
+Window Geometry:
+  Displays:
+    collapsed: false
+  Hide Left Dock: false
+  Height: 720
+  Width: 1024
+  X: 20
+  Y: 30

@@ -1,0 +1,35 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ''
+  Global Options:
+    Fixed Frame: front_camera_link
+    Background Color: 43; 47; 54
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/Axes
+      Name: 相机本体（短粗轴）
+      Enabled: true
+      Reference Frame: front_camera_link
+      Length: 0.09
+      Radius: 0.006
+      Value: true
+    - Class: rviz_default_plugins/Axes
+      Name: 相机光学系（长细轴）
+      Enabled: true
+      Reference Frame: front_camera_optical_frame
+      Length: 0.17
+      Radius: 0.003
+      Value: true
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Target Frame: front_camera_link
+      Distance: 0.8
+      Focal Point: {X: 0, Y: 0, Z: 0}
+      Pitch: 0.45
+      Yaw: 0.8
+  Enabled: true

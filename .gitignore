@@ -1,2 +1,12 @@
-# Local verification dependencies, never part of the robot source distribution.
+# 本机验证环境
 /.tmp-verify-odin/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+sentry_ws/build/
+sentry_ws/install/
+sentry_ws/log/
+*.egg-info/

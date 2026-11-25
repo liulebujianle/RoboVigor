@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- CAD 零位，单位 m。base_link 的 X 向车头，Y 向左，Z 向上。 -->
+  <xacro:property name="wheel_xy" value="0.16731710127"/>
+  <xacro:property name="wheel_z" value="-0.03618833"/>
+  <xacro:property name="wheel_radius" value="0.0761"/>
+  <xacro:property name="wheel_length" value="0.03979804608234"/>
+  <xacro:property name="wheel_offset" value="-0.00150040329349"/>
+  <xacro:property name="wheel_mass" value="0.25"/>
+
+  <link name="base_link"/>
+  <link name="chassis_link">
+    <visual>
+      <geometry><mesh filename="package://sentry_description/meshes/navigation/sentry_chassis.dae"/></geometry>
+      <material name="chassis_gray"><color rgba="0.42 0.46 0.49 1"/></material>
+    </visual>
+    <collision>
+      <geometry><box size="0.30 0.30 0.08"/></geometry>
+    </collision>
+    <!-- 质量和惯量沿用仿真估值，单位 kg、kg·m²。 -->
+    <inertial>
+      <origin xyz="0 0 -0.013"/>
+      <mass value="6.5"/>
+      <inertia ixx="0.179616667" iyy="0.179616667" izz="0.3159" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <joint name="chassis_fixed" type="fixed">
+    <parent link="base_link"/><child link="chassis_link"/>
+  </joint>
+
+  <!-- yaw 是轮轴在底盘 XY 平面内的方向。碰撞圆柱覆盖全向轮滚子的外缘。 -->
+  <xacro:macro name="cad_wheel" params="n x y yaw">
+    <xacro:property name="ax" value="${cos(yaw)}"/>
+    <xacro:property name="ay" value="${sin(yaw)}"/>
+    <xacro:property name="transverse" value="${wheel_mass * (3 * wheel_radius**2 + wheel_length**2) / 12}"/>
+    <link name="wheel_${n}_link">
+      <visual>
+        <geometry><mesh filename="package://sentry_description/meshes/navigation/sentry_wheel_${n}.dae"/></geometry>
+        <material name="rubber"><color rgba="0.08 0.08 0.08 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="${ax * wheel_offset} ${ay * wheel_offset} 0" rpy="0 ${pi/2} ${yaw}"/>
+        <geometry><cylinder radius="${wheel_radius}" length="${wheel_length}"/></geometry>
+      </collision>
+      <inertial>
+        <origin xyz="${ax * wheel_offset} ${ay * wheel_offset} 0" rpy="0 ${pi/2} ${yaw}"/>
+        <mass value="${wheel_mass}"/>
+        <inertia ixx="${transverse}" iyy="${transverse}" izz="${wheel_mass * wheel_radius**2 / 2}"
+                 ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+    <joint name="wheel_${n}_joint" type="continuous">
+      <parent link="chassis_link"/><child link="wheel_${n}_link"/>
+      <origin xyz="${x} ${y} ${wheel_z}"/><axis xyz="${ax} ${ay} 0"/>
+      <limit effort="1.2" velocity="1000"/>
+      <dynamics damping="0.0001" friction="0"/>
+    </joint>
+  </xacro:macro>
+
+  <!-- 从左后轮开始，依次是左后、左前、右前、右后。 -->
+  <xacro:cad_wheel n="1" x="${-wheel_xy}" y="${wheel_xy}" yaw="${-pi/4}"/>
+  <xacro:cad_wheel n="2" x="${wheel_xy}" y="${wheel_xy}" yaw="${-3*pi/4}"/>
+  <xacro:cad_wheel n="3" x="${wheel_xy}" y="${-wheel_xy}" yaw="${3*pi/4}"/>
+  <xacro:cad_wheel n="4" x="${-wheel_xy}" y="${-wheel_xy}" yaw="${pi/4}"/>
+</robot>

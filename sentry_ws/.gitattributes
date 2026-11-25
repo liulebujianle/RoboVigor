@@ -1,0 +1,2 @@
+# Python 文件使用 LF 换行，保证 Linux 下能正常执行 shebang。
+src/**/*.py text eol=lf

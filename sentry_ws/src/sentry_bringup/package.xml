@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+      <package format="3">
+        <name>sentry_bringup</name>
+        <version>0.1.0</version>
+        <description>Compose simulation and implemented robot modules</description>
+        <maintainer email="ethan@example.com">ethan</maintainer>
+        <license>Apache-2.0</license>
+        <exec_depend>python3-setuptools</exec_depend>
+<exec_depend>ament_index_python</exec_depend>
+<exec_depend>launch</exec_depend>
+<exec_depend>launch_ros</exec_depend>
+<exec_depend>python3-yaml</exec_depend>
+<exec_depend>sentry_sim</exec_depend>
+<exec_depend>sentry_motion</exec_depend>
+<exec_depend>sentry_perception</exec_depend>
+<exec_depend>sentry_description</exec_depend>
+<exec_depend>sentry_map</exec_depend>
+        <test_depend>python3-pytest</test_depend>
+        <export><build_type>ament_python</build_type></export>
+      </package>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- 视场边界用度填写，在 Gazebo 接口处转为弧度。扫描坐标为 X 前、Y 左、Z 上。 -->
+  <xacro:macro name="navigation_lidar" params="name topic columns rows h_min h_max v_min v_max near far noise:=0 show:=false">
+    <gazebo reference="${name}_link">
+      <sensor type="gpu_ray" name="${name}">
+        <pose>0 0 0 0 0 0</pose>
+        <update_rate>10</update_rate>
+        <visualize>${'true' if show else 'false'}</visualize>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>${columns}</samples>
+              <resolution>1</resolution>
+              <min_angle>${radians(h_min)}</min_angle>
+              <max_angle>${radians(h_max)}</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>${rows}</samples>
+              <resolution>1</resolution>
+              <min_angle>${radians(v_min)}</min_angle>
+              <max_angle>${radians(v_max)}</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>${near}</min>
+            <max>${far}</max>
+            <resolution>0.01</resolution>
+          </range>
+          <xacro:if value="${noise > 0}">
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>${noise}</stddev>
+            </noise>
+          </xacro:if>
+        </ray>
+        <plugin name="${name}_ros" filename="libgazebo_ros_ray_sensor.so">
+          <ros><remapping>~/out:=${topic}</remapping></ros>
+          <output_type>sensor_msgs/PointCloud2</output_type>
+          <frame_name>${name}_link</frame_name>
+        </plugin>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:navigation_lidar name="odin1_lite" topic="/lidar/points" columns="240" rows="180"
+                          h_min="-60" h_max="60" v_min="-45" v_max="45"
+                          near="0.15" far="25.0" noise="0.03" show="true"/>
+
+  <!-- 水平方向一圈均分 500 份，省去与 -180° 重合的 +180° 端点。 -->
+  <xacro:property name="mid_columns" value="500"/>
+  <xacro:navigation_lidar name="mid360s" topic="/mid360s/points" columns="${mid_columns}" rows="40"
+                          h_min="-180" h_max="${180 - 360.0 / mid_columns}" v_min="-7" v_max="52"
+                          near="0.10" far="40.0" show="true"/>
+
+</robot>
